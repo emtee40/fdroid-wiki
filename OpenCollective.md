@@ -31,6 +31,23 @@ Once the "Expense processing" label was set, if your invoice was for a sum of US
 Confirm you tell the truth, the full truth, and nothing but… well, send the form. Within a day or two your payment status should turn green ("Expense paid"), and in another day the money should arrive on your account. Ugh.
 
 
+### Notes for if you request as a business
+* you need to create an organisation first, and payments must go to that organisation then
+* bank account must be the one of your business, and type must be "business"
+* you must upload an invoice then, in the name of your business. This invoice must be addressed to
+
+        F-Droid Ltd
+        Open Source Collective 501(c)(6)
+        EIN: 82-2037583
+        340 S LEMON AVE #3717
+        Walnut CA 91789 USA
+
+* as this is a "501(c)(6)", there's no VAT (German speakers: this corresponds to "eingetragener Verein"). Instead, the invoice needs to make that clear. For German residents who pay their tax in Germany (I cannot speak for other countries/jurisdictions, someone else needs to amend that), it should e.g. contain something like:
+
+  > Umsatzsteuer wird gem. § 3a Abs. 3 UStG nicht erhoben.  
+  > Die Steuerschuld geht auf den Empfänger über.
+
+
 ### Useful links
 * OpenCollective: [Submitting Expenses](https://docs.opencollective.com/help/expenses-and-getting-paid/submitting-expenses)
 * OpenCollective: [Tax Information](https://docs.opencollective.com/help/expenses-and-getting-paid/tax-information)
