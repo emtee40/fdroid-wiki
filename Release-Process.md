@@ -1,5 +1,5 @@
 
-For each piece of the F-Droid ecosystem, there is a specific release process.  They generally follow the same patterns, but all have unique steps.  The official signing keys are listed in [Release Channels and Signing Keys](https://f-droid.org /docs/Release_Channels_and_Signing_Keys).
+For each piece of the F-Droid ecosystem, there is a specific release process.  They generally follow the same patterns, but all have unique steps.  The official signing keys are listed in [Release Channels and Signing Keys](https://f-droid.org/docs/Release_Channels_and_Signing_Keys).
 
 
 ## fdroidclient
