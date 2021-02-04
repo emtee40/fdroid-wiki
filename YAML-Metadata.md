@@ -104,3 +104,7 @@ Hint to give to devs – [XDDK points out](https://gitlab.com/fdroid/rfp/-/issue
           flutter: ^1.25.0-8.3.pre #the flutter sdk version
 
 ([Related discussion](https://github.com/flutter/flutter/issues/29211))
+
+### NativeScript
+
+Coming soon.
