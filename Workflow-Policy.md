@@ -1,7 +1,7 @@
 * lazy consensus: wait at least a week to give contributors a chance
   to respond.  Ping people to bring their attention that their
   response is desired.
-* if this if your first change to a given project repo, then ask first.
+* if this is your first change to a given project repo, then ask first.
 * Some project repos will have different policies.  For example
   _fdroiddata_ requires lots of small changes for app updates, etc.
 
