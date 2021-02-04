@@ -27,7 +27,7 @@ For each piece of the F-Droid ecosystem, there is a specific release process.  T
 10. add git signed tag named after the exact version name (no
    preceeding __v__)
 11. add new `Build:` entry to
-    [metadata file](https://gitlab.com/fdroid/fdroiddata/blob/master/metadata/org.fdroid.fdroid.txt)
+    [metadata file](https://gitlab.com/fdroid/fdroiddata/blob/master/metadata/org.fdroid.fdroid.yml)
 
 ### major release
 
