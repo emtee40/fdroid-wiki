@@ -99,9 +99,11 @@ grep 'output:' $(grep '$$flutter' *.yml | awk -F: '{print $1}' |uniq )
 
 Hint to give to devs – [XDDK points out](https://gitlab.com/fdroid/rfp/-/issues/1615#note_490534508) devs can specify flutter version in `pubspec.yaml`
 
-    environment:
-          sdk: ">=2.7.0 <3.0.0" #the working dart sdk versions
-          flutter: ^1.25.0-8.3.pre #the flutter sdk version
+```yaml
+environment:
+    sdk: ">=2.7.0 <3.0.0" #the working dart sdk versions
+    flutter: ^1.25.0-8.3.pre #the flutter sdk version
+```
 
 ([Related discussion](https://github.com/flutter/flutter/issues/29211))
 
