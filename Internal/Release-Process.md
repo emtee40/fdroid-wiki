@@ -11,12 +11,9 @@ For each piece of the F-Droid ecosystem, there is a specific release process.  T
    changes
 3. rebase the _weblate_ branch on the latest commits in _master_ of
    <https://gitlab.com/fdroid/fdroidclient> and fix any conflicts
-4. push local _weblate_ branch to your fork create a merge request,
-   and tag it with the _localization_ label
-5. make sure all tests pass before merging, including all _android-22_
-   emulator tests
-6. once the _weblate_ branch is merged, reset the git repo in
-   <https://hosted.weblate.org/projects/f-droid/f-droid/#repository>
+4. push local _weblate_ branch to your fork create a merge request, and tag it with the _localization_ label
+5. Make sure all tests pass before merging, including all _android-22_ emulator tests.  Run all the emulator tests locally, many of them do not run in GitLab CI.
+6. once the _weblate_ branch is merged, reset the git repo in <https://hosted.weblate.org/projects/f-droid/f-droid/#repository>
 7. set _versionCode_ in _app/build.gradle_
 8. add new entry in _metadata/en-US/changelogs/_
 9. copy that new entry to _CHANGELOG.md_
