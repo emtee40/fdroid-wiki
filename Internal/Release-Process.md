@@ -45,6 +45,30 @@ If it is a major release, there are a few more steps.
    from _master_, then Weblate will sync with that, and remove them
    there as well.
 
+### Versioning
+
+Each stable version follows the `X.Y` pattern. Hotfix releases - i.e. when a stable has an important bug that needs immediate fixing - will follow the `X.Y.Z` pattern.
+
+Before each stable release, a number of alpha releases will be released. They will follow the pattern `X.Y-alphaN`, where `N` is the current alpha number. These will usually include changes and new features that have not been tested enough for a stable release, so use at your own risk. Testers and reporters are very welcome.
+
+The version codes use a number of digits per each of these keys: `XXXYYYZNN`. So for example, 1.3.1 would be `1003150` and 0.95-alpha13 would be `95013` (leading zeros are omitted).
+
+Note that we use a trailing `50` for actual stable releases, so alphas are limited to `-alpha49`.
+
+This is an example of a release process for **0.95**:
+
+* We are currently at stable **0.94**
+* **0.95-alpha1** is released
+* **0.95-alpha2** is released
+* **0.95-alpha3** is released
+* `stable-v0.95` is branched and frozen
+* **0.95** is released
+* A bug is reported on the stable release and fixed
+* **0.95.1** is released with only that fix
+
+As soon as a stable is tagged, master will move on to `-alpha0` on the next version. This is a temporary measure - until `-alpha1` is released - so that moving from stable to master doesn't require a downgrade. `-alpha0` versions will not be tagged nor released.
+
+
 
 ## fdroidserver
 
