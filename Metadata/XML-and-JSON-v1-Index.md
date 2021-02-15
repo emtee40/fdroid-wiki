@@ -75,7 +75,7 @@ This is the `<application id="android.package.name">` tag in XML (XPath: `/fdroi
 | MaintainerNotes | - | - |  |
 
 #### localized data
-These are only available with the JSON index, and even there are optional. To be found in `$json->apps[$i]->localized->{$lang}`, with lang being e.g. `en-US`. These are objects. For their corresponding metadata, see [All About Descriptions, Graphics and Screenshots](https://f-droid.org/en/docs/All_About_Descriptions_Graphics_and_Screenshots).
+These are only available with the JSON index, where they are now mandatory. To be found in `$json->apps[$i]->localized->{$lang}`, with lang being e.g. `en-US`. These are objects. For their corresponding metadata, see [All About Descriptions, Graphics and Screenshots](https://f-droid.org/en/docs/All_About_Descriptions_Graphics_and_Screenshots). Names here usually correspond to those of the [Fastlane structure](https://gitlab.com/snippets/1895688)'s directories resp. `.txt` files.
 
 | field | comment |
 | ----- | ------- |
@@ -98,7 +98,7 @@ These are only available with the JSON index, and even there are optional. To be
 
 
 ### packages
-In XML directly within the `apps` section (XPath: `/fdroid/application[0..n]/package[0..n]`), in JSON its own `$json->packages` object (`$json->packages->{$package_name}` being an array of objects). Fields have a correspondence in the YAMLs `Build` section.
+In XML directly within the `apps` section (XPath: `/fdroid/application[0..n]/package[0..n]`), in JSON its own `$json->packages` object (`$json->packages->{$package_name}` being an array of objects). Most fields have a correspondence in the YAMLs `Build` section.
 
 | YAML | XML | JSON | comment |
 | ---- | --- | ---- | ------- |
