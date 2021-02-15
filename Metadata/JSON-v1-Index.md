@@ -10,9 +10,11 @@
 
 Hans writes:
 
-> As much as possible, the index JSON data tries to be as close as possible to the [YAML build metadata files](https://f-droid.org/docs/Build_Metadata_Reference/)
-
+> As much as possible, the index JSON data tries to be as close as possible to the [YAML build metadata files](https://f-droid.org/docs/Build_Metadata_Reference/)¹
+>
 > So `apps` is the list of all the app metadata from those files, and the `packages` metadata is derived from the `Builds` section.
+
+¹ also see the [YAML Metadata](Metadata/YAML-Metadata) wiki page
 
 And from Coffee comes:
 
