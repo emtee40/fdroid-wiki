@@ -140,7 +140,7 @@ As soon as a stable is tagged, master will move on to `-alpha0` on the next vers
    Tag it with the _localization_ label.
 9. Make sure all tests pass before merging.
 7. add git signed tag named after the exact version name (no
-   preceeding __v__), using the exact same string as `version=''`
+   preceeding __v__)
 8. `git fetch weblate` and check that Weblate rebased on the latest
    commits, otherwise, there is a merge conflict that needs to be
    fixed before Weblate will sync again.
