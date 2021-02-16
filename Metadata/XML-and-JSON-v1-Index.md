@@ -94,7 +94,7 @@ These are only available with the JSON index, where they are now mandatory. To b
 | title | (text) |
 | video | (text) |
 | ~~changelogs~~ | ~~array [`<versionCode>`] of text~~ that's the theory, but not reality. Reality looks like: |
-| whatsNew | (text; content of the `changelogs/<versionCode>.txt` matching the latest APK) |
+| whatsNew | (text; content of the `changelogs/<versionCode>.txt` matching the latest APK / `suggestedVersionCode`) |
 
 
 ### packages
