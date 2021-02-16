@@ -43,10 +43,10 @@ This is the `<application id="android.package.name">` tag in XML (XPath: `/fdroi
 | (file name) | id | packageName | `android.package.name` |
 | - | added | added | yyyy-mm-dd in XML, timestamp in JSON |
 | - | lastupdated | lastUpdated | as `added` |
-| Name | name | -<br>(see localized data) | human-readable name |
-| Summary | summary | summary | (text) |
+| Name | name | only available if set in YAML<br>(see localized data) | human-readable name |
+| Summary | summary | only available if set in YAML<br>(see localized data) | (text) |
 | - | icon | icon | file name w/o path |
-| Description | desc | description | full description (HTML) |
+| Description | desc | only available if set in YAML<br>(see localized data) | full description (HTML) |
 | License | license | license | as in metadata |
 |  |  |  |
 | WebSite | web | webSite | URL |
