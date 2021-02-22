@@ -9,7 +9,7 @@ currently, we're not able to get this issue done, as following questions aren't 
 Please help us through answering them.
 
 If there is no activity on this issue in the next 4 weeks, we will close this issue to reduce the number of open issues.
-On <link to the wiki> you can see more details about this process.
+On the [wiki](https://gitlab.com/fdroid/wiki/-/wikis/Internal/Issue-Cleanup-Policy) you can see more details about this process.
 
 Thank you for contributing to F-Droid!
 ```
@@ -34,7 +34,7 @@ currently, we're not able to get this issue done, as the following issues aren't
 - <Link to upstream issue>
 
 If there is no activity on this or the upstream issue in the next 4 weeks, we will close this issue to reduce the number of open issues.
-On <link to the wiki> you can see more details about this process.
+On the [wiki](https://gitlab.com/fdroid/wiki/-/wikis/Internal/Issue-Cleanup-Policy) you can see more details about this process.
 
 Thank you for contributing to F-Droid!
 ```
@@ -45,7 +45,7 @@ Hello <optional @mention, suited to the project rules>,
 currently we cannot get <link to our issue> done, as this issue here isn't done yet.
 
 If there is no activity here or in the F-Droid issue in the next 4 weeks, we will close our issue to reduce the number of open issues.
-On <link to our wiki> you can see more details about this process.
+In our [wiki](https://gitlab.com/fdroid/wiki/-/wikis/Internal/Issue-Cleanup-Policy) you can see more details about this process.
 
 Please contact us when you need help.
 
