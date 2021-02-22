@@ -1,7 +1,7 @@
 # Closing issues / MRs without feedback
 
-- When an issue needs further feedback to be processed further the `waiting-on-response` label should be added to an issue. Additionally, a comment should be added, which summarizes who should provide a response.
-- 4 weeks after the `waiting-on-response` label was added (and there was no further activity), the `candidate-to-close` label should be added. Additionally, a comment in the following form should be added:
+- When an issue needs further feedback to be processed further the ~waiting-on-response label should be added to an issue. Additionally, a comment should be added, which summarizes who should provide a response.
+- 4 weeks after the ~waiting-on-response label was added (and there was no further activity), the `candidate-to-close` label should be added. Additionally, a comment in the following form should be added:
 ```
 Hi @author/@person-the-last-relevant-question-was-asked, 
 currently, we're not able to get this issue done, as following questions aren't answered yet:
