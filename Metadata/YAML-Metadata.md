@@ -110,3 +110,7 @@ environment:
 ### NativeScript
 
 Coming soon.
+
+### ReactNative
+
+See https://f-droid.org/2020/10/14/adding-react-native-app-to-f-droid.html
