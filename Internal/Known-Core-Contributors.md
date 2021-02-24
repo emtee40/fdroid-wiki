@@ -1,4 +1,8 @@
-This is a ever-changing list of known core contributors, where they can list their capabilities and whether they want to be pinged or not.
+This is a ever-changing list of known core contributors, where they can list their capabilities and whether they want to be pinged or not.  There are a couple places to see who has what access:
+
+* [@fdroid "group" on gitlab.com](https://gitlab.com/groups/fdroid/-/group_members)
+* [f-droid "project" on Weblate](https://hosted.weblate.org/access/f-droid/#users)
+* [@contributors "group" on forum.f-droid.org](https://forum.f-droid.org/g/contributors)
 
 Please consider adding yourself to this list (in alphabetic order), to give the other team members and community contributors some hints.
 
