@@ -1,6 +1,10 @@
 
 Running Android emulators in GitLab CI is very handy for running test suites on merge requests.  Also, it lets you test on old Android versions even if you have no device with that Android version.  This was announced as a release in a [blog post](https://f-droid.org/2021/02/24/running-emulator-tests-on-gitlab-ci.html)
 
+We use our own Docker images to support this:
+* https://gitlab.com/fdroid/ci-images-client
+* https://gitlab.com/fdroid/ci-images-base
+
 Unfortunately, the quality control on the `system-image` packages is spotty, so a number of them are not really usable. It is important to use the `default` rather than `google_apis` system-images they do not contain the Google Play and apps binary blobs, and because the Google apps seem to slow down the boot process a lot.  Also, it seems the `android-22` through `android-27` system images seem to require less resources than the newer ones, so much so that they are unlikely to work at all for some projects.
 
 Here are some example runs to see what works:
