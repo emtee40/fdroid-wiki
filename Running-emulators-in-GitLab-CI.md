@@ -33,6 +33,13 @@ kvm 29 default x86_64:
 ```
 
 
+## Test image based on Google's
+
+Google has [their own scripts](https://github.com/google/android-emulator-container-scripts) for creating Docker images for the Android emulator.  This is an experimental project to do something like _fdroid/ci-images-client_ with their images as a base:
+
+* <https://gitlab.com/eighthave/ci-images-emulator-kvm>
+
+
 ## microg system-images
 
 The [microg system-image repository](https://github.com/microg/GmsCore/wiki/Development-Tools) is also [included](https://gitlab.com/fdroid/ci-images-client/-/commit/85ed9490) in the F-Droid setup.  There are currently two images:
