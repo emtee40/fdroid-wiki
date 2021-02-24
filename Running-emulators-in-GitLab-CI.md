@@ -32,6 +32,15 @@ kvm 29 default x86_64:
   <<: *kvm-template
 ```
 
+This script can help you generate multiple entries:
+
+```bash
+
+for system_image in `sdkmanager --list|awk '{print $1}'|sort|grep ';android-[23][02-9]'|grep -F ';x86'|grep -E ';(default|google|microg)'|sort -u`; do
+    echo kvm `echo $system_image | cut -d - -f 3 | sed 's,;, ,g'`:
+    printf '  <<: *kvm-template\n\n'
+done
+```
 
 ## Test image based on Google's
 
@@ -46,3 +55,4 @@ The [microg system-image repository](https://github.com/microg/GmsCore/wiki/Deve
 
 * `system-images;android-29;microg;x86_64`
 * `system-images;android-23;microg;x86` - requires emulator v28 or older because it lacks a "ranchu" kernel.
+
