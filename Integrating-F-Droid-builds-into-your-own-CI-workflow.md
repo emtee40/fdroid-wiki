@@ -93,7 +93,50 @@ And that’s it! Commit and push your changes, and wait for the pipeline to fini
 
 ## CircleCI
 
-Coming soon…
+By default the configuration is found in `.circleci/config.yml`.
+
+In the `jobs` section, add another subsection like this:
+
+```
+  build_fdroid:
+    docker:
+      - image: registry.gitlab.com/fdroid/ci-images-client:latest
+    steps:
+      - checkout
+      - run:
+          name: Build with F-Droid
+          command: |
+            test -d build || mkdir build
+            test -d fdroidserver || mkdir fdroidserver
+            git ls-remote https://gitlab.com/fdroid/fdroidserver.git master
+            curl --silent https://gitlab.com/fdroid/fdroidserver/repository/master/archive.tar.gz | tar -xz --directory=fdroidserver --strip-components=1
+            export PATH="`pwd`/fdroidserver:$PATH"
+            export PYTHONPATH="$CI_PROJECT_DIR/fdroidserver:$CI_PROJECT_DIR/fdroidserver/examples"
+            export PYTHONUNBUFFERED=true
+            bash fdroidserver/buildserver/setup-env-vars $ANDROID_HOME
+            adduser --disabled-password --gecos "" vagrant
+            ln -s $CI_PROJECT_DIR/fdroidserver /home/vagrant/fdroidserver
+            mkdir -p /vagrant/cache
+            wget -q https://services.gradle.org/distributions/gradle-5.6.2-bin.zip --output-document=/vagrant/cache/gradle-5.6.2-bin.zip
+            bash fdroidserver/buildserver/provision-gradle
+            bash fdroidserver/buildserver/provision-apt-get-install http://deb.debian.org/debian
+            source /etc/profile.d/bsenv.sh
+            apt-get dist-upgrade
+            apt-get install -t stretch-backports fdroidserver python3-asn1crypto python3-ruamel.yaml yamllint
+            apt-get purge fdroidserver
+            export GRADLE_USER_HOME=$PWD/.gradle
+            set -x
+            apt-get install sudo
+            fdroid build --verbose --on-server --no-tarball
+      - store_artifacts:
+           name: Store APK
+           path: unsigned
+           destination: apk
+```
+
+It is important to run all of these commands in a single `run` section: we are setting some environment variables here, and if you spread the commands out over multiple `run` sections, variables will not be shared between them.
+
+After that, be sure to add the new job to any workflow you would like to run it in.
 
 # Refinements
 
