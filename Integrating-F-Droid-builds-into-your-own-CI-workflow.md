@@ -1,10 +1,16 @@
 If you are planning to publish your app on F-Droid, or already have done so, and you have a CI pipeline set up for your app, here is how you can integrate an F-Droid build. Doing so will help you ensure that your new commit does not inadvertently break the F-Droid build process.
 
+[[_TOC_]]
+
+# Prerequisites
+
 We assume you have a CI pipeline set up for your app’s repository, and are somewhat familiar with GitLab CI, as well with the CI environment you use for your app. We also assume you already have an F-Droid build recipe for your app, or know how to create one.
+
+# Steps
 
 Essentially, what you need to do is to drop an F-Droid build recipe for your app into the source code tree, run the F-Droid build tool on the latest release of your code, using that recipe, ad finally configure your CI pipeline to run these steps for each commit.
 
-# The build recipe
+## Provide a build recipe
 
 If your app is already on F-Droid, use that build recipe. If not, create one. Either way, the build recipe needs to reside in the root folder of the source tree and be named `.fdroid.yml`.
 
@@ -21,7 +27,7 @@ Builds:
 
 You should only have this one entry in your Build section—this tells F-Droid to build only one version, namely the last commit of the current branch. `versionName` and `versionCode` should match the versions in the latest commit of your app.
 
-# CI configuration
+## Configure CI
 
 We may not be able to cover each and every CI out there. However, if yours is not covered, use one of those described here and adapt it as needed—the commands to run are the same, and the steps should be similar in principle for most CI environments.
 
@@ -30,7 +36,7 @@ The CI job is similar to the `fdroid build` job from the [fdroiddata](https://gi
 * For the same reason we run `fdroid build` only once, rather then in a loop for each package.
 * We run `fdroid build` without any üackage names, causing it to build from `.fdroid.yml` in the root of the source tree.
 
-## GitLab CI
+### GitLab CI
 
 By default, CI jobs are defined in `.gitlab-ci.yml` in the root directory of your source tree. This is configurable in GitLab—if you use a different file name, edit that file instead.
 
@@ -91,7 +97,7 @@ fdroid build:
 
 And that’s it! Commit and push your changes, and wait for the pipeline to finish.
 
-## CircleCI
+### CircleCI
 
 By default the configuration is found in `.circleci/config.yml`.
 
