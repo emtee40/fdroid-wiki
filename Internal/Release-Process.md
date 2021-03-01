@@ -15,8 +15,10 @@ For each piece of the F-Droid ecosystem, there is a specific release process.  T
 5. Make sure all tests pass before merging, including all _android-22_ emulator tests.  Run all the emulator tests locally, many of them do not run in GitLab CI.
 6. once the _weblate_ branch is merged, reset the git repo in <https://hosted.weblate.org/projects/f-droid/f-droid/#repository>
 7. set _versionCode_ in _app/build.gradle_
-8. add new entry in _metadata/en-US/changelogs/_
-9. copy that new entry to _CHANGELOG.md_
+8. Add new entry to _CHANGELOG.md_.
+9. For alpha builds, edit the _metadata/en-US/changelogs/_ file for the upcoming
+   release so the translators can work on it (e.g. for 1.12-alpha1/`1012001`, edit
+   _metadata/en-US/changelogs/1012050.txt_).
 10. make a local branch for the final release, then run
     `./tools/trim-incomplete-translations-for-release.py`
 	to remove any incomplete translations from the final while leaving
