@@ -4,6 +4,6 @@ Get a sneak peek at our current work, and help us make it the best it can be: tr
 
 * To install them on a device that already has F-Droid on it, you can scan or click this QR Code to add a new repo to get the nightly builds:
 
-[![F-Droid Nightly Repo](https://gitlab.com/fdroid/fdroidclient-nightly/-/blob/master/qr.png)](https://gitlab.com/fdroid/fdroidclient-nightly/-/raw/master/fdroid/repo)
+[![F-Droid Nightly Repo](https://gitlab.com/fdroid/fdroidclient-nightly/-/raw/master/qr.png?inline=false)](https://gitlab.com/fdroid/fdroidclient-nightly/-/raw/master/fdroid/repo)
 
 To learn about the whole nightly setup, there is documentation all about [publishing nightly builds](https://f-droid.org/docs/Publishing_Nightly_Builds/) with `fdroid nightly`.
