@@ -1,25 +1,32 @@
-We aim to replace as much of our code as possible using _buildbot_.  This is a place to work out the architecture and stages of implementation.  The whole process the _buildserver_ is quite different than the _buildbot_ workflow.  _buildbot_ is very well developed and maintained, so it will save us a lot of work in the long run to make the switch.
+We aim to replace as much of our code as possible using Buildbot.  This is a place to work out the architecture and stages of implementation.  The whole process the _buildserver_ is quite different than the Buildbot workflow.  Buildbot is very well developed and maintained, so it will save us a lot of work in the long run to make the switch.
 
 The easiest place to get started with this is to read [Buildbot Concepts](https://docs.buildbot.net/current/manual/concepts.html)
 
-## Architecture
 
-This is the long run goal for the _buildbot_ system.  It will not look like this until the implementation is complete.  This is the final destination.
-
-* `changes.GitPoller` looking for new commits to        https://gitlab.com/fdroid/fdroiddata, generating `Changes` to send to the `Scheduler`
-
-* completed builds are marked by an APK being present in _unsigned/_, _repo/_, or _archive_ named using the F-Droid standard pattern: `(unsigned|repo|archive)/<packageName>_<versionCode>.apk` e.g. _unsigned/org.fdroid.fdroid_100000.apk_
-
-* `Scheduler` checks whether completed build is present before turning the `Change` into a `BuildRequest`.
+https://flathub.org/builds/#/
+](https://docs.buildbot.net/latest/manual/configuration/www.html#reverse-proxy-configuration)
 
 
 ## Implementation Stages
 
-1. Get builds running in existing _buildserver_ VM using `fdroid build --on-server`.
-2. Generate 
+1. Get builds running in existing _buildserver_ VM by making a `Worker` per _buildserver_ instance that handles starting/stoping the VM, then running `fdroid build --server` for one single build.
+2. Make `fdroid build` just take the command line args and generate the `Changes` and submit them to the `Scheduler` via `buildbot sendchange`.
+3. Manage _buildserver_ VM start/reset from Buildbot workflow, each `Build` should run in a fresh VM instance.
 4. Support multiple _buildserver_ VM instances while still running `fdroid build`.
 5. Support `fdroid update` running in parallel with `fdroid build`
 6. Support `fdroid deploy` running in parallel with `fdroid build`
 7. Support `fdroid publish` running in parallel with `fdroid build`
 
 `checkupdates` can probably run as its own instance of Buildbot.
+
+
+
+# verification
+
+pip3 install         'buildbot-console-view==2.10.1'         'buildbot-grid-view==2.10.1'         'buildbot-waterfall-view==2.10.1'         'buildbot-www==2.10.1' buildbot-worker==2.10.1
+Collecting buildbot-console-view==2.10.1
+
+
+
+# checkupdates
+
