@@ -2,7 +2,7 @@
 For each piece of the F-Droid ecosystem, there is a specific release process.  They generally follow the same patterns, but all have unique steps.  The official signing keys are listed in [Release Channels and Signing Keys](https://f-droid.org/docs/Release_Channels_and_Signing_Keys).
 
 
-## fdroidclient
+# <tt>fdroidclient</tt>
 
 1. pull in latest commits from Weblate into a local branch called
    _weblate_
@@ -72,7 +72,7 @@ As soon as a stable is tagged, master will move on to `-alpha0` on the next vers
 
 
 
-## fdroidserver
+# <tt>fdroidserver</tt>
 
 1. Make sure [all of the tests](https://gitlab.com/fdroid/fdroidserver/#build-status)
    listed on top of the README are passing.
@@ -102,7 +102,7 @@ There are some very conservative stable release branches.  These are for targete
 * 1.1.x targets Debian/buster and Ubuntu/focal
 
 
-## privileged-extension
+# <tt>privileged-extension</tt>
 
 1. pull in latest commits from Weblate into a local branch called
    _weblate_
@@ -128,7 +128,7 @@ There are some very conservative stable release branches.  These are for targete
     [metadata file](https://gitlab.com/fdroid/fdroiddata/blob/master/metadata/org.fdroid.fdroid.privileged.txt)
 
 
-## fdroid-website
+# <tt>fdroid-website</tt>
 
 1. Review the [failing
    checks](https://hosted.weblate.org/checks/?project=f-droid&component=website)
@@ -164,7 +164,7 @@ There are some very conservative stable release branches.  These are for targete
     signatures.
 
 
-## jekyll-fdroid
+# <tt>jekyll-fdroid</tt>
 
 1. Make sure all the tests are passing
 2. set `s.version` and `s.date` in _jekyll-fdroid.gemspec_
@@ -174,7 +174,7 @@ There are some very conservative stable release branches.  These are for targete
    (1.0.1)` in _Gemfile.lock_
 
 
-## Repomaker
+# Repomaker
 
 1. Review and merge any merge requests from Weblate on
    <https://gitlab.com/fdroid/repomaker/merge_requests>.
