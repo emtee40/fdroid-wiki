@@ -94,6 +94,13 @@ As soon as a stable is tagged, master will move on to `-alpha0` on the next vers
 12. Update translation template using: `make -C locale update`. Commit updates
     to _locale/fdroidserver.pot_ and push.
 
+### Stable release branches
+
+There are some very conservative stable release branches.  These are for targeted bugfixes only, and are setup to only have the changes that would allow the releases to get into Debian/stable and Ubuntu/LTS releases.
+
+* 2.0.x targets Debian/bullseye and Ubuntu/hirsute
+* 1.1.x targets Debian/buster and Ubuntu/focal
+
 
 ## privileged-extension
 
