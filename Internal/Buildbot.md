@@ -1,10 +1,10 @@
 We aim to replace as much of our code as possible using Buildbot.  This is a place to work out the architecture and stages of implementation.  The whole process the _buildserver_ is quite different than the Buildbot workflow.  Buildbot is very well developed and maintained, so it will save us a lot of work in the long run to make the switch.
 
-The easiest place to get started with this is to read [Buildbot Concepts](https://docs.buildbot.net/current/manual/concepts.html)
+The easiest place to get started with this is to read [Buildbot Concepts].(https://docs.buildbot.net/current/manual/concepts.html)
 
 
-https://flathub.org/builds/#/
-](https://docs.buildbot.net/latest/manual/configuration/www.html#reverse-proxy-configuration)
+- https://flathub.org/builds/#/
+- https://docs.buildbot.net/latest/manual/configuration/www.html#reverse-proxy-configuration
 
 
 ## Implementation Stages
@@ -29,4 +29,3 @@ Collecting buildbot-console-view==2.10.1
 
 
 # checkupdates
-
