@@ -83,7 +83,7 @@ This is a skeleton for a Flutter app that does not use build flavors. **Notes:**
   - `build/app/outputs/apk/release/app-release.apk`
   - `build/app/outputs/apk/fdroid/release/app-fdroid-release.apk` (flavor: `fdroid`)
   - pattern with build flavor: `build/app/outputs/apk/[{flavor}/]release/app-[{flavor}-]release.apk`
-* `srclibs:` never use something like `flutter@stable` or `flutter@dev`. The value after the `@` must match an existing [Flutter release](https://github.com/flutter/flutter/releases), so the very same build can reproducibly be run later again
+* `srclibs:` never use something like `flutter@stable` or `flutter@dev`. The value after the `@` must match an existing [Flutter release](https://github.com/flutter/flutter/releases), so the very same build can reproducibly be run later again (also [see here](https://gitlab.com/fdroid/fdroiddata/-/merge_requests/8428#note_513934639) for reference)
 * `rm` is project specific. Just remove everything that's not needed for the Android build.
 * `prebuild` might need additional steps. The one specified in above skeleton suffices for most cases (and seems to be always needed).
 * `build:` the first line **must** be there – as by default, Flutter has analytics enabled. The second line may be obsolete, but is often needed. In the third line, ommit the `--flavor <flavorName>` if the app has no build flavors.
