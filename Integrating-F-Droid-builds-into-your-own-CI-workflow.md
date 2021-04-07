@@ -60,7 +60,7 @@ fdroid build:
     - test -d build || mkdir build
     - test -d fdroidserver || mkdir fdroidserver
     - git ls-remote https://gitlab.com/fdroid/fdroidserver.git master
-    - curl --silent https://gitlab.com/fdroid/fdroidserver/repository/master/archive.tar.gz
+    - curl --silent https://gitlab.com/fdroid/fdroidserver/-/archive/master/fdroidserver-master.tar.gz
           | tar -xz --directory=fdroidserver --strip-components=1
     - export PATH="`pwd`/fdroidserver:$PATH"
     - export PYTHONPATH="$CI_PROJECT_DIR/fdroidserver:$CI_PROJECT_DIR/fdroidserver/examples"
@@ -115,7 +115,7 @@ In the `jobs` section, add another subsection like this:
             test -d build || mkdir build
             test -d fdroidserver || mkdir fdroidserver
             git ls-remote https://gitlab.com/fdroid/fdroidserver.git master
-            curl --silent https://gitlab.com/fdroid/fdroidserver/repository/master/archive.tar.gz | tar -xz --directory=fdroidserver --strip-components=1
+            curl --silent https://gitlab.com/fdroid/fdroidserver/-/archive/master/fdroidserver-master.tar.gz | tar -xz --directory=fdroidserver --strip-components=1
             export PATH="`pwd`/fdroidserver:$PATH"
             export PYTHONPATH="$CI_PROJECT_DIR/fdroidserver:$CI_PROJECT_DIR/fdroidserver/examples"
             export PYTHONUNBUFFERED=true
