@@ -6,7 +6,9 @@
 ```markdown
 Hi @author/@person-the-last-relevant-question-was-asked, 
 currently, we're not able to get this issue done, as following questions aren't answered yet:
+
 - <Summary of the questions>
+
 Please help us through answering them.
 
 If there is no activity on this issue in the next 4 weeks, we will close this issue to reduce the number of open issues.
