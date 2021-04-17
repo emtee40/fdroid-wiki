@@ -1,5 +1,9 @@
 As the name suggests, this page collects questions asked frequently and puts some answers to them – so we don't have to answer them over and again.
 
+**Contents:**
+
+[[_TOC_]]
+
 ## General
 ### How long does it take for my app to show up on website and client?
 Your MR has just been merged, but the APK did not show up immediately? That's normal: the APK must first been built on the build server (happens automatically when the next build cycle starts), then signed (manual step), then a new index must be created and deployed.
