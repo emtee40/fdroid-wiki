@@ -15,6 +15,8 @@ If there is no activity on this issue in the next 4 weeks, we will close this is
 On the [wiki](https://gitlab.com/fdroid/wiki/-/wikis/Internal/Issue-Cleanup-Policy) you can see more details about this process.
 
 Thank you for contributing to F-Droid!
+
+/label ~"candidate-to-close"
 ```
 
 - If the questions are answered, or the issue gains otherwise activity, the ~candidate-to-close label should be removed. The same goes, if a contributor has objections against the close of the issue. He can also remove the label, but should add a comment, on why this issue shouldn't be closed.
@@ -24,6 +26,8 @@ Thank you for contributing to F-Droid!
 As mentioned above we close this issue due to missing activity.
 
 If you think this issue is still relevant, please reopen it or create a new one (with the link to this one for history).
+
+/close
 ```
 
 # Closing issues / MRs without upstream activity
@@ -42,6 +46,8 @@ If there is no activity on this or the upstream issue in the next 4 weeks, we wi
 On the [wiki](https://gitlab.com/fdroid/wiki/-/wikis/Internal/Issue-Cleanup-Policy) you can see more details about this process.
 
 Thank you for contributing to F-Droid!
+
+/label ~"candidate-to-close"
 ```
 
 - In the upstream issue a comment in the following form should be added:
@@ -66,6 +72,8 @@ Thank you for helping us spreading FOSS apps in the world :)
 As mentioned above we close this issue due to missing activity.
 
 If you think this issue is still relevant, please reopen it or create a new one (with the link to this one for history).
+
+/close
 ```
 
 - In the upstream issue a comment in the following form should be added:
