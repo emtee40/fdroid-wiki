@@ -18,3 +18,21 @@ Host fdroid-buildserver-gcc136-public
 ```
 
 This aims to be as close as possible to the production setup.  There is an Ubuntu/focal chroot included, since `fdroid publish` is run on Ubuntu/focal.  To use that chroot, just run: `schroot`.
+
+
+## gcc147
+
+```config
+Host gcc147.osuosl.org
+  Port 45026
+  User tunnel
+
+Host fdroid-buildserver-gcc147
+  User fdroid
+  PasswordAuthentication no 
+  ProxyCommand ssh -qax -W 192.168.111.129:22 tunnel@gcc147.osuosl.org
+  ServerAliveInterval 30
+  ServerAliveCountMax 5
+
+```
+
