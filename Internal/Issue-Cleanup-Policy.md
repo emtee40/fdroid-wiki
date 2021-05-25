@@ -2,7 +2,7 @@
 
 # General practises
 
-- Use the gitlab threads or reply to button wherever possible to keep the discussions organised. See this for how to use [Repy to comment][thread] button. Basically, for new comments, this button is available in the top right corner. For existing threads, use the thread's comment field to reply.
+- Use the gitlab threads or reply to button wherever possible to keep the discussions organised. See this for how to use [Reply to comment][thread] button. Basically, for new comments, this button is available in the top right corner. For existing threads, use the thread's comment field to reply.
 - The gitlab actions can be activated via [quick actions] too. These are called on commenting with  `/command parameters`. Each quick action has to be **in a separate new line**. It can used/called be in a new comment too. These actions can be taken only by the memebers of the corresponding project/group.  <br/>
 Examples: `/close`  ,  `/due in 4 weeks`  ,  `/duplicate #451`  etc. 
 - This page lists the comment format alongwith the text commands for the related actions. Some of these are given separate for better readability, but can be used within single comment too.
