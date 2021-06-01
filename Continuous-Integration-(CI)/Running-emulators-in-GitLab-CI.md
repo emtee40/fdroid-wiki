@@ -1,4 +1,3 @@
-
 Running Android emulators in GitLab CI is very handy for running test suites on merge requests.  Also, it lets you test on old Android versions even if you have no device with that Android version.  This was announced as a release in a [blog post](https://f-droid.org/2021/02/24/running-emulator-tests-on-gitlab-ci.html)
 
 We use our own Docker images to support this:
@@ -55,4 +54,3 @@ The [microg system-image repository](https://github.com/microg/GmsCore/wiki/Deve
 
 * `system-images;android-29;microg;x86_64`
 * `system-images;android-23;microg;x86` - requires emulator v28 or older because it lacks a "ranchu" kernel.
-
