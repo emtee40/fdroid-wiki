@@ -16,7 +16,7 @@ If your app is already on F-Droid, use that build recipe. If not, create one. Ei
 
 We need to modify the build recipe so that F-Droid will always build from the latest commit of the current branch. For this, the `Builds` section needs to have one single entry, with `HEAD` as the commit. For example:
 
-```
+```yaml
 Builds:
   - versionName: 0.1.0
     versionCode: 100
@@ -42,7 +42,7 @@ By default, CI jobs are defined in `.gitlab-ci.yml` in the root directory of you
 
 Add a new section to create a new job:
 
-```
+```gitlab-ci
 fdroid build:
   image: registry.gitlab.com/fdroid/ci-images-client:latest
   allow_failure: true
@@ -103,7 +103,7 @@ By default the configuration is found in `.circleci/config.yml`.
 
 In the `jobs` section, add another subsection like this:
 
-```
+```circle-ci
   build_fdroid:
     docker:
       - image: registry.gitlab.com/fdroid/ci-images-client:latest
@@ -154,7 +154,7 @@ There is an experimental CI image for a fully configured F-Droid build server. U
 
 To use it, use the following job definition (for GitLab CI):
 
-```
+```gitlab-ci
 fdroid build:
   image: registry.gitlab.com/mvglasow/ci-images-server:latest
   allow_failure: true
@@ -186,7 +186,7 @@ For any other CI:
 If your app generates the version code on the fly during the build process, and in a manner you cannot easily predict (e.g. the string includes the commit hash, or the version code is based on the timestamp of the last commit), F-Droid will build your app but will fail when verifying the version code.
 
 You can work around this by skipping the version code check. To do so, edit your build recipe (`.fdroid.yml`). In the `Builds` entry, add the following line (be sure to use the correct indentation):
-```
+```yaml
 novcheck: yes
 ```
 
