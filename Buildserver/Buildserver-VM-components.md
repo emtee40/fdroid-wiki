@@ -1,6 +1,4 @@
-A list of the components and how they are used to create a Buildserver VM.
-
-## Contents
+A list of the components and how they are used to create a _buildserver_ guest VM.  The production _buildserver_ guest runs in a VM using Vagrant with either VirtualBox or _libvirt_.  The release builds need the security isolation provided by a VM. The CI build setup runs in Docker, since Docker is better suited for CI and security isolation is not so important.
 
 [[_TOC_]]
 
@@ -22,8 +20,8 @@ A list of the components and how they are used to create a Buildserver VM.
 
 ## Assembling
 
-1. `Basebox` is created with [basebox/fdroid_basebox.py](https://gitlab.com/fdroid/basebox/-/blob/master/fdroid_basebox.py)
-1. `Bootstrap Buildserver` can be used to setup a Buildserver locally
+1. _basebox_ is created with [basebox/fdroid_basebox.py](https://gitlab.com/fdroid/basebox/-/blob/master/fdroid_basebox.py)
+1. _fdroid-bootstrap-buildserver_ will create complete _buildserver_ instance with a _buildserver_ guest VM, both the host and guest VMs are built on top of _basebox_.  The production _buildserver_ host runs on bare metal, so it uses a Debian install, not _basebox_.
 
 - Unknown time: `Buildserver provision script`s run
 - Unknown time: `makebuildserver` runs
