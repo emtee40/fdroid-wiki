@@ -35,4 +35,3 @@ Host fdroid-buildserver-gcc147
   ServerAliveCountMax 5
 
 ```
-
