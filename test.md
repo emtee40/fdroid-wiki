@@ -22,5 +22,5 @@ Will continue to try fixing this (i.e., to delete this wiki page) the upcoming w
   So I learnt, that Gitlab's access tokens have different scopes, [which can be set when creating them](https://gitlab.com/-/profile/personal_access_tokens).   The default scope is "all API accesses", which may not include what is needed for above non-404 operation.<br />
   Thus I created another access token with all four "via http" rights (read_repository, 
 write_repository, read_registry, write_registry) and tried again: Exactly the same result as before!<br />
-  One can also see in the [access token table](https://gitlab.com/-/profile/personal_access_tokens), when a token has been "Last Used".  Interestingly the original  "all API accesses" token saw accesses from trying before, while the new "via http" token does not ("Never", even though I used it ~ 15 minutes ago).<br />
+  One can also see in the [access token table](https://gitlab.com/-/profile/personal_access_tokens), when a token has been "Last Used".  Interestingly my original  "all API accesses" token saw accesses from trying before, while my new "via http" token does not ("Never", even though I used it ~ 15 minutes ago).<br />
   Giving up for today.
