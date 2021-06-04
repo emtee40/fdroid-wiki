@@ -4,7 +4,7 @@ O.K. thinking "I am computer savvy, even at 4 a.m.", I looked up [the documentat
 `curl --request DELETE --header "PRIVATE-TOKEN: <my-freshly-generated-token>" "https://gitlab.com/api/v4/fdroid/wiki/-/wikis/test"`, which results in a `404 - not found`.
 
 Alright, "tweaking the URL a bit should do the job":<br />
-`url --request DELETE --header "PRIVATE-TOKEN: <my-freshly-generated-token>" "https://gitlab.com/fdroid/wiki/-/wikis/test"` results in a proper HTML-response, containing
+`curl --request DELETE --header "PRIVATE-TOKEN: <my-freshly-generated-token>" "https://gitlab.com/fdroid/wiki/-/wikis/test"` results in a proper HTML-response, containing
   ```
   <div class="container">
     <h3>The change you requested was rejected.</h3>
