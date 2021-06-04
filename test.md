@@ -26,6 +26,6 @@ write_repository, read_registry, write_registry) and tried again: Exactly the sa
 * Saturday<br />
   Browsing the Gitlab documentation for something helpful, I found [the API syntax for addressing project resources](https://docs.gitlab.com/ee/api/api_resources.html#project-resources), [how to read and set a Gitlab wiki's settings](https://docs.gitlab.com/ee/administration/wikis/index.html), [how to change Gitlab's application settings](https://docs.gitlab.com/ee/api/settings.html#change-application-settings), and reread [how to delete a wiki page](https://docs.gitlab.com/ee/api/wikis.html#delete-a-wiki-page).<br />
   So I came up with `curl --request DELETE --header "PRIVATE-TOKEN: <my-new-http-token>" "https://gitlab.com/api/v4/projects/fdroid/wikis/test"`, which resulted in `{"error":"insufficient_scope","error_description":"The request requires higher privileges than provided by the access token.","scope":"api read_api"}`!<br />
-  Egerly I executed a `curl --request DELETE --header "PRIVATE-TOKEN: <my-old-freshly-generated-token>" "https://gitlab.com/api/v4/projects/fdroid/wikis/test"`, but that just returns a `{"error":"404 Not Found"`.<br />
-  Interestingly I receive a `{"message":"404 Project Not Found"}`, when retrying this command!?!<br />
+  Egerly I executed a `curl --request DELETE --header "PRIVATE-TOKEN: <my-old-freshly-generated-token>" "https://gitlab.com/api/v4/projects/fdroid/wikis/test"`, but that just returns a `{"error":"404 Not Found"`, again (as before).<br />
+  Interestingly I receive a `{"message":"404 Project Not Found"}`, when trying this command a second time!?!<br />
   Giving up for today.
