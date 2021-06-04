@@ -1,10 +1,10 @@
-Dammit: For an overly quick (and senseless) test, I crated this wiki page, only to discover, that wiki pages cannot be deleted per the Gitlab web-frontend.
+Dammit: For an overly quick (and senseless) test, I created this wiki page, only to discover, that wiki pages cannot be deleted per the Gitlab web-frontend.
 
 O.K. thinking "I am computer savvy, even at 4 a.m.", I looked up [the documentation for deleting a wiki page](https://docs.gitlab.com/ee/api/wikis.html#delete-a-wiki-page) and tried<br />
-`curl --request DELETE --header "PRIVATE-TOKEN: abc123xyz" "https://gitlab.com/api/v4/fdroid/wiki/-/wikis/test"`, which results in a `404 - not found`.
+`curl --request DELETE --header "PRIVATE-TOKEN: <my-freshly-generated-token>" "https://gitlab.com/api/v4/fdroid/wiki/-/wikis/test"`, which results in a `404 - not found`.
 
 Alright, "tweaking the URL a bit should do the job":<br />
-`url --request DELETE --header "PRIVATE-TOKEN: abc123xyz" "https://gitlab.com/fdroid/wiki/-/wikis/test"` results in a proper HTML-response, containing
+`url --request DELETE --header "PRIVATE-TOKEN: <my-freshly-generated-token>" "https://gitlab.com/fdroid/wiki/-/wikis/test"` results in a proper HTML-response, containing
   ```
   <div class="container">
     <h3>The change you requested was rejected.</h3>
