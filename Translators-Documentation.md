@@ -8,13 +8,13 @@ It's recommended to first translate the glossaries. Only translate the normal gl
 
 # Translation and Localization
 
-Every piece of F-Droid can be localized, including the Android app, the entire website, and the tools. That means that all of the texts can be translated into any language supported by Android. F-Droid will also use localized formats for numbers, currency, dates, etc. which happens automatically based on the language and country specified in the device’s settings. All of the F-Droid resources are available for translation on Weblate “components” that are each managed separately, based on technical requirements.
+Every piece of F-Droid can be localized, including the Android app, the entire website, and the tools. That means that all of the texts can be translated into any language supported by Android. F-Droid will also use localized formats for numbers, currency, dates, etc. which happens automatically based on the language and country specified in the device’s settings. All of the F-Droid resources are available for translation on [Weblate “components”](https://hosted.weblate.org/projects/f-droid/) that are each managed separately, based on technical requirements.
 
-If an app’s source code repo includes app descriptions, then those will be automatically included as long as they use the supported layouts. If there are any issues with missing translations or broken localized formats, please file an issue so it can be fixed.
+If an app’s source code repo includes app descriptions, then those will be automatically included as long as they use the [supported layouts](https://f-droid.org/en/docs/All_About_Descriptions_Graphics_and_Screenshots). If there are any issues with missing translations or broken localized formats, please [file an issue](https://gitlab.com/groups/fdroid/issues) so it can be fixed.
 
 ## Contributing
 
-Is F-Droid not in your language, or the translation is incorrect or incomplete? Get involved in the translations on our Weblate.
+Is F-Droid not in your language, or the translation is incorrect or incomplete? Get involved in the translations on [our Weblate](https://hosted.weblate.org/projects/f-droid/).
 
 All translation work is done in Weblate to keep the workflow easy. We recommend that translators use a GitLab account for logging into Weblate since that same account can be used on all of the F-Droid projects on GitLab. you can find other translators on the forum.
 
