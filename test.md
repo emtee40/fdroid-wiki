@@ -29,9 +29,9 @@ write_repository, read_registry, write_registry) and tried again: Exactly the sa
   `curl --request DELETE --header "PRIVATE-TOKEN: <my-new-http-token>" "https://gitlab.com/api/v4/projects/fdroid/wikis/test"`,<br />
   which resulted in `{"error":"insufficient_scope","error_description":"The request requires higher privileges than provided by the access token.","scope":"api read_api"}`!<br />
   Egerly I executed a<br />
-  `curl --request DELETE --header "PRIVATE-TOKEN: <my-all-apis-token>" "https://gitlab.com/api/v4/projects/fdroid/wikis/test"`,<br />
-  but that just returns a `{"error":"404 Not Found"`, again (as before).<br />
-  Interestingly I receive a different `{"message":"404 Project Not Found"}`, when retrying this command!?!<br />
+  `curl --request DELETE --header "PRIVATE-TOKEN: <my-old-freshly-generated-token>" "https://gitlab.com/api/v4/projects/fdroid/wikis/test"`,<br />
+  but that just returns a `{"error":"404 Not Found"}`, again (as before).<br />
+  Interestingly I receive a `{"message":"404 Project Not Found"}`, when retrying this command!?!<br />
   Giving up for today.
 * Sunday<br />
   I may have found the culprit: While [I have the role "developer" for this wiki](https://gitlab.com/fdroid/wiki/-/project_members?search=olf), it [takes the "maintainer" role to delete wiki pages](https://docs.gitlab.com/ee/user/project/wiki/#delete-a-wiki-page).<br />
