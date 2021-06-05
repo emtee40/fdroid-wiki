@@ -36,4 +36,4 @@ write_repository, read_registry, write_registry) and tried again: Exactly the sa
 * Sunday<br />
   I may have found the culprit: While [I have the role "developer" for this wiki](https://gitlab.com/fdroid/wiki/-/project_members?search=olf), it [takes the "maintainer" role to delete wiki pages](https://docs.gitlab.com/ee/user/project/wiki/#delete-a-wiki-page).<br />
   That is O.K., I will consider how to document that well (and lastingly), probably as an issue.<br />
-  Leave it for today.
+  Leaving it for today.
