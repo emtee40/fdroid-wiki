@@ -34,6 +34,6 @@ write_repository, read_registry, write_registry) and tried again: Exactly the sa
   Interestingly I receive a `{"message":"404 Project Not Found"}`, when retrying this command!?!<br />
   Giving up for today.
 * Sunday<br />
-  I may have found the culprit: While [I have the role "developer" for this wiki](https://gitlab.com/fdroid/wiki/-/project_members?search=olf), it [takes the "maintainer" role to delete wiki pages](https://docs.gitlab.com/ee/user/project/wiki/#delete-a-wiki-page).<br />
+  I may have found the culprit: While [I have the role "developer" for this wiki](https://gitlab.com/fdroid/wiki/-/project_members?search=olf), it [takes the "maintainer" role to delete wiki pages](https://docs.gitlab.com/ee/user/project/wiki/#delete-a-wiki-page); then deleting a page is also offered at the GUI (web-frontend).<br />
   That is O.K., I will consider how to document that well (and lasting), probably as an issue.<br />
   Leaving it for today.
