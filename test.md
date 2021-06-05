@@ -29,3 +29,6 @@ write_repository, read_registry, write_registry) and tried again: Exactly the sa
   Egerly I executed a `curl --request DELETE --header "PRIVATE-TOKEN: <my-old-freshly-generated-token>" "https://gitlab.com/api/v4/projects/fdroid/wikis/test"`, but that just returns a `{"error":"404 Not Found"`, again (as before).<br />
   Interestingly I receive a `{"message":"404 Project Not Found"}`, when retrying this command!?!<br />
   Giving up for today.
+* Sunday
+  I may have found the culprit: While [I have the role "developer" for this wiki](https://gitlab.com/fdroid/wiki/-/project_members?search=olf), it [takes the "maintainer" role to delete wiki pages](https://docs.gitlab.com/ee/user/project/wiki/#delete-a-wiki-page).
+  That is O.K., I will consider how to document that well (and lastingly), probably as an issue.
