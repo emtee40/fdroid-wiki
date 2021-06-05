@@ -25,10 +25,15 @@ write_repository, read_registry, write_registry) and tried again: Exactly the sa
   Giving up for today.
 * Saturday<br />
   Browsing the Gitlab documentation for something helpful, I found [the API syntax for addressing project resources](https://docs.gitlab.com/ee/api/api_resources.html#project-resources), [how to read and set a Gitlab wiki's settings](https://docs.gitlab.com/ee/administration/wikis/index.html), [how to change Gitlab's application settings](https://docs.gitlab.com/ee/api/settings.html#change-application-settings), and reread [how to delete a wiki page](https://docs.gitlab.com/ee/api/wikis.html#delete-a-wiki-page).<br />
-  So I came up with `curl --request DELETE --header "PRIVATE-TOKEN: <my-new-http-token>" "https://gitlab.com/api/v4/projects/fdroid/wikis/test"`, which resulted in `{"error":"insufficient_scope","error_description":"The request requires higher privileges than provided by the access token.","scope":"api read_api"}`!<br />
-  Egerly I executed a `curl --request DELETE --header "PRIVATE-TOKEN: <my-old-freshly-generated-token>" "https://gitlab.com/api/v4/projects/fdroid/wikis/test"`, but that just returns a `{"error":"404 Not Found"`, again (as before).<br />
+  So I came up with<br />
+  `curl --request DELETE --header "PRIVATE-TOKEN: <my-new-http-token>" "https://gitlab.com/api/v4/projects/fdroid/wikis/test"`,<br />
+  which resulted in `{"error":"insufficient_scope","error_description":"The request requires higher privileges than provided by the access token.","scope":"api read_api"}`!<br />
+  Egerly I executed a<br />
+  `curl --request DELETE --header "PRIVATE-TOKEN: <my-old-freshly-generated-token>" "https://gitlab.com/api/v4/projects/fdroid/wikis/test"`,<br />
+  but that just returns a `{"error":"404 Not Found"`, again (as before).<br />
   Interestingly I receive a `{"message":"404 Project Not Found"}`, when retrying this command!?!<br />
   Giving up for today.
-* Sunday
-  I may have found the culprit: While [I have the role "developer" for this wiki](https://gitlab.com/fdroid/wiki/-/project_members?search=olf), it [takes the "maintainer" role to delete wiki pages](https://docs.gitlab.com/ee/user/project/wiki/#delete-a-wiki-page).
-  That is O.K., I will consider how to document that well (and lastingly), probably as an issue.
+* Sunday<br />
+  I may have found the culprit: While [I have the role "developer" for this wiki](https://gitlab.com/fdroid/wiki/-/project_members?search=olf), it [takes the "maintainer" role to delete wiki pages](https://docs.gitlab.com/ee/user/project/wiki/#delete-a-wiki-page).<br />
+  That is O.K., I will consider how to document that well (and lastingly), probably as an issue.<br />
+  Leave it for today.
