@@ -16,13 +16,13 @@ If an app’s source code repo includes app descriptions, then those will be aut
 
 Is F-Droid not in your language, or the translation is incorrect or incomplete? Get involved in the translations on [our Weblate](https://hosted.weblate.org/projects/f-droid/).
 
-All translation work is done in Weblate to keep the workflow easy. We recommend that translators use a GitLab account for logging into Weblate since that same account can be used on all of the F-Droid projects on GitLab. you can find other translators on the forum.
+All translation work is done in Weblate to keep the workflow easy. We recommend that translators use a [GitLab](https://gitlab.com/) account for logging into Weblate since that same account can be used on all of the F-Droid projects on GitLab. you can find other translators on the [forum](https://forum.f-droid.org/c/translation).
 
 ### Adding a new language
 
-First and foremost, Android must already support the specific language and locale you want to add. We cannot work with languages that Android and the SDK do not support, the tools simply break down. Next, if you are considering adding a country-specific variant of a language (e.g. de-AT), first make sure that the main language is well maintained (e.g. de). Your contribution might be useful to more people if you contribute to the existing version of your language rather than the country-specific variant.
+First and foremost, Android must [already support](https://android.googlesource.com/platform/frameworks/base/+/master/core/res/res/values/locale_config.xml) the specific language and locale you want to add. We cannot work with languages that Android and the SDK do not support, the tools simply break down. Next, if you are considering adding a country-specific variant of a language (e.g. de-AT), first make sure that the main language is well maintained (e.g. de). Your contribution might be useful to more people if you contribute to the existing version of your language rather than the country-specific variant.
 
-For fdroidclient, fdroidserver and Repomaker, anyone can create a new language via Weblate. For the rest of the translation “components” on Weblate, please file an admin issue to request a new language.
+For [fdroidclient](https://hosted.weblate.org/projects/f-droid/f-droid/), [fdroidserver](https://hosted.weblate.org/projects/f-droid/fdroidserver/) and [Repomaker](https://hosted.weblate.org/projects/f-droid/repomaker/), anyone can create a new language via Weblate. For the rest of the translation “components” on Weblate, please [file an admin issue](https://gitlab.com/fdroid/admin/issues) to request a new language.
 
 ### When translations are included
 
@@ -34,7 +34,7 @@ As a general rule, a translation must be at least 70% complete for it to be incl
 
 #### App summaries
 
-f-droid.org makes the one line summaries for many apps available for translation. The goal is to make it possible to have sections where only a single language is show, like the Latest Tab or the website sidebar. These are imported on a rolling basis, at least once a month.
+f-droid.org makes the one line summaries for many apps [available for translation](https://hosted.weblate.org/projects/f-droid/fdroiddata/). The goal is to make it possible to have sections where only a single language is show, like the Latest Tab or the website sidebar. These are imported on a rolling basis, at least once a month.
 
 #### f-droid.org website
 
@@ -58,6 +58,6 @@ The client application is available in many languages. Should yours not be among
 
 ## Communication
 We have a special category at our forum for translation:
-https://forum.f-droid.org/c/translation/21
+https://forum.f-droid.org/c/translation/
 
 You can also contact us with the matrix protocol(you can use the [element client](https://element.io)), the channels are #fdroid:matrix.org and #fdroid-dev:f-droid.org
