@@ -1,5 +1,3 @@
-# This document is under construction, but should be considered a valuable resource
-
 The f-droid project's translation is currently managed on:
 https://hosted.weblate.org/projects/f-droid/
 
@@ -38,15 +36,15 @@ f-droid.org makes the one line summaries for many apps [available for translatio
 
 #### f-droid.org website
 
-For the f-droid.org website, it is a much more complicated system. Since it cannot (yet?) support lots of languages, we have to put stricter requirements on it. The core strings must be fully translated to be included. They also must be maintained in order to stay included. The documentation and tutorials are very useful to have translated. The blog posts are the least important. Each page must be fully translated before the translated version will be shown, otherwise, the site will show the original English.
+For the f-droid.org website, it is a much more complicated system. Since it cannot ([yet?](https://gitlab.com/fdroid/fdroid-website/-/milestones/6)) support lots of languages, we have to put stricter requirements on it. The core strings must be fully translated to be included. They also must be maintained in order to stay included. The documentation and tutorials are very useful to have translated. The blog posts are the least important. Each page must be fully translated before the translated version will be shown, otherwise, the site will show the original English.
 
 In order for a new language to be added to f-droid.org, it must have:
 
-    Website component: 100% translated
-    Website Pages component: 100% translated
-    Data component: at least 10% translated
+- [Website](https://hosted.weblate.org/projects/f-droid/website) component: 100% translated
+- [Website Pages](https://hosted.weblate.org/projects/f-droid/website-pages) component: 100% translated
+- [Data](https://hosted.weblate.org/projects/f-droid/F-droid data) component: at least 10% translated
 
-There is a nightly build of the website that includes all translations on Weblate, no matter how complete they are. This lets everyone see the progress, and means we can get new languages working well before launching them.
+There is a [nightly build of the website](https://staging.f-droid.org/) that includes all translations on Weblate, no matter how complete they are. This lets everyone see the progress, and means we can get new languages working well before launching them.
 
 ## The old “Languages” preference
 
@@ -60,4 +58,4 @@ The client application is available in many languages. Should yours not be among
 We have a special category at our forum for translation:
 https://forum.f-droid.org/c/translation/
 
-You can also contact us with the matrix protocol(you can use the [element client](https://element.io)), the channels are #fdroid:matrix.org and #fdroid-dev:f-droid.org
+You can also contact us with the matrix protocol(you can use the [element client](https://element.io)), the channels are #fdroid:f-droid.org and #fdroid-dev:f-droid.org
