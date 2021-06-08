@@ -1,5 +1,5 @@
 There are a number of _buildserver_ instances which community members can get
-access to.  You do not need to be a core contributor to get access.
+access to.  You do not need to be a core contributor to get access.  Once you have been granted access, you will need to copy the relevant config from below and put it into _~/.ssh/config_.
 
 
 ## fdroid-buildserver-gcc136-public
