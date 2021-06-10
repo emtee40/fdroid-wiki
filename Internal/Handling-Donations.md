@@ -1,8 +1,8 @@
-This page will collect details on using our OpenCollective presence.
+This page will collect details on using our donations systems, including OpenCollective, Liberapay, and GitHub Sponsors.
 
 ## Payouts
 ### Payouts via bank transfer
-Other than Liberapay (performing payouts only via PayPal or Strype), OpenCollective supports payouts via bank transfer, which we meanwhile tested successfully.
+Other than Liberapay (performing payouts only via PayPal or Stripe), OpenCollective supports payouts via bank transfer, which we meanwhile tested successfully.
 
 If you have a payout request, first step is to file it as [issue with our admin repo](https://gitlab.com/fdroid/admin/-/issues), pointing out what the payout is for, and how much it should be. This issue will take a week to be processed, so team members have a chance to chime in, approve, or ask for clarification.
 
@@ -52,3 +52,16 @@ Confirm you tell the truth, the full truth, and nothing but… well, send the fo
 * OpenCollective: [Submitting Expenses](https://docs.opencollective.com/help/expenses-and-getting-paid/submitting-expenses)
 * OpenCollective: [Tax Information](https://docs.opencollective.com/help/expenses-and-getting-paid/tax-information)
 * IRS: [Instructions for Form W-8BEN](https://www.irs.gov/instructions/iw8ben)
+
+
+## Stripe
+
+Stripe is a service that can be used to move money from Liberapay, GitHub Sponsors, and others into bank accounts.  Stripe is used to move donations from F-Droid's [GitHub Sponsors](https://github.com/sponsors/f-droid) into F-Droid's [OpenCollective](https://opencollective.com/f-droid/) in accounts managed by @bubu and @eighthave.
+
+Individual contributors can use Stripe to receive money from Liberapay.  By default, this will transfer each individual donation to your bank account, generating lots of transactions.  Stripe's "[Bank accounts and scheduling](https://dashboard.stripe.com/settings/payouts)" under "Business settings" lets you change the payout frequency, for example, to monthly.
+
+
+## Paypal
+
+Paypal can be used to receive money from Liberapay.
+
