@@ -16,3 +16,5 @@ This is a work-in-progress policy doc for the process of requesting and being gr
 * These requests are approved by "lazy consensus".  There is a one week waiting period where existing core contributors can voice concerns or objections.  If there have been no objections or requests for more time, the request will be approved after seven days has past.
 
 * Core contributors can optionally be added to the  `team@f-droid.org` email alias.
+
+* Core contributors can be added to the [Consultants](https://f-droid.org/consulting/) page, edit [consulting.md](https://gitlab.com/fdroid/fdroid-website/blob/master/_pages/consulting.md) and submit a merge request.
