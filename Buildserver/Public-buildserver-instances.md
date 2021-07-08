@@ -35,3 +35,5 @@ Host fdroid-buildserver-gcc147
   ServerAliveCountMax 5
 
 ```
+
+These machines are hosted at OSUOSL as part of the [GCC Farm Project](https://cfarm.tetaneutral.net/machines/list/).
