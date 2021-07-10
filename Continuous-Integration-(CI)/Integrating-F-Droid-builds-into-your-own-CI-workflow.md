@@ -148,7 +148,7 @@ After that, be sure to add the new job to any workflow you would like to run it 
 
 # Refinements
 
-## Use a prebuilt CI image
+## Using a prebuilt CI image
 
 The CI script is currently rather long because we are not using a dedicated F-Droid build server image. Rather, we are using a generic image and need to install a couple of things on top of it. This is the same setup the [fdroiddata](https://gitlab.com/fdroid/fdroiddata) repository is using (as of February, 2021).
 
@@ -183,7 +183,7 @@ For any other CI:
 * Change the image to `registry.gitlab.com/mvglasow/ci-images-server:latest`
 * Drop all install steps from the script, starting with `set -x` (we still need to install `sudo` before each run, as F-Droid will uninstall it when running in `--on-server` mode).
 
-## My app generates its version codes dynamically
+## Dynamically generated version codes
 
 If your app generates the version code on the fly during the build process, and in a manner you cannot easily predict (e.g. the string includes the commit hash, or the version code is based on the timestamp of the last commit), F-Droid will build your app but will fail when verifying the version code.
 
