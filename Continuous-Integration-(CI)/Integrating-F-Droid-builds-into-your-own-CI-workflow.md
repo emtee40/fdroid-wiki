@@ -14,6 +14,8 @@ Essentially, what you need to do is to drop an F-Droid build recipe for your app
 
 If your app is already on F-Droid, use that build recipe. If not, create one. Either way, the build recipe needs to reside in the root folder of the source tree and be named `.fdroid.yml`.
 
+Although this build recipe will be placed in the source tree, it still needs to specify `RepoType` and `Repo` – otherwise, F-Droid will exit with an error, telling you there are no apps to process.
+
 We need to modify the build recipe so that F-Droid will always build from the latest commit of the current branch. For this, the `Builds` section needs to have one single entry, with `HEAD` as the commit. For example:
 
 ```yaml
