@@ -58,21 +58,20 @@ Builds:
   - versionName: 0.0.3
     versionCode: 3
     commit: v0.0.3
-    output: build/app/outputs/apk/release/app-release-unsigned.apk
+    output: build/app/outputs/flutter-apk/app-release.apk
     srclibs:
-      - flutter@1.22.5
+      - flutter@2.2.3
     rm:
       - ios
       - .vs
-    prebuild: echo "flutter.sdk=$$flutter$$" >> ../local.properties
     build:
       - $$flutter$$/bin/flutter config --no-analytics
       - $$flutter$$/bin/flutter packages pub get
       - $$flutter$$/bin/flutter build apk --flavor fdroid
 
 AutoUpdateMode: Version v%v
-UpdateCheckMode: HTTP
-UpdateCheckData: https://raw.githubusercontent.com/<owner>/<repo>/<branch>/pubspec.yaml|version:\s.+\+(\d+)|.|version:\s(.+)\+
+UpdateCheckMode: Tags
+UpdateCheckData: pubspec.yaml|version:\s.+\+(\d+)|.|version:\s(.+)\+
 CurrentVersion: 0.0.3
 CurrentVersionCode: 3
 ```
@@ -85,7 +84,6 @@ This is a skeleton for a Flutter app that does not use build flavors. **Notes:**
   - pattern with build flavor: `build/app/outputs/apk/[{flavor}/]release/app-[{flavor}-]release.apk`
 * `srclibs:` never use something like `flutter@stable` or `flutter@dev`. The value after the `@` must match an existing [Flutter release](https://github.com/flutter/flutter/releases), so the very same build can reproducibly be run later again (also [see here](https://gitlab.com/fdroid/fdroiddata/-/merge_requests/8428#note_513934639) for reference)
 * `rm` is project specific. Just remove everything that's not needed for the Android build.
-* `prebuild` might need additional steps. The one specified in above skeleton suffices for most cases (and seems to be always needed).
 * `build:` the first line **must** be there – as by default, Flutter has analytics enabled. The second line may be obsolete, but is often needed. In the third line, ommit the `--flavor <flavorName>` if the app has no build flavors.
 * even though Flutter apps use gradlew, do **not** specify `gradle: yes` or `gradle: <flavor>`. That's dealt with differently with Flutter apps. Similarly, using `subdir` in most cases simply seems to break the build; it's not needed here as Flutter deals with it itself. This is why `rm` is important here.
 
