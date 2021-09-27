@@ -11,7 +11,11 @@
 * matrix?
 * oftc?
 
-## Hardware
+## Hardware/Software
+
+* F-Droid GPG key (admin@f-droid.org)
+* index signing key
+* app signing keys
 
 
 ## Money
