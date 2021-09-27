@@ -2,10 +2,10 @@
 ## Accounts
 
 * https://mastodon.technology/@fdroidorg
+* https://twitter.com/fdroidorg
 * https://gitlab.com/fdroid
 * https://github.com/fdroid
 * https://github.com/f-droid
-* https://twitter.com/fdroidorg
 
 * telegram?
 * matrix?
