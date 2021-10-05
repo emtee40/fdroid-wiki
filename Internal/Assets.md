@@ -29,3 +29,9 @@
 * [F-Droid Limited UK "private company"](https://beta.companieshouse.gov.uk/company/08420676)
 * [PayPal](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=E2FCXCT6837GL)
 * [flattr](https://flattr.com/thing/343053/F-Droid-Repository)
+* Bank Account: 
+```nohighlight
+Name: F-Droid Limited
+IBAN: GB92 BARC 2056 7893 4088 92
+SWIFT: BARCGB22
+```
