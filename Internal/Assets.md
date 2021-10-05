@@ -20,7 +20,12 @@
 
 ## Money
 
-* https://opencollective.com/f-droid/
+* https://opencollective.com/f-droid
+* https://opencollective.com/f-fdroid-euro
 * https://liberapay.com/F-Droid-Data
-* [F-Droid Limited UK "private company"](https://beta.companieshouse.gov.uk/company/08420676)
+* https://github.com/sponsors/f-droid, which is hooked up to https://opencollective.com/f-droid via Stripe.
 
+### Deprecated
+* [F-Droid Limited UK "private company"](https://beta.companieshouse.gov.uk/company/08420676)
+* [PayPal](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=E2FCXCT6837GL)
+* [flattr](https://flattr.com/thing/343053/F-Droid-Repository)
