@@ -1,21 +1,14 @@
 
-## Accounts
 
-* https://mastodon.technology/@fdroidorg
-* https://twitter.com/fdroidorg
-* https://gitlab.com/fdroid
-* https://github.com/fdroid
-* https://github.com/f-droid
 
-* telegram?
-* matrix?
-* oftc?
+
+
 
 ## Domain Names
 
 * f-droid.com     maintained by @CiaranG
 
-* f-droid.org	maintained by @CiaranG
+* f-droid.org	maintained by @CiaranG   (active website)  team@f-droid.org (email address)
 
 * fdroid.com	maintained by @CiaranG
 
@@ -37,11 +30,49 @@
 
 * fdroid.co       maintained by @eighthave
 
+
+## Project Infrastructure:
+
+## Source Code Repositories
+  
+- * https://gitlab.com/fdroid  (Group ID Number 28397)
+- * https://github.com/fdroid
+- * https://github.com/f-droid
+
+## Forums
+
+- * https://forum.f-droid.org/
+
+
+## Social Media
+
+- * https://webchat.oftc.net/?randomnick=1&channels=fdroid&prompt=1   
+ #fdroid on OFTC
+- * https://matrix.to/#/#fdroid:f-droid.org
+ #fdroid:f-droid.org on Matrix
+- * https://t.me/joinchat/AlRQekvjWDTuQrCgMYSNVA  
+ (Telegram)
+- * https://xmpp.org/#fdroid#matrix.org@bridge.xmpp.matrix.org?join
+- * https://mastodon.technology/@fdroidorg
+- * https://twitter.com/fdroidorg
+
+## Archives
+ 
+- * https://view.matrix.org/room/!hbPGQxyHEvFEncGQxE:f-droid.org/?anchor=$CW5qfh6r1SvaZpkKoGimBcFbRynTVO2F3mYpOb9uIWY&offset=30
+
+## Databases ?
+
 ## Hardware/Software
 
 * F-Droid GPG key (admin@f-droid.org)
 * index signing key
 * app signing keys
+
+## Licenses Used
+
+* GNU Affero General Public License version 3 or later (AGPLv3+)  
+* Creative Commons Attribution-ShareAlike 3.0 License (CC-BY-SA-3.0) 
+* GNU General Public License version 3 or later (GPLv3+)
 
 
 ## Money
