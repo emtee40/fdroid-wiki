@@ -11,6 +11,32 @@
 * matrix?
 * oftc?
 
+## Domain Names
+
+f-droid.com     maintained by @CiaranG
+
+f-droid.org	maintained by @CiaranG
+
+fdroid.com	maintained by @CiaranG
+
+fdroid.org	maintained by @CiaranG
+
+f-dr01d.org     maintained by @eighthave
+
+f-dr0id.org     maintained by @eighthave
+
+f-dr0ld.org     maintained by @eighthave
+
+f-dro1d.org     maintained by @eighthave
+
+f-drold.org     maintained by @eighthave
+
+fdroid.net      maintained by @eighthave
+
+f-droid.co      maintained by @eighthave
+
+fdroid.co       maintained by @eighthave
+
 ## Hardware/Software
 
 * F-Droid GPG key (admin@f-droid.org)
