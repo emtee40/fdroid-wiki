@@ -5,14 +5,15 @@ access to.  You do not need to be a core contributor to get access.  Once you ha
 ## fdroid-buildserver-gcc136-public
 
 ```config
-Host gcc136.osuosl.org
+Host fdroidGcc136
+  Hostname gcc136.osuosl.org
   Port 45015
   User tunnel
 
 Host fdroid-buildserver-gcc136-public
   User fdroid
-  PasswordAuthentication no 
-  ProxyCommand ssh -qax -W 192.168.78.135:22 tunnel@gcc136.osuosl.org
+  Hostname 192.168.78.135
+  ProxyJump fdroidGcc136
   ServerAliveInterval 30
   ServerAliveCountMax 5
 ```
@@ -23,14 +24,15 @@ This aims to be as close as possible to the production setup.  There is an Ubunt
 ## gcc147
 
 ```config
-Host gcc147.osuosl.org
+Host fdroidGcc147
+  Hostname gcc147.osuosl.org
   Port 45026
   User tunnel
 
 Host fdroid-buildserver-gcc147
   User fdroid
-  PasswordAuthentication no 
-  ProxyCommand ssh -qax -W 192.168.111.129:22 tunnel@gcc147.osuosl.org
+  Hostname 192.168.111.129
+  ProxyJump fdroidGcc147
   ServerAliveInterval 30
   ServerAliveCountMax 5
 
