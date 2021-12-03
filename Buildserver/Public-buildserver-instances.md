@@ -1,6 +1,10 @@
-There are a number of _buildserver_ instances which community members can get
-access to.  You do not need to be a core contributor to get access.  Once you have been granted access, you will need to copy the relevant config from below and put it into _~/.ssh/config_.
+# Get access
 
+There are a number of _buildserver_ instances which community members can get access to.  You do not need to be a core contributor to get access. You may as @jspricke @TheLastProject @uniqx or anyone else who have access to the machines, on [Matrix](https://matrix.to/#/#fdroid-dev:f-droid.org).
+
+# Setup
+
+Once you have been granted access, you will need to copy the relevant config from below and put it into _~/.ssh/config_.
 
 ## fdroid-buildserver-gcc136-public
 
