@@ -45,6 +45,7 @@ URL: https://rfc2822.gitlab.io/fdroid-firefox/fdroid/repo?fingerprint=8F992BBBA0
 Description: Official repository for apps created by Divested Computing Group. All apps are developed by Divested Computing Group with the exception of Fennec DOS which is based on Mozilla technology.
 
 URL: https://divestos.org/fdroid/official/?fingerprint=E4BE8D6ABFA4D9D4FEEF03CDDA7FF62A73FD64B75566F6DD4E5E577550BE8467
+
 --
 ## -------------------------------- Messaging -------------------------
 ### Signal -----------------
