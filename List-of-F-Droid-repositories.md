@@ -46,7 +46,7 @@ Description: Official repository for apps created by Divested Computing Group. A
 
 URL: https://divestos.org/fdroid/official/?fingerprint=E4BE8D6ABFA4D9D4FEEF03CDDA7FF62A73FD64B75566F6DD4E5E577550BE8467
 
---
+---
 ## -------------------------------- Messaging -------------------------
 ### Signal -----------------
 #### TwinHelix - Signal FOSS
@@ -80,7 +80,7 @@ Description: Unofficial repository for uGet Download manager, the Universal (non
 
 URL: https://fdroid.heartshine.xyz/repo?fingerprint=11579B3CE3F5F9398C9E124EE301744382B77250E548F0D4ED90EA0212A5460F
 
---
+---
 ### private --------------------
 #### Briar
 
@@ -124,7 +124,7 @@ Description: Repository contains apps like Launchpad (an audio sequencer), Proto
 
 URL: https://submarine.strangled.net/fdroid/repo/?fingerprint=3DB2D09F573245E005B6A54EB5EBF6E6A351D6A5161CFEEFF1442C939597C31B
 
---
+---
 ### not completely private --------------
 #### Cutthecord
 
@@ -138,7 +138,8 @@ Description: Official repository for Ltt.rs, an easy to use Email client.
 
 URL: https://ltt.rs/fdroid/repo?fingerprint=9C2E57C85C279E5E1A427F6E87927FC1E2278F62D61D7FCEFDE9346E568CCF86
 
-## ------------------------ G**gle related -----------------
+---
+## ------------------------ Google related -----------------
 #### MicroG
 
 Description: Official repository for microG an free as in freedom re-implementation of Google’s proprietary Android user space apps and libraries.
@@ -175,7 +176,7 @@ Description: An Fdroid repository contains apps by UnifiedPush.
 
 URL: https://repo.unifiedpush.org//?fingerprint=DF11176406C63A7876103CE6CC1A8FCA239DF76AA5F6DE5CDBAFE73ECDBF1875
 
---
+---
 ## --------------------------- popular Apps ----------------------
 #### Collabora Office
 
@@ -189,7 +190,7 @@ Description: Official repository for Bitwarden an secure and free password manag
 
 URL: https://mobileapp.bitwarden.com/fdroid?fingerprint=BC54EA6FD1CD5175BCCCC47C561C5726E1C3ED7E686B6DB4B18BAC843A3EFE6C
 
---
+---
 ## --------------------------- Privacy -----------------------
 #### I2P
 
@@ -221,7 +222,7 @@ Description: Official Kali Nethunter repository for applications used in penetra
 
 URL: https://store.nethunter.com/repo?fingerprint=7E418D34C3AD4F3C37D7E6B0FACE13332364459C862134EB099A3BDA2CCF4494
 
---
+---
 ## ---------------- specific OS -----------------------
 #### The Calyx Institute F-Droid Repository
 
@@ -235,7 +236,7 @@ Description: Official repository by KDE containing nightly test versions of thei
 
 URL: https://cdn.kde.org/android/fdroid/repo/?fingerprint=B3EBE10AFA6C5C400379B34473E843D686C61AE6AD33F423C98AF903F056523F
 
---
+---
 #### DivestOS Unofficial
 
 Description: This repository contains unofficial builds of open source apps that are not included in the official F-Droid repo or IzzySoft repo.
@@ -362,6 +363,7 @@ Description: Official Repo for the library app VideLibri. VideLibri lists the bo
 
 URL: https://fdroid.videlibri.de/repo?fingerprint=388988E3A53B6F91D1AE39784EA4B5F1A12B22D34F8E3363E5C7F70A1C57A6F4
 
+---
 ### ------------------------ non-FOSS ------------------------
 #### Luca App
 ***(not FOSS and bad privacy handling, I highly recommend the "Corona-Warn App" instead, with its Fork "Corona Tracing" being on FDroid and working with microG)*** -the Editor
@@ -376,7 +378,7 @@ Description: An small collection of Non Foss apps.
 
 URL: https://haagch.frickel.club/files/fdroid/repo?fingerprint=387AC9E58C9481A6B1A8DCE53A16E53645DA694822A8FE50C877EFB5F42E6933
 
--------------------------------------------------------------
+---
 **Note**
 This collection was taken from the "F-Droid Repositories" Telegram channel, to provide the list to anyone without the limitation of this app. It was also rearranged and structured a bit, for better readibility. I can't grant future updates of this list.
 - the Editor
