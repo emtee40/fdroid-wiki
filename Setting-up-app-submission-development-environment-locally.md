@@ -8,7 +8,7 @@
 
    ```shell
    cd fdroiddata
-   docker run --rm -i -t --entrypoint "/bin/bash" -v ${ANDROID_ROOT}:/opt/android-sdk:Z -v $(pwd):/build:z -e ANDROID_HOME:/opt/android-sdk registry.gitlab.com/proletarius101/ci-images-client:fdroid-build
+   docker run --rm -i -t --entrypoint "/bin/bash" -v ${ANDROID_SDK_ROOT}:/opt/android-sdk:Z -v $(pwd):/build:z -e ANDROID_HOME:/opt/android-sdk registry.gitlab.com/proletarius101/ci-images-client:fdroid-build
    ```
 
 3. Run the `fdroid` command you want. e.g.
