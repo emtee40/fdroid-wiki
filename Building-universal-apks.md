@@ -4,3 +4,15 @@ To enable [auto update](https://f-droid.org/en/docs/Build_Metadata_Reference/#Au
 prebuild:
   - echo "android { splits { abi { enable false } } }" >> build.gradle
 ```
+
+Or add a `fdroid` [build type](https://developer.android.com/studio/build/build-variants):
+
+```yaml
+        fdroid {
+            splits {
+                abi {
+                    enable false
+                }
+            }
+        }
+```
