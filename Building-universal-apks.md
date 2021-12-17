@@ -8,6 +8,8 @@ prebuild:
 Or add a `fdroid` [build type](https://developer.android.com/studio/build/build-variants):
 
 ```yaml
+android {
+    buildTypes {
         fdroid {
             splits {
                 abi {
@@ -15,4 +17,6 @@ Or add a `fdroid` [build type](https://developer.android.com/studio/build/build-
                 }
             }
         }
+    }
+}
 ```
