@@ -34,7 +34,7 @@ That's due to we are [still using the legacy Android SDK tool](https://gitlab.co
         || true
       - export PATH=${ANDROID_SDK_ROOT}/cmdline-tools/tools/bin:${PATH}
       - yes | sdkmanager --licenses
-      - sdkmanager "build-tools;30.0.3" "build-tools;31.0.0" "platforms;android-31"
+      - sdkmanager "build-tools;30.0.3" "build-tools;31.0.0" "platforms;android-31" # Or let gradle to download the corresponding SDKs automatically
 ```
 
 This issue will persist before we switch to the new build container image.
