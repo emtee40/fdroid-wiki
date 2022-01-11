@@ -4,7 +4,7 @@ A list of tasks an F-Droid client has to perform. These tasks could serve as a b
 
 ## Low-level back-end tasks
 
-### Downloading Index (with Mirroring)
+### Downloading Index and other files like APKs and icons (with Mirroring)
 
    * IndexV1Updater
    * .net.`*`Http`*`
