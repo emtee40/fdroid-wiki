@@ -9,6 +9,8 @@ Weekly Meeting: Tuesdays, 1300 UTC on #fdroid-dev and https://meet.calyx.net/fdr
 
 * Can we go with readable json only? I.e. Don't use the jar format and rely on the web server compressing the data.
 * Do we need the `"version": 30001` field?
+* Use a dict for the hashes?
+* drop `localized` and have `"description": {"en-US": "Foo", "de": "Blub"}`?
 
 ### Subdirectories
 
@@ -22,6 +24,7 @@ Weekly Meeting: Tuesdays, 1300 UTC on #fdroid-dev and https://meet.calyx.net/fdr
 * Entry point is `index-v2.json` (signed) linking to different files:
   - Files are a tuple (filename, hash).
   - hashType is defined globally.
+  - Diff is `diff-oldTimestamp.json` to current version.
 
 ```json
 {
@@ -35,11 +38,11 @@ Weekly Meeting: Tuesdays, 1300 UTC on #fdroid-dev and https://meet.calyx.net/fdr
       "b1f27fa87f8cabca50cdcd462a0f500d79d883b965a498d0e49eea560b39be1f"
     ],
     [
-      "diff-2021-12-28-2007.05.json",
+      "diff-1641697179000.json",
       "b1f27fa87f8cabca50cdcd462a0f500d79d883b965a498d0e49eea560b39be1f"
     ],
     [
-      "diff-2021-12-27-2007.05.json",
+      "diff-1641697169000.json",
       "b1f27fa87f8cabca50cdcd462a0f500d79d883b965a498d0e49eea560b39be1f"
     ]
   ]
@@ -48,6 +51,7 @@ Weekly Meeting: Tuesdays, 1300 UTC on #fdroid-dev and https://meet.calyx.net/fdr
 
 * `repo.json` contains all the data:
   - Use versionCode as the key in the versions dict.
+  - permissions key is maxSDK.
 
 ```json
 {
@@ -77,7 +81,7 @@ Weekly Meeting: Tuesdays, 1300 UTC on #fdroid-dev and https://meet.calyx.net/fdr
           "advertising-icon.png",
           "b1f27fa87f8cabca50cdcd462a0f500d79d883b965a498d0e49eea560b39be1f"
         ],
-        "localized": {
+        "description": {
           "en-US": "This Anti-Feature is applied to an app that contains advertising."
         }
       }
@@ -245,8 +249,7 @@ Weekly Meeting: Tuesdays, 1300 UTC on #fdroid-dev and https://meet.calyx.net/fdr
                   "9893a7da6d959b1a0024dfcbb4f515103471491d05596e5a138c639104d45b8a"
                 ]
               ]
-            },
-            "whatsNew": "- Fix notifications on Android 12\n- Add DecSync and Birthday Adapter to \"known\" apps and don't crash\n"
+            }
           }
         }
       },
@@ -367,7 +370,10 @@ Weekly Meeting: Tuesdays, 1300 UTC on #fdroid-dev and https://meet.calyx.net/fdr
               "android.permission.READ_EXTERNAL_STORAGE"
             ]
           },
-          "versionName": "1.0.28"
+          "versionName": "1.0.28",
+          "whatsNew": {
+            "en-US": "- Fix notifications on Android 12\n- Add DecSync and Birthday Adapter to \"known\" apps and don't crash\n"
+          }
         }
       }
     }
