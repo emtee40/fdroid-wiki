@@ -5,34 +5,72 @@ We are creating a new index format to solve a lot of issue and improve things.  
 
 Weekly Meeting: Tuesdays, 1300 UTC on #fdroid-dev and https://meet.calyx.net/fdroid
 
+## Open Topics
+
+* Can we go with readable json only? I.e. Don't use the jar format and rely on the web server compressing the data.
+* Do we need the `"version": 30001` field?
+
+### Subdirectories
+
+* Test if feasible (Jochen: which old client versions to test?)
+* Define structure:
+  - Maven repo scheme: `com/example/app`.
+  - Debian scheme: `c/com.example.app`.
+
 ## New index format
 
-* Entry point is `index-v2.json` (signed) linking to different files (complete index, diff..).
-* hashType is defined globally.
-* Files are a tuple (filename, hash).
-* Use versionCode as the key in the versions dict.
+* Entry point is `index-v2.json` (signed) linking to different files:
+  - Files are a tuple (filename, hash).
+  - hashType is defined globally.
+
+```json
+{
+  "hashType": "sha256",
+  "timestamp": 1641697189000,
+  "version": 30001,
+  "maxage": 14,
+  "index": [
+    [
+      "repo.json",
+      "b1f27fa87f8cabca50cdcd462a0f500d79d883b965a498d0e49eea560b39be1f"
+    ],
+    [
+      "diff-2021-12-28-2007.05.json",
+      "b1f27fa87f8cabca50cdcd462a0f500d79d883b965a498d0e49eea560b39be1f"
+    ],
+    [
+      "diff-2021-12-27-2007.05.json",
+      "b1f27fa87f8cabca50cdcd462a0f500d79d883b965a498d0e49eea560b39be1f"
+    ]
+  ]
+}
+```
+
+* `repo.json` contains all the data:
+  - Use versionCode as the key in the versions dict.
 
 ```json
 {
   "repo": {
-    "timestamp": 1641697189000,
-    "version": 30001,
-    "maxage": 14,
     "name": "F-Droid",
-    "hashType": "sha256",
     "icon": [
       "fdroid-icon.png",
       "b1f27fa87f8cabca50cdcd462a0f500d79d883b965a498d0e49eea560b39be1f"
     ],
     "address": "https://f-droid.org/repo",
     "description": "\nThe official F-Droid Free Software repository.  Everything in this\nrepository is always built from the source code.\n",
-    "mirrors": [
-      "https://ftp.fau.de/fdroid/repo",
-      "https://mirror.cyberbits.eu/fdroid/repo",
-      "https://fdroid.tetaneutral.net/fdroid/repo",
-      "https://ftp.lysator.liu.se/pub/fdroid/repo",
-      "https://plug-mirror.rcac.purdue.edu/fdroid/repo"
-    ],
+    "mirrors": {
+      "https://ftp.fau.de/fdroid/repo": {
+        "location": "de"
+      },
+      "https://mirror.cyberbits.eu/fdroid/repo": {},
+      "https://ftp.lysator.liu.se/pub/fdroid/repo": {
+        "location": "se"
+      },
+      "https://plug-mirror.rcac.purdue.edu/fdroid/repo": {
+        "location": "us"
+      }
+    },
     "antiFeatures": {
       "Advertising": {
         "icon": [
@@ -52,11 +90,11 @@ Weekly Meeting: Tuesdays, 1300 UTC on #fdroid-dev and https://meet.calyx.net/fdr
           "System"
         ],
         "changelog": "https://gitlab.com/fdroid/fdroidclient/raw/HEAD/CHANGELOG.md",
-        "suggestedVersionCode": "1013051",
+        "suggestedVersionCode": 1013051,
         "donate": "https://f-droid.org/donate",
-        "flattrID": "343053",
+        "flattrID": 343053,
         "issueTracker": "https://gitlab.com/fdroid/fdroidclient/issues",
-        "liberapayID": "27859",
+        "liberapayID": 27859,
         "license": "GPL-3.0-or-later",
         "openCollective": "F-Droid-Euro",
         "sourceCode": "https://gitlab.com/fdroid/fdroidclient",
@@ -105,7 +143,7 @@ Weekly Meeting: Tuesdays, 1300 UTC on #fdroid-dev and https://meet.calyx.net/fdr
           ],
           "minSdkVersion": 22,
           "size": 8010257,
-          "srcname": [
+          "srcName": [
             "org.fdroid.fdroid_1013051_src.tar.gz",
             "9893a7da6d959b1a0024dfcbb4f515103471491d05596e5a138c639104d45b8a"
           ],
@@ -133,7 +171,7 @@ Weekly Meeting: Tuesdays, 1300 UTC on #fdroid-dev and https://meet.calyx.net/fdr
           ],
           "minSdkVersion": 22,
           "size": 8014353,
-          "srcname": [
+          "srcName": [
             "org.fdroid.fdroid_1013050_src.tar.gz",
             "c35b2ac9428509f9c2906c1f32df64d5935114de968bc366f687ffaf6050a689"
           ],
@@ -174,7 +212,7 @@ Weekly Meeting: Tuesdays, 1300 UTC on #fdroid-dev and https://meet.calyx.net/fdr
           "Time"
         ],
         "changelog": "https://github.com/Etar-Group/Etar-Calendar/releases",
-        "suggestedVersionCode": "28",
+        "suggestedVersionCode": 28,
         "issueTracker": "https://github.com/Etar-Group/Etar-Calendar/issues",
         "license": "GPL-3.0-only",
         "sourceCode": "https://github.com/Etar-Group/Etar-Calendar",
@@ -221,7 +259,7 @@ Weekly Meeting: Tuesdays, 1300 UTC on #fdroid-dev and https://meet.calyx.net/fdr
           ],
           "minSdkVersion": 21,
           "size": 5870473,
-          "srcname": [
+          "srcName": [
             "ws.xsoh.etar_28_src.tar.gz",
             "6dfd11972653ab22a7d4a547420b1fc10a4c8f41c3d2571cc75957fcb4f168e3"
           ],
@@ -254,7 +292,7 @@ Weekly Meeting: Tuesdays, 1300 UTC on #fdroid-dev and https://meet.calyx.net/fdr
   "apps": {
     "ws.xsoh.etar": {
       "metadata": {
-        "suggestedVersionCode": "29"
+        "suggestedVersionCode": 29
       },
       "versions": {
         "29": {
@@ -265,7 +303,7 @@ Weekly Meeting: Tuesdays, 1300 UTC on #fdroid-dev and https://meet.calyx.net/fdr
           ],
           "minSdkVersion": 21,
           "size": 6103829,
-          "srcname": [
+          "srcName": [
             "ws.xsoh.etar_29_src.tar.gz",
             "c48d7acfe5d923008e2674e6598f8aaed275ad91894133be931f228f0f02ede6"
           ],
@@ -298,7 +336,7 @@ Weekly Meeting: Tuesdays, 1300 UTC on #fdroid-dev and https://meet.calyx.net/fdr
   "apps": {
     "ws.xsoh.etar": {
       "metadata": {
-        "suggestedVersionCode": "30"
+        "suggestedVersionCode": 30
       },
       "versions": {
         "28": null,
@@ -310,7 +348,7 @@ Weekly Meeting: Tuesdays, 1300 UTC on #fdroid-dev and https://meet.calyx.net/fdr
           ],
           "minSdkVersion": 21,
           "size": 6103829,
-          "srcname": [
+          "srcName": [
             "ws.xsoh.etar_30_src.tar.gz",
             "842937a439dd58df85b559f6b3f155415c217655264fb859b82a8b21efece9ff"
           ],
