@@ -78,7 +78,7 @@ It should be enough for the client to update the DB when there is an new client 
     "icon": {
       "name": "fdroid-icon.png",
       "sha256": "b1f27fa87f8cabca50cdcd462a0f500d79d883b965a498d0e49eea560b39be1f",
-      "size": "1234"
+      "size": 1234
     },
     "address": "https://f-droid.org/repo",
     "description": "\nThe official F-Droid Free Software repository.  Everything in this\nrepository is always built from the source code.\n",
@@ -190,12 +190,12 @@ It should be enough for the client to update the DB when there is an new client 
             "size": 8010257
           },
           "manifest": {
-            "versionCode": "1013051",
+            "versionCode": 1013051,
             "versionName": "1.13.1",
             "package": "org.fdroid.fdroid",
             "uses-sdk": {
-              "minSdkVersion": "22",
-              "targetSdkVersion": "25"
+              "minSdkVersion": 22,
+              "targetSdkVersion": 25
             },
             "uses-permission": [
               {
@@ -239,7 +239,7 @@ It should be enough for the client to update the DB when there is an new client 
               },
               {
                 "name": "android.permission.USB_PERMISSION",
-                "maxSdkVersion": "22"
+                "maxSdkVersion": 22
               },
               {
                 "name": "android.permission.WAKE_LOCK"
@@ -248,9 +248,11 @@ It should be enough for the client to update the DB when there is an new client 
                 "name": "android.permission.FOREGROUND_SERVICE"
               }
             ],
-            "uses-permission-sdk-23": {
-              "name": "android.permission.ACCESS_COARSE_LOCATION"
-            }
+            "uses-permission-sdk-23": [
+              {
+                "name": "android.permission.ACCESS_COARSE_LOCATION"
+              }
+            ]
           },
           "source": {
             "name": "org.fdroid.fdroid_1013051_src.tar.gz",
@@ -267,12 +269,12 @@ It should be enough for the client to update the DB when there is an new client 
             "size": 8014353
           },
           "manifest": {
-            "versionCode": "1013050",
+            "versionCode": 1013050,
             "versionName": "1.13",
             "package": "org.fdroid.fdroid",
             "uses-sdk": {
-              "minSdkVersion": "22",
-              "targetSdkVersion": "25"
+              "minSdkVersion": 22,
+              "targetSdkVersion": 25
             },
             "uses-permission": [
               {
@@ -316,7 +318,7 @@ It should be enough for the client to update the DB when there is an new client 
               },
               {
                 "name": "android.permission.USB_PERMISSION",
-                "maxSdkVersion": "22"
+                "maxSdkVersion": 22
               },
               {
                 "name": "android.permission.WAKE_LOCK"
@@ -325,9 +327,11 @@ It should be enough for the client to update the DB when there is an new client 
                 "name": "android.permission.FOREGROUND_SERVICE"
               }
             ],
-            "uses-permission-sdk-23": {
-              "name": "android.permission.ACCESS_COARSE_LOCATION"
-            }
+            "uses-permission-sdk-23": [
+              {
+                "name": "android.permission.ACCESS_COARSE_LOCATION"
+              }
+            ]
           },
           "source": {
             "name": "org.fdroid.fdroid_1013050_src.tar.gz",
