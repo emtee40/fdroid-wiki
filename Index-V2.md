@@ -28,6 +28,7 @@ It should be enough for the client to update the DB when there is an new client 
 
 * Entry point is `entry-v2.jar` (signed) linking to different files.
 * Diff is oldTimestamp to current version.
+* Diff life in diff/ subdirectory.
 
 ```json
 {
@@ -41,12 +42,12 @@ It should be enough for the client to update the DB when there is an new client 
       "size": 123
     },
     "1641697179000": {
-      "name": "diff-1641697179000-1641697189000.json",
+      "name": "diff/1641697179000-1641697189000.json",
       "sha256": "b1f27fa87f8cabca50cdcd462a0f500d79d883b965a498d0e49eea560b39be1f",
       "size": 123
     },
     "1641697169000": {
-      "name": "diff-1641697179000-1641697189000.json",
+      "name": "diff/1641697179000-1641697189000.json",
       "sha256": "b862213931d033000b55b1836c8980a4a64ab06903b7abca48d436b7ac45954e",
       "size": 123
     }
