@@ -27,7 +27,9 @@ It should be enough for the client to update the DB when there is an new client 
 
 ## New index format
 
-* Entry point is `entry-v2.jar` (signed) linking to different files.
+### entry point
+
+* Entry point is `entry.jar` (signed) linking to different files.
 * Diff is oldTimestamp to current version.
 * Diff life in diff/ subdirectory.
 
@@ -56,9 +58,18 @@ It should be enough for the client to update the DB when there is an new client 
 }
 ```
 
+
+### repo and package index
+
 * `index-v2.json` contains all the data:
   - Use versionCode as the key in the versions dict.
-  - permissions key is maxSDK.
+* [Android Manifest elements](https://developer.android.com/guide/topics/manifest/manifest-element) are included in `manifest`
+  * They are all transformed from XML to JSON using [the GData Convention](https://wiki.open311.org/JSON_and_XML_Conversion/#the-gdata-convention) (_xmltodict_ implements this).
+  * The `http://schemas.android.com/apk/res/android` XML namespace prefix is dropped, (`android:maxSdkVersion=` -> `"maxSdkVersion":`).
+  * Elements in any other namespaces are stripped out.
+  * `fdroid update` includes allowlist of elements to include in the index.
+  * The included elements are convertable back to XML, albeit without preserving code format or order.
+  * This data maps to [android.content.pm.PackageInfo](https://developer.android.com/reference/android/content/pm/PackageInfo) and related classes.
 
 ```json
 {
@@ -173,34 +184,79 @@ It should be enough for the client to update the DB when there is an new client 
       "versions": {
         "1013051": {
           "added": 1628567668000,
-          "packageName": "org.fdroid.fdroid",
           "file": {
             "name": "org.fdroid.fdroid_1013051.apk",
             "sha256": "9893a7da6d959b1a0024dfcbb4f515103471491d05596e5a138c639104d45b8a",
             "size": 8010257
           },
-          "minSdkVersion": 22,
+          "manifest": {
+            "versionCode": "1013051",
+            "versionName": "1.13.1",
+            "package": "org.fdroid.fdroid",
+            "uses-sdk": {
+              "minSdkVersion": "22",
+              "targetSdkVersion": "25"
+            },
+            "uses-permission": [
+              {
+                "name": "android.permission.INTERNET"
+              },
+              {
+                "name": "android.permission.ACCESS_NETWORK_STATE"
+              },
+              {
+                "name": "android.permission.ACCESS_WIFI_STATE"
+              },
+              {
+                "name": "android.permission.CHANGE_WIFI_MULTICAST_STATE"
+              },
+              {
+                "name": "android.permission.CHANGE_NETWORK_STATE"
+              },
+              {
+                "name": "android.permission.CHANGE_WIFI_STATE"
+              },
+              {
+                "name": "android.permission.BLUETOOTH"
+              },
+              {
+                "name": "android.permission.BLUETOOTH_ADMIN"
+              },
+              {
+                "name": "android.permission.RECEIVE_BOOT_COMPLETED"
+              },
+              {
+                "name": "android.permission.READ_EXTERNAL_STORAGE"
+              },
+              {
+                "name": "android.permission.WRITE_EXTERNAL_STORAGE"
+              },
+              {
+                "name": "android.permission.WRITE_SETTINGS"
+              },
+              {
+                "name": "android.permission.NFC"
+              },
+              {
+                "name": "android.permission.USB_PERMISSION",
+                "maxSdkVersion": "22"
+              },
+              {
+                "name": "android.permission.WAKE_LOCK"
+              },
+              {
+                "name": "android.permission.FOREGROUND_SERVICE"
+              }
+            ],
+            "uses-permission-sdk-23": {
+              "name": "android.permission.ACCESS_COARSE_LOCATION"
+            }
+          },
           "source": {
             "name": "org.fdroid.fdroid_1013051_src.tar.gz",
             "sha256": "9893a7da6d959b1a0024dfcbb4f515103471491d05596e5a138c639104d45b8a",
             "size": 64
-          },
-          "targetSdkVersion": 25,
-          "permissions": {
-            "0": [
-              "android.permission.INTERNET",
-              "android.permission.ACCESS_NETWORK_STATE",
-              "android.permission.ACCESS_WIFI_STATE"
-            ],
-            "22": [
-              "android.permission.USB_PERMISSION"
-            ],
-            "23": [
-              "android.permission.ACCESS_COARSE_LOCATION"
-            ]
-          },
-          "versionName": "1.13.1",
-          "versionCode": 1013051
+          }
         },
         "1013050": {
           "added": 1625887690000,
@@ -210,29 +266,74 @@ It should be enough for the client to update the DB when there is an new client 
             "sha256": "c35b2ac9428509f9c2906c1f32df64d5935114de968bc366f687ffaf6050a689",
             "size": 8014353
           },
-          "minSdkVersion": 22,
+          "manifest": {
+            "versionCode": "1013050",
+            "versionName": "1.13",
+            "package": "org.fdroid.fdroid",
+            "uses-sdk": {
+              "minSdkVersion": "22",
+              "targetSdkVersion": "25"
+            },
+            "uses-permission": [
+              {
+                "name": "android.permission.INTERNET"
+              },
+              {
+                "name": "android.permission.ACCESS_NETWORK_STATE"
+              },
+              {
+                "name": "android.permission.ACCESS_WIFI_STATE"
+              },
+              {
+                "name": "android.permission.CHANGE_WIFI_MULTICAST_STATE"
+              },
+              {
+                "name": "android.permission.CHANGE_NETWORK_STATE"
+              },
+              {
+                "name": "android.permission.CHANGE_WIFI_STATE"
+              },
+              {
+                "name": "android.permission.BLUETOOTH"
+              },
+              {
+                "name": "android.permission.BLUETOOTH_ADMIN"
+              },
+              {
+                "name": "android.permission.RECEIVE_BOOT_COMPLETED"
+              },
+              {
+                "name": "android.permission.READ_EXTERNAL_STORAGE"
+              },
+              {
+                "name": "android.permission.WRITE_EXTERNAL_STORAGE"
+              },
+              {
+                "name": "android.permission.WRITE_SETTINGS"
+              },
+              {
+                "name": "android.permission.NFC"
+              },
+              {
+                "name": "android.permission.USB_PERMISSION",
+                "maxSdkVersion": "22"
+              },
+              {
+                "name": "android.permission.WAKE_LOCK"
+              },
+              {
+                "name": "android.permission.FOREGROUND_SERVICE"
+              }
+            ],
+            "uses-permission-sdk-23": {
+              "name": "android.permission.ACCESS_COARSE_LOCATION"
+            }
+          },
           "source": {
             "name": "org.fdroid.fdroid_1013050_src.tar.gz",
             "sha256": "c35b2ac9428509f9c2906c1f32df64d5935114de968bc366f687ffaf6050a689",
             "size": 3636
-          },
-          "targetSdkVersion": 25,
-          "permissions": {
-            "0": [
-              "android.permission.INTERNET",
-              "android.permission.ACCESS_NETWORK_STATE",
-              "android.permission.ACCESS_WIFI_STATE",
-              "android.permission.FOREGROUND_SERVICE"
-            ],
-            "22": [
-              "android.permission.USB_PERMISSION"
-            ],
-            "23": [
-              "android.permission.ACCESS_COARSE_LOCATION"
-            ]
-          },
-          "versionName": "1.13",
-          "versionCode": 1013050
+          }
         }
       }
     }
