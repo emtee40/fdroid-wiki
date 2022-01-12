@@ -35,9 +35,9 @@ It should be enough for the client to update the DB when there is an new client 
 {
   "timestamp": 1641697189000,
   "version": 30001,
-  "maxage": 14,
+  "maxAge": 14,
   "files": {
-    "repo": {
+    "index": {
       "name": "index-v2.json",
       "sha256": "c4bd600d7ed554a69201d7aaa4f7f7ef7cd13dc20cdd4af254d17ffd12bd7cdc",
       "size": 123
@@ -56,14 +56,14 @@ It should be enough for the client to update the DB when there is an new client 
 }
 ```
 
-* `repo.json` contains all the data:
+* `index-v2.json` contains all the data:
   - Use versionCode as the key in the versions dict.
   - permissions key is maxSDK.
   - how to define a default for localized? Add a extra tag? Hardcode in the client?
 
 ```json
 {
-  "repo": {
+  "metadata": {
     "name": "F-Droid",
     "icon": {
       "name": "fdroid-icon.png",
@@ -454,7 +454,7 @@ def fix_index(old):
     new = {app["packageName"]: app for app in old["apps"]}
     for package, value in old["packages"].items():
         new[package]["versions"] = {v["versionCode"]: v for v in value}
-    new["repo"] = old["repo"]
+    new["metadata"] = old["repo"]
     return new
 
 
