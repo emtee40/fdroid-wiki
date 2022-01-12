@@ -70,18 +70,24 @@ It should be enough for the client to update the DB when there is an new client 
     },
     "address": "https://f-droid.org/repo",
     "description": "\nThe official F-Droid Free Software repository.  Everything in this\nrepository is always built from the source code.\n",
-    "mirrors": {
-      "https://ftp.fau.de/fdroid/repo": {
+    "mirrors": [
+      {
+        "url": "https://ftp.fau.de/fdroid/repo",
         "location": "de"
       },
-      "https://mirror.cyberbits.eu/fdroid/repo": {},
-      "https://ftp.lysator.liu.se/pub/fdroid/repo": {
+      {
+        "url": "https://mirror.cyberbits.eu/fdroid/repo",
+        "location": {},
+      },
+      {
+        "url": "https://ftp.lysator.liu.se/pub/fdroid/repo",
         "location": "se"
       },
-      "https://plug-mirror.rcac.purdue.edu/fdroid/repo": {
+      {
+        "url": "https://plug-mirror.rcac.purdue.edu/fdroid/repo",
         "location": "us"
       }
-    },
+    ],
     "antiFeatures": {
       "Advertising": {
         "icon": {
