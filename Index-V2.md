@@ -10,21 +10,19 @@ Weekly Meeting: Tuesdays, 1300 UTC on #fdroid-dev and https://meet.calyx.net/fdr
 #### Can we go with readable json only? I.e. Don't use the jar format and rely on the web server compressing the data.
 
 We need the JAR, it provides the signing method.  The code for verifying signed JARs is built into Android and Java. Also, there is no guarantee that there is a webserver serving the repo.  It can also come from IPFS, USB Disk, Bluetooth, etc. -@eighthave
+We could go with inline signing like Debian does, let's discuss this in the next meeting -@jspricke
 
 #### Do we need the `"version": 30001` field?
 
 Absolutely, that's the index format version.  It is the way to tell the client to upgrade its database. For example, like when a new metadata field gets added, like `Liberapay:`. -@eighthave
+It should be enough for the client to update the DB when there is an new client version, let's discuss in the meeting. -@jspricke
 
-#### Use a dict for the hashes?
-
-#### drop `localized` and have `"description": {"en-US": "Foo", "de": "Blub"}`?
-
-What's wrong with `localized`?  I think we should maintain the V1 structure, unless we have a reason to change it.  That will reduce the overall amount of work. -@eighthave
 
 ### Subdirectories
 
 * Test if feasible (Jochen: which old client versions to test?)
 * https://gitlab.com/fdroid/fdroidserver/-/issues/966
+* maybe move the toplevel directory, i.e. https://f-droid.org/packages?
 
 ## New index format
 
@@ -57,6 +55,7 @@ What's wrong with `localized`?  I think we should maintain the V1 structure, unl
 * `repo.json` contains all the data:
   - Use versionCode as the key in the versions dict.
   - permissions key is maxSDK.
+  - how to define a default for localized? Add a extra tag? Hardcode in the client?
 
 ```json
 {
@@ -112,11 +111,6 @@ What's wrong with `localized`?  I think we should maintain the V1 structure, unl
         "translation": "https://hosted.weblate.org/projects/f-droid/f-droid",
         "webSite": "https://f-droid.org",
         "added": 1295222400000,
-        "icon": {
-          "name": "org.fdroid.fdroid.1014003.png",
-          "sha256": "b1f27fa87f8cabca50cdcd462a0f500d79d883b965a498d0e49eea560b39be1f",
-          "size": 124
-        },
         "localized": {
           "de": {
             "description": "F-Droid ist ein installierbarer Katalog mit Libre Software Android-Apps. \nDer F-Droid-Client erleichtert die App-Suche und -Installation \nund hält sie auf Ihrem Gerät aktuell.\n\nEr verbindet sich mit jeder mit F-Droid kompatiblen Paketquelle. Die \nStandardquelle wird auf f-droid.org gehosted, die ausschließflich echte \nfreie und quelloffene Software enthält.\n\nAndroid selbst ist dahingehend offen, dass jeder die Wahl hat, woher \ner APKs installieren möchte. Es gibt aber viele gute Gründe, F-Droid \nals App-Manager für freie Software zu verwenden:\n\n* Benachrichtigungen zu verfügbaren Aktualisierungen erhalten \n* Aktualisierungen wahlweise automatisch herunterladen und installieren \n* Vorgänger- und Beta-Versionen überblicken \n* Mit dem Gerät inkompatible Apps aussortieren\n* Apps nach Kategorien und durchsuchbaren Beschreibungen finden \n* Auf URLs zugreifen, die mit Quelltext, Spendenmöglichkeiten, usw. verknüpft sind \n* Durch Überprüfung von Quell-Signaturen und APK-Hashes geschützt bleiben\n",
@@ -145,6 +139,11 @@ What's wrong with `localized`?  I think we should maintain the V1 structure, unl
                 }
               ]
             },
+            "icon": {
+              "name": "org.fdroid.fdroid.1014003.png",
+              "sha256": "b1f27fa87f8cabca50cdcd462a0f500d79d883b965a498d0e49eea560b39be1f",
+              "size": 124
+            },
             "summary": "The app store that respects freedom and privacy"
           }
         }
@@ -164,7 +163,7 @@ What's wrong with `localized`?  I think we should maintain the V1 structure, unl
             "size": 64
           },
           "targetSdkVersion": 25,
-          "permission": {
+          "permissions": {
             "0": [
               "android.permission.INTERNET",
               "android.permission.ACCESS_NETWORK_STATE",
@@ -193,7 +192,7 @@ What's wrong with `localized`?  I think we should maintain the V1 structure, unl
             "size": 3636
           },
           "targetSdkVersion": 25,
-          "permission": {
+          "permissions": {
             "0": [
               "android.permission.INTERNET",
               "android.permission.ACCESS_NETWORK_STATE",
@@ -285,7 +284,7 @@ What's wrong with `localized`?  I think we should maintain the V1 structure, unl
             "size": 23
           },
           "targetSdkVersion": 30,
-          "permission": {
+          "permissions": {
             "0": [
               "android.permission.WRITE_EXTERNAL_STORAGE",
               "android.permission.GET_ACCOUNTS",
@@ -330,7 +329,7 @@ What's wrong with `localized`?  I think we should maintain the V1 structure, unl
             "size": 74
           },
           "targetSdkVersion": 31,
-          "permission": {
+          "permissions": {
             "0": [
               "android.permission.WRITE_EXTERNAL_STORAGE",
               "android.permission.GET_ACCOUNTS",
@@ -376,7 +375,7 @@ What's wrong with `localized`?  I think we should maintain the V1 structure, unl
             "size": 356
           },
           "targetSdkVersion": 31,
-          "permission": {
+          "permissions": {
             "0": [
               "android.permission.WRITE_EXTERNAL_STORAGE",
               "android.permission.GET_ACCOUNTS",
