@@ -26,9 +26,8 @@ It should be enough for the client to update the DB when there is an new client 
 
 ## New index format
 
-* Entry point is `index-v2.json` (signed) linking to different files:
-  - Files are a tuple (filename, hash).
-  - Diff is `diff-oldTimestamp.json` to current version.
+* Entry point is `index-v2.json` (signed) linking to different files.
+* Diff is oldTimestamp to current version.
 
 ```json
 {
@@ -36,16 +35,19 @@ It should be enough for the client to update the DB when there is an new client 
   "version": 30001,
   "maxage": 14,
   "files": {
-    "repo.json": {
+    "repo": {
+      "name": "repo-c4bd600d7ed554a69201d7aaa4f7f7ef7cd13dc20cdd4af254d17ffd12bd7cdc.json",
+      "sha256": "c4bd600d7ed554a69201d7aaa4f7f7ef7cd13dc20cdd4af254d17ffd12bd7cdc",
+      "size": 123
+    },
+    "1641697179000": {
+      "name": "diff-b1f27fa87f8cabca50cdcd462a0f500d79d883b965a498d0e49eea560b39be1f.json",
       "sha256": "b1f27fa87f8cabca50cdcd462a0f500d79d883b965a498d0e49eea560b39be1f",
       "size": 123
     },
-    "diff-1641697179000.json": {
-      "sha256": "b1f27fa87f8cabca50cdcd462a0f500d79d883b965a498d0e49eea560b39be1f",
-      "size": 123
-    },
-    "diff-1641697169000.json": {
-      "sha256": "b1f27fa87f8cabca50cdcd462a0f500d79d883b965a498d0e49eea560b39be1f",
+    "1641697169000": {
+      "name": "diff-b862213931d033000b55b1836c8980a4a64ab06903b7abca48d436b7ac45954e.json",
+      "sha256": "b862213931d033000b55b1836c8980a4a64ab06903b7abca48d436b7ac45954e",
       "size": 123
     }
   }
