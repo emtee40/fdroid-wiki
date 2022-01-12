@@ -9,24 +9,22 @@ Weekly Meeting: Tuesdays, 1300 UTC on #fdroid-dev and https://meet.calyx.net/fdr
 
 #### Can we go with readable json only? I.e. Don't use the jar format and rely on the web server compressing the data.
 
-We need the JAR, it provides the signing method.  The code for verifying signed JARs is built into Android and Java. Also, there is no guarantee that theer is a webserver serving the repo.  It can also come from IPFS, USB Disk, Bluetooth, etc. -@eighthave
+We need the JAR, it provides the signing method.  The code for verifying signed JARs is built into Android and Java. Also, there is no guarantee that there is a webserver serving the repo.  It can also come from IPFS, USB Disk, Bluetooth, etc. -@eighthave
 
 #### Do we need the `"version": 30001` field?
 
-Absolutely, that's the metadata version.  It is the only way to tell the client to upgrade its database. -@eighthave
+Absolutely, that's the index format version.  It is the way to tell the client to upgrade its database. For example, like when a new metadata field gets added, like `Liberapay:`. -@eighthave
 
 #### Use a dict for the hashes?
 
 #### drop `localized` and have `"description": {"en-US": "Foo", "de": "Blub"}`?
 
-What's wrong with `localized`?  I think we should maintain the V1 structure, unless we have a reason to change it. -@eighthave
+What's wrong with `localized`?  I think we should maintain the V1 structure, unless we have a reason to change it.  That will reduce the overall amount of work. -@eighthave
 
 ### Subdirectories
 
 * Test if feasible (Jochen: which old client versions to test?)
-* Define structure:
-  - Maven repo scheme: `com/example/app`.
-  - Debian scheme: `c/com.example.app`.
+* https://gitlab.com/fdroid/fdroidserver/-/issues/966
 
 ## New index format
 
