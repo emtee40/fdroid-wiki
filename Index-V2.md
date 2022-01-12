@@ -9,7 +9,7 @@ Weekly Meeting: Tuesdays, 1300 UTC on #fdroid-dev and https://meet.calyx.net/fdr
 
 #### Can we go with readable json only? I.e. Don't use the jar format and rely on the web server compressing the data.
 
-We need the JAR, it provides the signing method.  The code for verifying signed JARs is built into Android and Java. Also, -@eighthave
+We need the JAR, it provides the signing method.  The code for verifying signed JARs is built into Android and Java. Also, there is no guarantee that theer is a webserver serving the repo.  It can also come from IPFS, USB Disk, Bluetooth, etc. -@eighthave
 
 #### Do we need the `"version": 30001` field?
 
