@@ -101,6 +101,18 @@ It should be enough for the client to update the DB when there is an new client 
         }
       }
     }
+    "categories": {
+      "System": {
+        "image": {
+          "name": "category_games.png",
+          "sha256": "b1f27fa87f8cabca50cdcd462a0f500d79d883b965a498d0e49eea560b39be1f",
+          "size": 123
+        },
+        "description": {
+          "en-US": "Apps for your System"
+        }
+      }
+    }
   },
   "packages": {
     "org.fdroid.fdroid": {
