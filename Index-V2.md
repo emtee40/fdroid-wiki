@@ -95,7 +95,7 @@ It should be enough for the client to update the DB when there is an new client 
       }
     }
   },
-  "apps": {
+  "packages": {
     "org.fdroid.fdroid": {
       "metadata": {
         "categories": [
