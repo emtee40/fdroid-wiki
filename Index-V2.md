@@ -120,6 +120,7 @@ It should be enough for the client to update the DB when there is an new client 
         "categories": [
           "System"
         ],
+        "packageName": "org.fdroid.fdroid",
         "changelog": "https://gitlab.com/fdroid/fdroidclient/raw/HEAD/CHANGELOG.md",
         "suggestedVersionCode": 1013051,
         "donate": "https://f-droid.org/donate",
@@ -197,7 +198,8 @@ It should be enough for the client to update the DB when there is an new client 
               "android.permission.ACCESS_COARSE_LOCATION"
             ]
           },
-          "versionName": "1.13.1"
+          "versionName": "1.13.1",
+          "versionCode": 1013051
         },
         "1013050": {
           "added": 1625887690000,
@@ -227,7 +229,8 @@ It should be enough for the client to update the DB when there is an new client 
               "android.permission.ACCESS_COARSE_LOCATION"
             ]
           },
-          "versionName": "1.13"
+          "versionName": "1.13",
+          "versionCode": 1013050
         }
       }
     }
@@ -242,12 +245,14 @@ It should be enough for the client to update the DB when there is an new client 
 ### adding an app
 ```json
 {
+  "timestamp": 1641697189000,
   "apps": {
     "ws.xsoh.etar": {
       "metadata": {
         "categories": [
           "Time"
         ],
+        "packageName": "ws.xsoh.etar",
         "changelog": "https://github.com/Etar-Group/Etar-Calendar/releases",
         "suggestedVersionCode": 28,
         "issueTracker": "https://github.com/Etar-Group/Etar-Calendar/issues",
@@ -319,7 +324,8 @@ It should be enough for the client to update the DB when there is an new client 
               "android.permission.READ_EXTERNAL_STORAGE"
             ]
           },
-          "versionName": "1.0.26"
+          "versionName": "1.0.26",
+          "versionCode": 28
         }
       }
     }
@@ -364,7 +370,8 @@ It should be enough for the client to update the DB when there is an new client 
               "android.permission.READ_EXTERNAL_STORAGE"
             ]
           },
-          "versionName": "1.0.27"
+          "versionName": "1.0.27",
+          "versionCode": 29
         }
       }
     }
@@ -411,6 +418,7 @@ It should be enough for the client to update the DB when there is an new client 
             ]
           },
           "versionName": "1.0.28",
+          "versionCode": 30,
           "whatsNew": {
             "en-US": "- Fix notifications on Android 12\n- Add DecSync and Birthday Adapter to \"known\" apps and don't crash\n"
           }
