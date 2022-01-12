@@ -59,7 +59,6 @@ It should be enough for the client to update the DB when there is an new client 
 * `index-v2.json` contains all the data:
   - Use versionCode as the key in the versions dict.
   - permissions key is maxSDK.
-  - how to define a default for localized? Add a extra tag? Hardcode in the client?
 
 ```json
 {
