@@ -174,6 +174,7 @@ It should be enough for the client to update the DB when there is an new client 
       "versions": {
         "1013051": {
           "added": 1628567668000,
+          "packageName": "org.fdroid.fdroid",
           "apkName": {
             "name": "org.fdroid.fdroid_1013051.apk",
             "sha256": "9893a7da6d959b1a0024dfcbb4f515103471491d05596e5a138c639104d45b8a",
@@ -204,6 +205,7 @@ It should be enough for the client to update the DB when there is an new client 
         },
         "1013050": {
           "added": 1625887690000,
+          "packageName": "org.fdroid.fdroid",
           "apkName": {
             "name": "org.fdroid.fdroid_1013050.apk",
             "sha256": "c35b2ac9428509f9c2906c1f32df64d5935114de968bc366f687ffaf6050a689",
@@ -299,6 +301,7 @@ It should be enough for the client to update the DB when there is an new client 
       "versions": {
         "28": {
           "added": 1626742335000,
+          "packageName": "ws.xsoh.etar",
           "apkName": {
             "name": "ws.xsoh.etar_28.apk",
             "sha256": "6dfd11972653ab22a7d4a547420b1fc10a4c8f41c3d2571cc75957fcb4f168e3",
@@ -345,6 +348,7 @@ It should be enough for the client to update the DB when there is an new client 
       "versions": {
         "29": {
           "added": 1640708626000,
+          "packageName": "ws.xsoh.etar",
           "apkName": {
             "name": "ws.xsoh.etar_29.apk",
             "sha256": "c48d7acfe5d923008e2674e6598f8aaed275ad91894133be931f228f0f02ede6",
@@ -392,6 +396,7 @@ It should be enough for the client to update the DB when there is an new client 
         "28": null,
         "30": {
           "added": 1641342628000,
+          "packageName": "ws.xsoh.etar",
           "apkName": {
             "name": "ws.xsoh.etar_30.apk",
             "sha256": "842937a439dd58df85b559f6b3f155415c217655264fb859b82a8b21efece9ff",
