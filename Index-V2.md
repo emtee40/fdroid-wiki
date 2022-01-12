@@ -175,13 +175,13 @@ It should be enough for the client to update the DB when there is an new client 
         "1013051": {
           "added": 1628567668000,
           "packageName": "org.fdroid.fdroid",
-          "apkName": {
+          "file": {
             "name": "org.fdroid.fdroid_1013051.apk",
             "sha256": "9893a7da6d959b1a0024dfcbb4f515103471491d05596e5a138c639104d45b8a",
             "size": 8010257
           },
           "minSdkVersion": 22,
-          "srcName": {
+          "src": {
             "name": "org.fdroid.fdroid_1013051_src.tar.gz",
             "sha256": "9893a7da6d959b1a0024dfcbb4f515103471491d05596e5a138c639104d45b8a",
             "size": 64
@@ -206,13 +206,13 @@ It should be enough for the client to update the DB when there is an new client 
         "1013050": {
           "added": 1625887690000,
           "packageName": "org.fdroid.fdroid",
-          "apkName": {
+          "file": {
             "name": "org.fdroid.fdroid_1013050.apk",
             "sha256": "c35b2ac9428509f9c2906c1f32df64d5935114de968bc366f687ffaf6050a689",
             "size": 8014353
           },
           "minSdkVersion": 22,
-          "srcName": {
+          "src": {
             "name": "org.fdroid.fdroid_1013050_src.tar.gz",
             "sha256": "c35b2ac9428509f9c2906c1f32df64d5935114de968bc366f687ffaf6050a689",
             "size": 3636
@@ -302,13 +302,13 @@ It should be enough for the client to update the DB when there is an new client 
         "28": {
           "added": 1626742335000,
           "packageName": "ws.xsoh.etar",
-          "apkName": {
+          "file": {
             "name": "ws.xsoh.etar_28.apk",
             "sha256": "6dfd11972653ab22a7d4a547420b1fc10a4c8f41c3d2571cc75957fcb4f168e3",
             "size": 5870473
           },
           "minSdkVersion": 21,
-          "srcName": {
+          "src": {
             "name": "ws.xsoh.etar_28_src.tar.gz",
             "sha256": "6dfd11972653ab22a7d4a547420b1fc10a4c8f41c3d2571cc75957fcb4f168e3",
             "size": 23
@@ -349,13 +349,13 @@ It should be enough for the client to update the DB when there is an new client 
         "29": {
           "added": 1640708626000,
           "packageName": "ws.xsoh.etar",
-          "apkName": {
+          "file": {
             "name": "ws.xsoh.etar_29.apk",
             "sha256": "c48d7acfe5d923008e2674e6598f8aaed275ad91894133be931f228f0f02ede6",
             "size": 6103829
           },
           "minSdkVersion": 21,
-          "srcName": {
+          "src": {
             "name": "ws.xsoh.etar_29_src.tar.gz",
             "sha256": "c48d7acfe5d923008e2674e6598f8aaed275ad91894133be931f228f0f02ede6",
             "size": 74
@@ -397,13 +397,13 @@ It should be enough for the client to update the DB when there is an new client 
         "30": {
           "added": 1641342628000,
           "packageName": "ws.xsoh.etar",
-          "apkName": {
+          "file": {
             "name": "ws.xsoh.etar_30.apk",
             "sha256": "842937a439dd58df85b559f6b3f155415c217655264fb859b82a8b21efece9ff",
             "size": 6103829
           },
           "minSdkVersion": 21,
-          "srcName": {
+          "src": {
             "name": "ws.xsoh.etar_30_src.tar.gz",
             "sha256": "842937a439dd58df85b559f6b3f155415c217655264fb859b82a8b21efece9ff",
             "size": 356
