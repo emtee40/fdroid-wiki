@@ -62,7 +62,15 @@ It should be enough for the client to update the DB when there is an new client 
 ### repo and package index
 
 * `index-v2.json` contains all the data:
+  - The key for packages is a full Java-language-style package name, it may contain uppercase or lowercase letters ('A' through 'Z'), numbers, and underscores (`_`): https://developer.android.com/guide/topics/manifest/manifest-element#package
+    - it is already used in the metadata with `metadata/<id>.yml`
+    - rational: the primary use case of the index is to distribute Android apps which have these restrictions already.
+    - maybe extend this to all characters except `-`?
   - Use versionCode as the key in the versions dict.
+    - this is not unique. Proposals:
+      - use sha256.
+      - require files to be named `id-version`
+      - extract a unique id from the apk (versioncode + ABI?)
 * [Android Manifest elements](https://developer.android.com/guide/topics/manifest/manifest-element) are included in `manifest`
   * They are all transformed from XML to JSON using [the GData Convention](https://wiki.open311.org/JSON_and_XML_Conversion/#the-gdata-convention) (_xmltodict_ implements this).
   * The `http://schemas.android.com/apk/res/android` XML namespace prefix is dropped, (`android:maxSdkVersion=` -> `"maxSdkVersion":`).
