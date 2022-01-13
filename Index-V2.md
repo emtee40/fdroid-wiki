@@ -27,6 +27,9 @@ It should be enough for the client to update the DB when there is an new client 
 
 ## New index format
 
+* JSON 1.0 data format
+* all JSON files are encoded using UTF-8
+
 ### entry point
 
 * Entry point is `entry.jar` (signed) linking to different files.
@@ -66,11 +69,12 @@ It should be enough for the client to update the DB when there is an new client 
     - it is already used in the metadata with `metadata/<id>.yml`
     - rational: the primary use case of the index is to distribute Android apps which have these restrictions already.
     - maybe extend this to all characters except `-`?
-  - Use versionCode as the key in the versions dict.
-    - this is not unique. Proposals:
-      - use sha256.
-      - require files to be named `id-version`
-      - extract a unique id from the apk (versioncode + ABI?)
+  - Use `versionCode` as the key in the versions dict.
+    - this is not unique. Proposals for other things to use:
+      - per-versionCode lists `{"<versionCode>": [{}, {}]}`
+      - filename
+      - sha256
+* Handle `preferredSigner` https://gitlab.com/fdroid/fdroidserver/-/issues/153
 * [Android Manifest elements](https://developer.android.com/guide/topics/manifest/manifest-element) are included in `manifest`
   * They are all transformed from XML to JSON using [the GData Convention](https://wiki.open311.org/JSON_and_XML_Conversion/#the-gdata-convention) (_xmltodict_ implements this).
   * The `http://schemas.android.com/apk/res/android` XML namespace prefix is dropped, (`android:maxSdkVersion=` -> `"maxSdkVersion":`).
@@ -97,7 +101,6 @@ It should be enough for the client to update the DB when there is an new client 
       },
       {
         "url": "https://mirror.cyberbits.eu/fdroid/repo",
-        "location": {}
       },
       {
         "url": "https://ftp.lysator.liu.se/pub/fdroid/repo",
