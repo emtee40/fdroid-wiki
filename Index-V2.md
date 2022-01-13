@@ -89,7 +89,7 @@ It should be enough for the client to update the DB when there is an new client 
       },
       {
         "url": "https://mirror.cyberbits.eu/fdroid/repo",
-        "location": {},
+        "location": {}
       },
       {
         "url": "https://ftp.lysator.liu.se/pub/fdroid/repo",
@@ -111,7 +111,7 @@ It should be enough for the client to update the DB when there is an new client 
           "en-US": "This Anti-Feature is applied to an app that contains advertising."
         }
       }
-    }
+    },
     "categories": {
       "System": {
         "image": {
