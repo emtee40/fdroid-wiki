@@ -85,7 +85,7 @@ It should be enough for the client to update the DB when there is an new client 
 
 ```json
 {
-  "metadata": {
+  "repo": {
     "name": "F-Droid",
     "icon": {
       "name": "fdroid-icon.png",
