@@ -31,10 +31,10 @@ It should be enough for the client to update the DB when there is an new client 
 * [x] [File name can be path](https://gitlab.com/fdroid/fdroidclient/-/issues/1164)
 * [x] [Changelog per version, not app](https://gitlab.com/fdroid/fdroidserver/-/issues/527)
 * [ ] [Anti-Feature Maintainer-Notes as structured text](https://gitlab.com/fdroid/fdroidserver/-/issues/683)
-* [ ] [Signing](https://gitlab.com/fdroid/fdroidserver/-/issues/835) [Algorithm](https://gitlab.com/fdroid/fdroidclient/-/issues/1989)
-* [ ] ["frosting" in the APK Signing Block](https://gitlab.com/fdroid/fdroidserver/-/issues/935)
-* [ ] [Extension to app descriptions]()
-* [ ] [multiple donation links](https://gitlab.com/fdroid/fdroidserver/-/issues/968)
+* [x] [Signing](https://gitlab.com/fdroid/fdroidserver/-/issues/835) [Algorithm](https://gitlab.com/fdroid/fdroidclient/-/issues/1989) -> Jarsigner without legacy algorithm
+* [ ] ~~["frosting" in the APK Signing Block](https://gitlab.com/fdroid/fdroidserver/-/issues/935)~~
+* [ ] [Extension to app descriptions](https://gitlab.com/fdroid/fdroidserver/-/issues/953)
+* [x] [multiple donation links](https://gitlab.com/fdroid/fdroidserver/-/issues/968)
 
 ## New index format
 
