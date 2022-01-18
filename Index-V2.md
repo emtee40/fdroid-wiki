@@ -276,6 +276,12 @@ It should be enough for the client to update the DB when there is an new client 
               }
             ]
           },
+          "signer": {
+            "sha256": [
+              "b1f27fa87f8cabca50cdcd462a0f500d79d883b965a498d0e49eea560b39be1f",
+              "c35b2ac9428509f9c2906c1f32df64d5935114de968bc366f687ffaf6050a689"
+            ]
+          },
           "source": {
             "name": "org.fdroid.fdroid_1013051_src.tar.gz",
             "sha256": "9893a7da6d959b1a0024dfcbb4f515103471491d05596e5a138c639104d45b8a",
@@ -353,6 +359,12 @@ It should be enough for the client to update the DB when there is an new client 
               {
                 "name": "android.permission.ACCESS_COARSE_LOCATION"
               }
+            ]
+          },
+          "signer": {
+            "sha256": [
+              "b1f27fa87f8cabca50cdcd462a0f500d79d883b965a498d0e49eea560b39be1f",
+              "c35b2ac9428509f9c2906c1f32df64d5935114de968bc366f687ffaf6050a689"
             ]
           },
           "source": {
