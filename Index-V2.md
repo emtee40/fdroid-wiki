@@ -55,7 +55,7 @@ It should be enough for the client to update the DB when there is an new client 
 	* https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/toISOString
   * https://www.moesif.com/blog/technical/timestamp/manage-datetime-timestamp-timezones-in-api/
 
-To deal reduce pain with timezones we should also always add timezones when writing this datapoint to json. We could either always normalize to utc by simply setting 'tz = datetime.timezone.utc'. Or we could use the systems timezone as demonstrated here:
+@uniqx: To reduce the pain of dealing with timezones we should also always add timezones-suffixes when writing this datetimes to json. This way it will not matter whether we use the systems local timezone or normalize to UTC.
 
 ```!python
 >>> LOCAL_TIMEZONE = datetime.datetime.now(datetime.timezone.utc).astimezone().tzinfo
@@ -66,7 +66,7 @@ To deal reduce pain with timezones we should also always add timezones when writ
 '2022-01-18T19:49:55.917984+00:00'
 ```
 
-@uniqx: For achieving good repository operator privacy we probably should default to utc. Personally I'd love to have to option to use my local timezone in my repositories, but that's not really a an important requirement I guess.
+@uniqx: For achieving good repository operator privacy we probably should default to UTC. Personally I'd love to have to option to use my local timezone in my repositories, but that's not really a an important requirement I guess.
 
 ### entry point
 
