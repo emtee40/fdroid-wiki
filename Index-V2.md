@@ -156,7 +156,10 @@ It should be enough for the client to update the DB when there is an new client 
         "packageName": "org.fdroid.fdroid",
         "changelog": "https://gitlab.com/fdroid/fdroidclient/raw/HEAD/CHANGELOG.md",
         "suggestedVersionCode": 1013051,
-        "donate": "https://f-droid.org/donate",
+        "donate": [
+          "https://f-droid.org/donate",
+          "https://new-donation-method.org/fdroid"
+        ],
         "flattrID": 343053,
         "issueTracker": "https://gitlab.com/fdroid/fdroidclient/issues",
         "liberapayID": 27859,
