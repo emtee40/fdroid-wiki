@@ -41,6 +41,21 @@ It should be enough for the client to update the DB when there is an new client 
 * JSON 1.0 data format
 * all JSON files are encoded using UTF-8
 
+* proposal: use ISO8601 for the date format
+  * human readable
+  * no ambiguity in the format
+	* UNIX timestamps could be in seconds or milliseconds
+	* some languages will use local timezone when operating on UNIX timestamps
+  * automatic timezone handling across many languages
+	* https://docs.python.org/3/library/datetime.html#datetime.datetime.isoformat
+	* https://docs.python.org/3/library/datetime.html#datetime.datetime.fromisoformat
+	* https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.time/-duration/to-iso-string.html
+	* https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.time/-duration/parse-iso-string.html
+	* https://fasterxml.github.io/jackson-annotations/javadoc/2.8/com/fasterxml/jackson/annotation/JsonFormat.html
+	* https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/toISOString
+  * https://www.moesif.com/blog/technical/timestamp/manage-datetime-timestamp-timezones-in-api/
+
+
 ### entry point
 
 * Entry point is `entry.jar` (signed) linking to different files.
