@@ -27,9 +27,9 @@ It should be enough for the client to update the DB when there is an new client 
 
 ### Tickets
 
-* [ ] [Tag reproducible builds](https://gitlab.com/fdroid/fdroidserver/-/issues/178)
-* [ ] [File name can be path](https://gitlab.com/fdroid/fdroidclient/-/issues/1164)
-* [ ] [Changelog per version, not app](https://gitlab.com/fdroid/fdroidserver/-/issues/527)
+* [ ] ~~[Tag reproducible builds](https://gitlab.com/fdroid/fdroidserver/-/issues/178)~~
+* [x] [File name can be path](https://gitlab.com/fdroid/fdroidclient/-/issues/1164)
+* [x] [Changelog per version, not app](https://gitlab.com/fdroid/fdroidserver/-/issues/527)
 * [ ] [Anti-Feature Maintainer-Notes as structured text](https://gitlab.com/fdroid/fdroidserver/-/issues/683)
 * [ ] [Signing](https://gitlab.com/fdroid/fdroidserver/-/issues/835) [Algorithm](https://gitlab.com/fdroid/fdroidclient/-/issues/1989)
 * [ ] ["frosting" in the APK Signing Block](https://gitlab.com/fdroid/fdroidserver/-/issues/935)
