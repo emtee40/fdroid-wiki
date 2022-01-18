@@ -387,7 +387,7 @@ It should be enough for the client to update the DB when there is an new client 
 ```json
 {
   "timestamp": 1641697189000,
-  "apps": {
+  "packages": {
     "ws.xsoh.etar": {
       "metadata": {
         "categories": [
@@ -478,7 +478,7 @@ It should be enough for the client to update the DB when there is an new client 
 ### adding a new version
 ```json
 {
-  "apps": {
+  "packages": {
     "ws.xsoh.etar": {
       "metadata": {
         "suggestedVersionCode": 29
@@ -525,7 +525,7 @@ It should be enough for the client to update the DB when there is an new client 
 ### add+archive version
 ```json
 {
-  "apps": {
+  "packages": {
     "ws.xsoh.etar": {
       "metadata": {
         "suggestedVersionCode": 30
@@ -576,7 +576,7 @@ It should be enough for the client to update the DB when there is an new client 
 ### archive app
 ```json
 {
-  "apps": {
+  "packages": {
     "org.fdroid.fdroid": null
   }
 }
