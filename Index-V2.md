@@ -25,6 +25,17 @@ It should be enough for the client to update the DB when there is an new client 
 * https://gitlab.com/fdroid/fdroidserver/-/issues/966
 * maybe move the toplevel directory, i.e. https://f-droid.org/packages?
 
+### Tickets
+
+* [ ] [Tag reproducible builds](https://gitlab.com/fdroid/fdroidserver/-/issues/178)
+* [ ] [File name can be path](https://gitlab.com/fdroid/fdroidclient/-/issues/1164)
+* [ ] [Changelog per version, not app](https://gitlab.com/fdroid/fdroidserver/-/issues/527)
+* [ ] [Anti-Feature Maintainer-Notes as structured text](https://gitlab.com/fdroid/fdroidserver/-/issues/683)
+* [ ] [Signing](https://gitlab.com/fdroid/fdroidserver/-/issues/835) [Algorithm](https://gitlab.com/fdroid/fdroidclient/-/issues/1989)
+* [ ] ["frosting" in the APK Signing Block](https://gitlab.com/fdroid/fdroidserver/-/issues/935)
+* [ ] [Extension to app descriptions]()
+* [ ] [multiple donation links](https://gitlab.com/fdroid/fdroidserver/-/issues/968)
+
 ## New index format
 
 * JSON 1.0 data format
