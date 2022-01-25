@@ -107,11 +107,7 @@ It should be enough for the client to update the DB when there is an new client 
     - it is already used in the metadata with `metadata/<id>.yml`
     - rational: the primary use case of the index is to distribute Android apps which have these restrictions already.
     - maybe extend this to all characters except `-`?
-  - Use `versionCode` as the key in the versions dict.
-    - this is not unique. Proposals for other things to use:
-      - per-versionCode lists `{"<versionCode>": [{}, {}]}`
-      - filename
-      - sha256
+  - Use hash of binary as the key in the versions dict. (for now sha256 but not guaranteed, just need to be unique)
 * Handle `preferredSigner` https://gitlab.com/fdroid/fdroidserver/-/issues/153
 * [Android Manifest elements](https://developer.android.com/guide/topics/manifest/manifest-element) are included in `manifest`
   * They are all transformed from XML to JSON using [the GData Convention](https://wiki.open311.org/JSON_and_XML_Conversion/#the-gdata-convention) (_xmltodict_ implements this).
@@ -234,7 +230,7 @@ It should be enough for the client to update the DB when there is an new client 
         }
       },
       "versions": {
-        "1013051": {
+        "9893a7da6d959b1a0024dfcbb4f515103471491d05596e5a138c639104d45b8a": {
           "added": 1628567668000,
           "file": {
             "name": "org.fdroid.fdroid_1013051.apk",
@@ -467,7 +463,7 @@ It should be enough for the client to update the DB when there is an new client 
         }
       },
       "versions": {
-        "28": {
+        "6dfd11972653ab22a7d4a547420b1fc10a4c8f41c3d2571cc75957fcb4f168e3": {
           "added": 1626742335000,
           "packageName": "ws.xsoh.etar",
           "file": {
@@ -514,7 +510,7 @@ It should be enough for the client to update the DB when there is an new client 
         "suggestedVersionCode": 29
       },
       "versions": {
-        "29": {
+        "c48d7acfe5d923008e2674e6598f8aaed275ad91894133be931f228f0f02ede6": {
           "added": 1640708626000,
           "packageName": "ws.xsoh.etar",
           "file": {
@@ -561,8 +557,8 @@ It should be enough for the client to update the DB when there is an new client 
         "suggestedVersionCode": 30
       },
       "versions": {
-        "28": null,
-        "30": {
+        "6dfd11972653ab22a7d4a547420b1fc10a4c8f41c3d2571cc75957fcb4f168e3": null,
+        "842937a439dd58df85b559f6b3f155415c217655264fb859b82a8b21efece9ff": {
           "added": 1641342628000,
           "packageName": "ws.xsoh.etar",
           "file": {
