@@ -23,8 +23,10 @@
 3. Run the `fdroid` command you want. e.g.
    ```shell
    cd build
+   export build=com.standardnotes
    $fdroid fetchsrclibs $build --verbose
-   $fdroid rewritemeta com.standardnotes
+   $fdroid rewritemeta $build
+   $fdroid build --verbose --test --scan-binary --on-server --no-tarball $build
    ```
 
 # Traditional way
