@@ -18,13 +18,7 @@ Please also note that the website is updated asynchronously – so while the ind
 
 
 ### Can I see the current build status?
-Sure: for this we have the [F-Droid Monitor](https://monitor.f-droid.org/builds) where you can see the current build cycle ([running](https://monitor.f-droid.org/builds/running)), the last completed one ([build](https://monitor.f-droid.org/builds/build)), [disabled](https://monitor.f-droid.org/builds/disabled) builds, and more. Historical builds can be found in the [Build activity](https://f-droid.org/wiki/index.php?title=Special:RecentChanges&hidebots=0&days=30&limit=500) logs.
-
-If you want to check the last build of a specific app, see
-
-    https://f-droid.org/wiki/index.php?title=<package_name>/lastbuild&redirect=no
-
-(after replacing `<package_name>` by the app's package name of course).
+Sure: for this we have the [F-Droid Monitor](https://monitor.f-droid.org/builds) where you can see the current build cycle ([running](https://monitor.f-droid.org/builds/running)), the last completed one ([build](https://monitor.f-droid.org/builds/build)), [disabled](https://monitor.f-droid.org/builds/disabled) builds, and more.
 
 ## Merge Requests
 ### Why do we always ask for static values on versionCode/versionName in `build.gradle`?
