@@ -1,20 +1,30 @@
 # With Docker/Podman
 
-1. Get `fdroiddata`
+1. Get `fdroiddata` & `fdroidserver`
    ```shell
    git clone https://gitlab.com/fdroid/fdroiddata.git --depth=1
+   git clone https://gitlab.com/fdroid/fdroidserver.git --depth=1
    ```
 2. Run and attach to the container
 
    ```shell
-   cd fdroiddata
-   docker run --rm -i -t --entrypoint "/bin/bash" -v ${ANDROID_SDK_ROOT}:/opt/android-sdk:Z -v $(pwd):/build:z -e ANDROID_HOME:/opt/android-sdk registry.gitlab.com/proletarius101/ci-images-client:fdroid-build
+   docker run --rm -i -t --entrypoint "/bin/bash" -v ${ANDROID_SDK_ROOT}:/opt/android-sdk:Z -v $(pwd)/fdroidserver:/home/vagrant/fdroidserver:Z -v $(pwd)/fdroiddata:/build:z registry.gitlab.com/fdroid/fdroidserver:buildserver
+   source /etc/profile.d/bsenv.sh
+   export GRADLE_USER_HOME=$home_vagrant/.gradle
+   export fdroid="sudo --preserve-env --user vagrant
+          env PATH=$fdroidserver:$PATH
+          env PYTHONPATH=$fdroidserver:$fdroidserver/examples
+          env PYTHONUNBUFFERED=true
+          env TERM=$TERM
+          env HOME=$home_vagrant
+          fdroid"
    ```
 
 3. Run the `fdroid` command you want. e.g.
    ```shell
    cd build
-   $VAGRANT_HOME/fdroidserver/fdroid rewritemeta com.standardnotes
+   $fdroid fetchsrclibs $build --verbose
+   $fdroid rewritemeta com.standardnotes
    ```
 
 # Traditional way
