@@ -26,7 +26,7 @@
    export build=com.standardnotes
    $fdroid fetchsrclibs $build --verbose
    $fdroid rewritemeta $build
-   $fdroid build --verbose --test --scan-binary --on-server --no-tarball $build
+   $fdroid build --verbose --latest --scan-binary --on-server --no-tarball $build
    ```
 
 # Traditional way
