@@ -5,6 +5,8 @@ We are creating a new index format to solve a lot of issue and improve things.  
 
 Weekly Meeting: Tuesdays, 1300 UTC on #fdroid-dev and https://meet.calyx.net/fdroid
 
+Related: https://theupdateframework.github.io
+
 ## Open Topics
 
 #### Can we go with readable json only? I.e. Don't use the jar format and rely on the web server compressing the data.
@@ -67,6 +69,11 @@ It should be enough for the client to update the DB when there is an new client 
   ```
 
   @uniqx: For achieving good repository operator privacy we probably should default to UTC. Personally I'd love to have to option to use my local timezone in my repositories, but that's not really a an important requirement I guess.
+
+  We discussed this in the meeting. In general ISO 8601 is a nice format to work with dates. For the F-Droid purposes we where not sure:
+  - The main purpose of the timestamp in the index is a version information. We don't compute or compare it to other dates and only show it to the user.
+  - With the new index diff method we will use it to download the right diff. For this a simple canonical time representation is important. The ISO format contains colons (`:`) which are problematic on some file systems. Hans tried a format without them but it is not well supported by the different programming languages.
+  We agreed to stay with the epoch for now.
 
 ### entry point
 
