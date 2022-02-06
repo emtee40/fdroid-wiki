@@ -250,6 +250,11 @@ It should be enough for the client to update the DB when there is an new client 
             "sha256": "9893a7da6d959b1a0024dfcbb4f515103471491d05596e5a138c639104d45b8a",
             "size": 8010257
           },
+          "antiFeatures": {
+            "NonFreeNet": {
+              "en-US": "Comment why"
+            }
+          },
           "manifest": {
             "versionCode": 1013051,
             "versionName": "1.13.1",
