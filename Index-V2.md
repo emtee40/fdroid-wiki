@@ -141,7 +141,7 @@ It should be enough for the client to update the DB when there is an new client 
         "location": "de"
       },
       {
-        "url": "https://mirror.cyberbits.eu/fdroid/repo",
+        "url": "https://mirror.cyberbits.eu/fdroid/repo"
       },
       {
         "url": "https://ftp.lysator.liu.se/pub/fdroid/repo",
@@ -199,40 +199,46 @@ It should be enough for the client to update the DB when there is an new client 
         "translation": "https://hosted.weblate.org/projects/f-droid/f-droid",
         "webSite": "https://f-droid.org",
         "added": 1295222400000,
-        "localized": {
+        "description": {
+          "de": "F-Droid ist ein installierbarer Katalog mit Libre Software Android-Apps. \nDer F-Droid-Client erleichtert die App-Suche und -Installation \nund hält sie auf Ihrem Gerät aktuell.\n\nEr verbindet sich mit jeder mit F-Droid kompatiblen Paketquelle. Die \nStandardquelle wird auf f-droid.org gehosted, die ausschließflich echte \nfreie und quelloffene Software enthält.\n\nAndroid selbst ist dahingehend offen, dass jeder die Wahl hat, woher \ner APKs installieren möchte. Es gibt aber viele gute Gründe, F-Droid \nals App-Manager für freie Software zu verwenden:\n\n* Benachrichtigungen zu verfügbaren Aktualisierungen erhalten \n* Aktualisierungen wahlweise automatisch herunterladen und installieren \n* Vorgänger- und Beta-Versionen überblicken \n* Mit dem Gerät inkompatible Apps aussortieren\n* Apps nach Kategorien und durchsuchbaren Beschreibungen finden \n* Auf URLs zugreifen, die mit Quelltext, Spendenmöglichkeiten, usw. verknüpft sind \n* Durch Überprüfung von Quell-Signaturen und APK-Hashes geschützt bleiben\n",
+          "en-US": "F-Droid is an installable catalogue of libre software\napps for Android. The F-Droid client app makes it\neasy to browse, install, and keep track of updates on your device.\n\nIt connects to any F-Droid compatible repositories. The default repo\nis hosted at f-droid.org, which contains only bona fide libre software.\n\nAndroid itself is open in the sense that you are free to install APKs\nfrom anywhere you wish, but there are many good reasons for using\nF-Droid as your libre software app manager:\n\n* Get notified when updates are available\n* Optionally download and install updates automatically\n* Keep track of older and beta versions\n* Filter out apps incompatible with the device\n* Find apps via categories and searchable descriptions\n* Access associated URLs for donations, source code etc.\n* Stay safe by checking repo index signatures and APK hashes\n"
+        },
+        "featureGraphic": {
           "de": {
-            "description": "F-Droid ist ein installierbarer Katalog mit Libre Software Android-Apps. \nDer F-Droid-Client erleichtert die App-Suche und -Installation \nund hält sie auf Ihrem Gerät aktuell.\n\nEr verbindet sich mit jeder mit F-Droid kompatiblen Paketquelle. Die \nStandardquelle wird auf f-droid.org gehosted, die ausschließflich echte \nfreie und quelloffene Software enthält.\n\nAndroid selbst ist dahingehend offen, dass jeder die Wahl hat, woher \ner APKs installieren möchte. Es gibt aber viele gute Gründe, F-Droid \nals App-Manager für freie Software zu verwenden:\n\n* Benachrichtigungen zu verfügbaren Aktualisierungen erhalten \n* Aktualisierungen wahlweise automatisch herunterladen und installieren \n* Vorgänger- und Beta-Versionen überblicken \n* Mit dem Gerät inkompatible Apps aussortieren\n* Apps nach Kategorien und durchsuchbaren Beschreibungen finden \n* Auf URLs zugreifen, die mit Quelltext, Spendenmöglichkeiten, usw. verknüpft sind \n* Durch Überprüfung von Quell-Signaturen und APK-Hashes geschützt bleiben\n",
-            "name": "F-Droid",
-            "summary": "Der App-Store, der Freiheit und Privatsphäre respektiert"
-          },
+            "name": "featureGraphic_PTun9TO4cMFOeiqbvQSrkdcxNUcOFQCymMIaj9UJOAY=.jpg",
+            "sha256": "b1f27fa87f8cabca50cdcd462a0f500d79d883b965a498d0e49eea560b39be1f",
+            "size": 123
+          }
+        },
+        "name": {
+          "de": "F-Droid",
+          "en-US": "F-Droid"
+        },
+        "summary": {
+          "de": "Der App-Store, der Freiheit und Privatsphäre respektiert",
+          "en-US": "The app store that respects freedom and privacy"
+        },
+        "screenshots": {
           "en-US": {
-            "description": "F-Droid is an installable catalogue of libre software\napps for Android. The F-Droid client app makes it\neasy to browse, install, and keep track of updates on your device.\n\nIt connects to any F-Droid compatible repositories. The default repo\nis hosted at f-droid.org, which contains only bona fide libre software.\n\nAndroid itself is open in the sense that you are free to install APKs\nfrom anywhere you wish, but there are many good reasons for using\nF-Droid as your libre software app manager:\n\n* Get notified when updates are available\n* Optionally download and install updates automatically\n* Keep track of older and beta versions\n* Filter out apps incompatible with the device\n* Find apps via categories and searchable descriptions\n* Access associated URLs for donations, source code etc.\n* Stay safe by checking repo index signatures and APK hashes\n",
-            "featureGraphic": {
-              "name": "featureGraphic_PTun9TO4cMFOeiqbvQSrkdcxNUcOFQCymMIaj9UJOAY=.jpg",
-              "sha256": "b1f27fa87f8cabca50cdcd462a0f500d79d883b965a498d0e49eea560b39be1f",
-              "size": 123
-            },
-            "name": "F-Droid",
-            "screenshots": {
-              "phone": [
-                {
-                  "name": "screenshot-app-details.png",
-                  "sha256": "b1f27fa87f8cabca50cdcd462a0f500d79d883b965a498d0e49eea560b39be1f",
-                  "size": 125
-                },
-                {
-                  "name": "screenshot-dark-details.png",
-                  "sha256": "9893a7da6d959b1a0024dfcbb4f515103471491d05596e5a138c639104d45b8a",
-                  "size": 43
-                }
-              ]
-            },
-            "icon": {
-              "name": "org.fdroid.fdroid.1014003.png",
-              "sha256": "b1f27fa87f8cabca50cdcd462a0f500d79d883b965a498d0e49eea560b39be1f",
-              "size": 124
-            },
-            "summary": "The app store that respects freedom and privacy"
+            "phone": [
+              {
+                "name": "screenshot-app-details.png",
+                "sha256": "b1f27fa87f8cabca50cdcd462a0f500d79d883b965a498d0e49eea560b39be1f",
+                "size": 125
+              },
+              {
+                "name": "screenshot-dark-details.png",
+                "sha256": "9893a7da6d959b1a0024dfcbb4f515103471491d05596e5a138c639104d45b8a",
+                "size": 43
+              }
+            ]
+          }
+        },
+        "icon": {
+          "en-US": {
+            "name": "org.fdroid.fdroid.1014003.png",
+            "sha256": "b1f27fa87f8cabca50cdcd462a0f500d79d883b965a498d0e49eea560b39be1f",
+            "size": 124
           }
         }
       },
