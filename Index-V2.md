@@ -627,23 +627,5 @@ It should be enough for the client to update the DB when there is an new client 
 ```
 
 ### test script
-```python
-import json
-import json_merge_patch
 
-
-def fix_index(old):
-    new = {app["packageName"]: app for app in old["apps"]}
-    for package, value in old["packages"].items():
-        new[package]["versions"] = {v["versionCode"]: v for v in value}
-    new["metadata"] = old["repo"]
-    return new
-
-
-old = json.load(open("old_index-v1.json"))
-new = json.load(open("new_index-v1.json"))
-old = fix_index(old)
-new = fix_index(new)
-j = json_merge_patch.create_patch(old, new)
-json.dump(j, open("foo", "w"), indent=2)
-```
+https://gitlab.com/-/snippets/2249962
