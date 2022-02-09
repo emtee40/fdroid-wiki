@@ -1,3 +1,15 @@
+## poll 2022-02-03
+
+> Here's another question for the #FDroid user base: Do you think you are tech savvy?
+>
+> 11% - no  
+> 83% - yes  
+> 7% - show results/not a user
+
+814 votes (15+ replies)
+
+https://mastodon.technology/@fdroidorg/107733482674792869
+
 
 ## poll 2021-12-12
 
