@@ -628,4 +628,4 @@ It should be enough for the client to update the DB when there is an new client 
 
 ### test script
 
-https://gitlab.com/-/snippets/2249962
+https://gitlab.com/jspricke/index-v2-convert
