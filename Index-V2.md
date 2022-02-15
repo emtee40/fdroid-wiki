@@ -44,38 +44,7 @@ It should be enough for the client to update the DB when there is an new client 
 * all JSON files are encoded using UTF-8
 * all keys are camel case
 * alpha-sorted by key name
-
-* proposal: use ISO8601 for the date format
-  * human readable
-  * no ambiguity in the format
-	* UNIX timestamps could be in seconds or milliseconds
-	* some languages will use local timezone when operating on UNIX timestamps
-  * automatic timezone handling across many languages
-	* https://docs.python.org/3/library/datetime.html#datetime.datetime.isoformat
-	* https://docs.python.org/3/library/datetime.html#datetime.datetime.fromisoformat
-	* https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.time/-duration/to-iso-string.html
-	* https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.time/-duration/parse-iso-string.html
-	* https://fasterxml.github.io/jackson-annotations/javadoc/2.8/com/fasterxml/jackson/annotation/JsonFormat.html
-	* https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/toISOString
-  * https://www.moesif.com/blog/technical/timestamp/manage-datetime-timestamp-timezones-in-api/
-
-  @uniqx: To reduce the pain of dealing with timezones we should also always add timezones-suffixes when writing this datetimes to json. This way it will not matter whether we use the systems local timezone or normalize to UTC.
-
-  ```!python
-  >>> LOCAL_TIMEZONE = datetime.datetime.now(datetime.timezone.utc).astimezone().tzinfo
-  >>> datetime.datetime.now(tz=LOCAL_TIMEZONE).isoformat()
-  '2022-01-18T20:49:55.917984+01:00'
-
-  >>> datetime.datetime.now(tz=datetime.timezone.utc).isoformat()
-  '2022-01-18T19:49:55.917984+00:00'
-  ```
-
-  @uniqx: For achieving good repository operator privacy we probably should default to UTC. Personally I'd love to have to option to use my local timezone in my repositories, but that's not really a an important requirement I guess.
-
-  We discussed this in the meeting. In general ISO 8601 is a nice format to work with dates. For the F-Droid purposes we where not sure:
-  - The main purpose of the timestamp in the index is a version information. We don't compute or compare it to other dates and only show it to the user.
-  - With the new index diff method we will use it to download the right diff. For this a simple canonical time representation is important. The ISO format contains colons (`:`) which are problematic on some file systems. Hans tried a format without them but it is not well supported by the different programming languages.
-  We agreed to stay with the epoch for now.
+* millisecond [UNIX Epoch times](https://en.wikipedia.org/wiki/Unix_time) in UTC
 
 ### entry point
 
