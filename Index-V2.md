@@ -13,7 +13,7 @@ Related: https://theupdateframework.github.io
 
 We need the JAR, it provides the signing method.  The code for verifying signed JARs is built into Android and Java. Also, there is no guarantee that there is a webserver serving the repo.  It can also come from IPFS, USB Disk, Bluetooth, etc. -@eighthave
 We could go with inline signing like Debian does, let's discuss this in the next meeting -@jspricke
-Publish both a `entry-v2.jar` and a `entry-v2.json`.
+Publish both a `entry.jar` and a `entry.json`.
 
 #### Do we need the `"version": 30001` field?
 
@@ -48,7 +48,7 @@ It should be enough for the client to update the DB when there is an new client 
 
 ### entry point
 
-* Entry point is `entry.jar` (signed) linking to different files.
+* Entry point is _entry.jar_ (JAR-signed) or _entry.json_ (GPG-signed) linking to different files.
 * Diff is oldTimestamp to current version.
 * Diff life in diff/ subdirectory.
 
