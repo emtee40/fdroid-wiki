@@ -43,6 +43,7 @@ It should be enough for the client to update the DB when there is an new client 
 * JSON 1.0 data format
 * all JSON files are encoded using UTF-8
 * all keys are camel case
+* alpha-sorted by key name
 
 * proposal: use ISO8601 for the date format
   * human readable
