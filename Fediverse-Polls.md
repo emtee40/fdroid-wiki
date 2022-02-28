@@ -1,3 +1,16 @@
+## poll 2022-02-24
+
+> Do you think it's fair/justified that #AppStore and #GooglePlay take a (quite substantial) percentage of each every transaction in apps they're shipping and that they refuse to ship apps with alternative donation/payment providers?
+>
+> 4% - yes  
+> 20% - yes, if fees were lower  
+> 73% - no  
+> 3% - other (see comments)
+
+591 votes (25+ replies)
+
+https://mastodon.technology/@fdroidorg/107853673112259338
+
 ## poll 2022-02-03
 
 > Here's another question for the #FDroid user base: Do you think you are tech savvy?
