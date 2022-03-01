@@ -11,7 +11,7 @@ Agenda: https://pad.riseup.net/p/fdroid-dev-meetings-keep
 
 * Jitsi Voice/Video: https://meet.calyx.net/fdroid
 * Matrix: [#fdroid-dev:f-droid.org](https://matrix.to/#/#fdroid-dev:f-droid.org)
-* OFTC IRC: #fdroid-dev
+* OFTC IRC: [#fdroid-dev(https://webchat.oftc.net/?randomnick=1&channels=fdroid-dev&prompt=1)
 
 (_This channel is publicly logged at_ https://matrix.f-droid.org/alias/%23fdroid-dev:f-droid.org)
 
