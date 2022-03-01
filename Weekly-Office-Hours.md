@@ -2,7 +2,6 @@ We have a weekly scheduled meeting time to discuss important topics for F-Droid.
 
 * odd weeks: [11:30 UTC](https://time.is/1130_in_UTC/PT/ET/BRT/EAT/CET/IST/China)
 * even weeks: [18:00 UTC](https://time.is/1800_in_UTC/PT/ET/BRT/EAT/CET/IST/China)
-* [_see UTC time compared to yours_](https://time.is/UTC#time_difference)
 
 Agenda: https://pad.riseup.net/p/fdroid-dev-meetings-keep
 
@@ -16,10 +15,12 @@ Agenda: https://pad.riseup.net/p/fdroid-dev-meetings-keep
 (_This channel is publicly logged at_ https://matrix.f-droid.org/alias/%23fdroid-dev:f-droid.org)
 
 
-## How to find the current week number?
+## How to find out what time it is for me?
 
-* `date +%V`
+* [_see UTC time compared to yours_](https://time.is/UTC#time_difference)
 * https://week-number.org/
+* week number in the terminal: `date +%V`
+
 
 ## Can I get an automatic reminder?
 
