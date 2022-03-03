@@ -1,6 +1,7 @@
 
-The F-Droid ecosystem has lots of moving pieces, this is an overview of those
-pieces.  Please add details and correct omissions.
+The F-Droid ecosystem has lots of moving pieces, this is an overview of those pieces.  Please add details and correct omissions.
+
+![fdroid-architecture](uploads/802c69f7aea4825f42de8ff8d747f50e/fdroid-architecture.jpeg)
 
 ## The index
 
