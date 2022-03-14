@@ -153,15 +153,11 @@ There are some very conservative stable release branches.  These are for targete
 8. `git fetch weblate` and check that Weblate rebased on the latest
    commits, otherwise, there is a merge conflict that needs to be
    fixed before Weblate will sync again.
-9. Run `./tools/i18n.sh md2po` to make all changes available for
-   translation, and commit to _master_.  Only commit the changed
+9. Run `./tools/post-release-translation-merge.sh` to make all changes 
+   available for translation, and commit to _master_.  Only commit the changed
    translation files (_po/*.po*_), do not commit new translation files
-   here (new languages are added via Weblate).  The easiest version of
-   this sync is only committing one or more of the _gettext_ template
-   files (_po/*.pot_), since Weblate will sync _.pot_ to all the _.po_
-   files.
-10. Push release tag and new translation commits, ideally with GPG
-    signatures.
+   here (new languages are added via Weblate).
+10. Push release tag and new translation commits with a GPG signature in the [trusted keyring](https://gitlab.com/fdroid/fdroid-deployserver/-/blob/aa4ffff3b686259d28de9bcdd75733abbd2e93b4/provision.yml#L396).
 
 
 # <tt>jekyll-fdroid</tt>
