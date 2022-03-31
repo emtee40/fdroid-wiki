@@ -3,7 +3,9 @@ We have a weekly scheduled meeting time to discuss important topics for F-Droid.
 * odd weeks: [11:30 UTC](https://time.is/1130_in_UTC/PT/ET/BRT/EAT/CET/IST/China)
 * even weeks: [18:00 UTC](https://time.is/1800_in_UTC/PT/ET/BRT/EAT/CET/IST/China)
 
-Agenda: https://pad.riseup.net/p/fdroid-dev-meetings-keep
+Agenda:\
+https://pads.c3w.at/drive/#/2/drive/edit/-OZvi14qLQNyjcVle20631nj/ \
+~~https://pad.riseup.net/p/fdroid-dev-meetings-keep~~
 
 
 ## Where do we meet?
