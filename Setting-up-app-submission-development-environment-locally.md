@@ -24,8 +24,11 @@
    ```shell
    cd build
    export build=com.standardnotes
+   # Fetch dependent libraries (if any)
    $fdroid fetchsrclibs $build --verbose
+   # Format your build receipe
    $fdroid rewritemeta $build
+   # Build your app and scan for any binary files that are prohibited
    $fdroid build --verbose --latest --scan-binary --on-server --no-tarball $build
    ```
 
