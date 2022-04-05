@@ -8,7 +8,7 @@
 2. Run and attach to the container
 
    ```shell
-   docker run --rm -i -t --entrypoint "/bin/bash" -v ${ANDROID_SDK_ROOT}:/opt/android-sdk:Z -v $(pwd)/fdroidserver:/home/vagrant/fdroidserver:Z -v $(pwd)/fdroiddata:/build:z registry.gitlab.com/fdroid/fdroidserver:buildserver
+   docker run --rm -i -t --group-add keep-groups --entrypoint "/bin/bash" -v ${ANDROID_SDK_ROOT}:/opt/android-sdk:Z -v $(pwd)/fdroidserver:/home/vagrant/fdroidserver:Z -v $(pwd)/fdroiddata:/build:z registry.gitlab.com/fdroid/fdroidserver:buildserver
    source /etc/profile.d/bsenv.sh
    export GRADLE_USER_HOME=$home_vagrant/.gradle
    export fdroid="sudo --preserve-env --user vagrant
