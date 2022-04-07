@@ -1,3 +1,16 @@
+## poll 2022-04-02
+
+> How much money do you spend on apps?
+>
+> 74% - < 12 €/$ (per year)  
+> 19% - < 60 €/$ (per year)  
+> 4% - < 120 €/$ (per year)  
+> 3% - > 120 €/$ (per year)
+
+725 votes (35+ replies)
+
+https://mastodon.technology/@fdroidorg/108062248190455448
+
 ## poll 2022-02-24
 
 > Do you think it's fair/justified that #AppStore and #GooglePlay take a (quite substantial) percentage of each every transaction in apps they're shipping and that they refuse to ship apps with alternative donation/payment providers?
