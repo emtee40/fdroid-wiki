@@ -43,3 +43,26 @@ Host fdroid-buildserver-gcc147
 ```
 
 These machines are hosted at OSUOSL as part of the [GCC Farm Project](https://cfarm.tetaneutral.net/machines/list/).
+
+
+# Temporary instances
+
+We got some short term credits from Azure.  These will disappear soon.
+
+```config
+Host fdroid-buildserver-azure-8core
+  User fdroid
+  Hostname 51.107.209.125
+
+Host fdroid-buildserver-azure-1
+  User fdroid
+  Hostname 20.25.97.57
+
+Host fdroid-buildserver-azure-2
+  User fdroid
+  Hostname 40.87.85.251
+
+Host fdroid-buildserver-azure-buster
+  User fdroid
+  Hostname 20.231.66.66
+```
