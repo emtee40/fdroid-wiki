@@ -47,7 +47,7 @@ These machines are hosted at OSUOSL as part of the [GCC Farm Project](https://cf
 
 # Temporary instances
 
-We got some short term credits from Azure.  These will disappear soon.  You can ssh to _root_ and _fdroid_.
+We got some short term credits from Azure.  These will disappear soon.  You can ssh to _root_ and _fdroid_.  This is what should go in your _~/.ssh/config_:
 
 ```config
 Host fdroid-buildserver-azure-8core
