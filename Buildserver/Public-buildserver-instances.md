@@ -1,6 +1,6 @@
 # Get access
 
-There are a number of _buildserver_ instances which community members can get access to.  You do not need to be a core contributor to get access. You may ask @jspricke @TheLastProject @uniqx or anyone else who have access to the machines, on [Matrix](https://matrix.to/#/#fdroid-dev:f-droid.org).
+There are a number of _buildserver_ instances which community members can get access to.  You do not need to be a core contributor to get access. You may ask @jspricke @TheLastProject @uniqx or anyone else who has access to the machines, on [Matrix](https://matrix.to/#/#fdroid-dev:f-droid.org).
 
 # Setup
 
