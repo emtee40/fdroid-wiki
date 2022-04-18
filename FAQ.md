@@ -9,7 +9,7 @@ As the name suggests, this page collects questions asked frequently and puts som
 Your MR has just been merged, but the APK did not show up immediately? That's normal: the APK must first been built on the build server (happens automatically when the next build cycle starts), then signed (manual step), then a new index must be created and deployed.
 
 * a build cycle currently takes about 36h
-* manual signing happens afterwards
+* signing apps at the and is manual
 * next build cycle starts after signing
 
 So if you're lucky, it takes 2 days (new build cycle just started minutes after the merge). If your not-that-lucky (merge happened a minute after a build cycle started), it will take 4 days. If you're very unlucky, Murphy visits in between with some problems… So no panic before 5 days have passed, please :wink:
