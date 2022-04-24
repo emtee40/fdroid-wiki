@@ -3,4 +3,6 @@ Due to technical limitations of building the whole toolchain from source by fdro
 ## Workaround
 You can publish a custom fdroid repo on GitHub pages, GitLab pages, or any static assets hosting platforms. Example: https://github.com/bitwarden/mobile/blob/master/.github/workflows/release.yml#L93...L175.
 
-You may guide the user to add your repo to their fdroidclient with one tap. Example: https://mobileapp.bitwarden.com/fdroid/
+You may guide the user to add your repo to their fdroidclient with one tap. Example: https://mobileapp.bitwarden.com/fdroid/.
+
+This matches our vision of [decentralized distribution](https://f-droid.org/en/2022/02/05/decentralizing-distribution.html).
