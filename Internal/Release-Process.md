@@ -4,8 +4,9 @@ For each piece of the F-Droid ecosystem, there is a specific release process.  T
 
 # <tt>fdroidclient</tt>
 
-1. pull in latest commits from Weblate into a local branch called
-   _weblate_
+0. Commit changes in Weblate (e.g. `wlc commit`)
+1. Fetch in latest commits from Weblate
+1. Run `./tools/pick-complete-translations.py`
 2. run `./tools/check-format-strings.py` and
    `./tools/remove-unused-and-blank-translations.py` and commit
    changes
