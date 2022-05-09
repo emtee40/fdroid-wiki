@@ -1,9 +1,5 @@
 
 
-
-
-
-
 ## Domain Names
 
 * f-droid.com     maintained by @CiaranG
@@ -35,34 +31,44 @@
 
 ## Source Code Repositories
   
-- * https://gitlab.com/fdroid  (Group ID Number 28397)
-- * https://github.com/fdroid
-- * https://github.com/f-droid
+* https://gitlab.com/fdroid  (Group ID Number 28397)
+* https://github.com/fdroid
+* https://github.com/f-droid
 
 ## Forums
 
-- * https://forum.f-droid.org/
+* https://forum.f-droid.org/
 
 
 ## Social Media
 
-- * https://webchat.oftc.net/?randomnick=1&channels=fdroid&prompt=1   
+* https://webchat.oftc.net/?randomnick=1&channels=fdroid&prompt=1   
  #fdroid on OFTC
-- * https://matrix.to/#/#fdroid:f-droid.org
+* https://matrix.to/#/#fdroid:f-droid.org
  #fdroid:f-droid.org on Matrix
-- * https://t.me/joinchat/AlRQekvjWDTuQrCgMYSNVA  
+* https://t.me/joinchat/AlRQekvjWDTuQrCgMYSNVA  
  (Telegram)
-- * https://xmpp.org/#fdroid#matrix.org@bridge.xmpp.matrix.org?join
-- * https://mastodon.technology/@fdroidorg
-- * https://twitter.com/fdroidorg
+* https://xmpp.org/#fdroid#matrix.org@bridge.xmpp.matrix.org?join
+* https://mastodon.technology/@fdroidorg
+* https://twitter.com/fdroidorg
 
 ## Archives
  
-- * https://view.matrix.org/room/!hbPGQxyHEvFEncGQxE:f-droid.org/?anchor=$CW5qfh6r1SvaZpkKoGimBcFbRynTVO2F3mYpOb9uIWY&offset=30
+* https://view.matrix.org/room/!hbPGQxyHEvFEncGQxE:f-droid.org/?anchor=$CW5qfh6r1SvaZpkKoGimBcFbRynTVO2F3mYpOb9uIWY&offset=30
 
 ## Databases ?
 
 ## Hardware/Software
+
+## Services
+
+* GCC Compile Farm boxes
+* OSUOSL GitLab Runners
+* PEP VMs (verification and a gitlab runner)
+* GitLab partner account
+* Azure cloud budget
+
+## Signing/Encryption Keys
 
 * F-Droid GPG key (admin@f-droid.org)
 * index signing key
