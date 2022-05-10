@@ -131,26 +131,16 @@ There are some very conservative stable release branches.  These are for targete
 
 # <tt>fdroid-website</tt>
 
-1. Review the [failing
-   checks](https://hosted.weblate.org/checks/?project=f-droid&component=website)
-   in Weblate, and try to fix any as possible in the Weblate UI (not
-   locally!).
+1. Review the [failing checks](https://hosted.weblate.org/checks/?project=f-droid&component=website) in Weblate, and try to fix any as possible in the Weblate UI (not locally!).
 2. Commit all work [in Weblate](https://hosted.weblate.org/projects/f-droid/website/#repository)
    or with `wlc commit`.
 3. Fetch the latest commits from Weblate into a git remote called _weblate_.
-4. Reset your local _master_ branch to the main repo's _master_, e.g.
-   `git checkout -B master upstream/master`
+4. Reset your local _master_ branch to the main repo's _master_, e.g. `git checkout -B master upstream/master` (careful, this will remove commits in _master_ that are not in _upstream/master_).
 5. Run `./tools/pick-complete-translations.py`.
-6. Change to new _merge_weblate_ branch and run all checker scripts
-   (`./tools/check-*.py`), make sure they all pass, then commit those
-   changes.
-7. Merge the _merge_weblate_ branch into the local _master_ branch and
-   fix any conflicts.
-8. Push _merge_weblate_ branch to your fork and create a merge request.
-   Tag it with the _localization_ label.
+6. Change to new _merge_weblate_ branch and run all checker scripts (`./tools/check-*.py`), make sure they all pass, then commit those changes.
+7. Push _merge_weblate_ branch to your fork and create a merge request. Tag it with the _localization_ label.
 9. Make sure all tests pass before merging.
-7. add git signed tag named after the exact version name (no
-   preceeding __v__)
+10. Add git signed tag named after the exact version name (no preceeding __v__)
 8. `git fetch weblate` and check that Weblate rebased on the latest
    commits, otherwise, there is a merge conflict that needs to be
    fixed before Weblate will sync again.
