@@ -10,7 +10,7 @@ For `Base URL`, enter `https://hosted.mailcow.de/SOGo/dav/calendar@f-droid.org/C
 Go to Calendars, press `+` on Subscriptions and enter calendar@f-droid.org.
 
 ## Mozilla Thunderbird
-Go to Calendar, press +.
+Go to Calendar, press `+`.
 
 In Create New Calendar, choose "On the Network".
 
