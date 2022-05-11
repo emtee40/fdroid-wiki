@@ -1,4 +1,4 @@
-Main email management is done by @TheLastProject. If you're an F-Droid contributor and want access to team@f-droid.org, please create an issue on https://gitlab.com/fdroid/admin/-/issues and assign it to @TheLastProject.
+Main email management is done by @TheLastProject. If you're an F-Droid contributor and want access to team@f-droid.org, please create an issue on https://gitlab.com/fdroid/admin/-/issues and assign it to @TheLastProject. In case @TheLastProject is not reachable, @eighthave also has complete admin access (he is the backup contact).
 
 F-Droid email addresses are username@f-droid.org, but if wanted aliases like firstname.lastname@f-droid.org and firstname@f-droid.org can be added.
 
