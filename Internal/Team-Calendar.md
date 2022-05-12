@@ -21,7 +21,7 @@ After pressing Find Calendars, Thunderbird will ask you for your F-Droid email p
 ## Gnome Evolution
 Open the calendar view, right-click on one of the items in the left pane and choose "New calendar". Select "CalDAV" as type. In the URL input, paste `https://hosted.mailcow.de/SOGo/dav/calendar@f-droid.org/Calendar/personal/` and as User specify your `@f-droid.org` address. Optionally specify an email address for invitations.
 
-As you cannot add to the teams calendar directly, you might need to repeat this for your own `@f-droid.org` calendar which you can keep "invisible" (to not see all self-created appointments twice).
-
 # Adding entries
-To add an entry to the Team calendar, simply add something to your personal calendar and invite calendar@f-droid.org. All subscribed members will see the calendar event.
+To add an entry to the Team calendar, simply invite calendar@f-droid.org to a calendar event. All subscribed users will see it.
+
+An useful trick is to make a new personal calendar and create the shared entries in there, so you can hide this secondary calendar from your normal view (and thus not see each entry twice).
