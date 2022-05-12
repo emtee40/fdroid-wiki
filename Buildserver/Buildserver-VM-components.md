@@ -32,5 +32,5 @@ A list of the components and how they are used to create a _buildserver_ guest V
 On the GCC CFarm instances using Vagrant/libvirt, it is possible to shrink the libvirt disks:
 
 * shut down VM
-* `virt-sparsify --in-place var/lib/libvirt/images/fdroid-gitlab-runner_default.img`
+* `virt-sparsify --in-place fdroid-gitlab-runner_default.img`
 
