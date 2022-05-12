@@ -140,6 +140,7 @@ There are some very conservative stable release branches.  These are for targete
 6. Change to new _merge_weblate_ branch and run all checker scripts (`./tools/check-*.py`), make sure they all pass, then commit those changes.
 7. Push _merge_weblate_ branch to your fork and create a merge request. Tag it with the _localization_ label.
 9. Make sure all tests pass before merging.
+9. Check https://gitlab.com/fdroid/jekyll-fdroid for updates, and include them by editing the commit hash in _Gemfile_
 10. Add git signed tag named after the exact version name (no preceeding __v__)
 8. `git fetch weblate` and check that Weblate rebased on the latest
    commits, otherwise, there is a merge conflict that needs to be
