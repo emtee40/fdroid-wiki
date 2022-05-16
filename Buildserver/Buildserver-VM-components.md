@@ -34,3 +34,15 @@ On the GCC CFarm instances using Vagrant/libvirt, it is possible to shrink the l
 * shut down VM
 * `virt-sparsify --in-place fdroid-gitlab-runner_default.img`
 
+### Azure setup
+
+* mount _/home_ on extra storage
+* set up libvirt default storage pool on _/home/default-storage-pool_
+* bind mount _/var/lib/libvirt/images_:<br/>
+  `/home/default-storage-pool  /var/lib/libvirt/images none    bind    0       0`
+* _fdroidserver/makebuildserver.config.py_ -> `apt_package_cache = False`
+* `mkdir -p /root/code/fdroid`
+* `cd /root/code/fdroid`
+* `git clone https://gitlab.com/fdroid/fdroid-bootstrap-buildserver.git`
+* `git clone https://gitlab.com/fdroid/fdroid-cfarm-bootstrap.git`
+* _authorized_keys_ from fdroid-cfarm-bootstrap/files/contributor_keys
