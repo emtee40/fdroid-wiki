@@ -1,5 +1,3 @@
-Sdkmanager can be installed via [pip](https://pypi.org/project/sdkmanager/) or via the [Linux package manager](https://pkgs.org/search/?q=sdkmanager).
-
 The procedure is as follows:
 1. Install Sdkmanager either via [pip](https://pypi.org/project/sdkmanager/) or the [Linux package manager](https://pkgs.org/search/?q=sdkmanager).
 2. Run the command ``sudo mkdir /opt/android-sdk/`` to make the Directory where the Android emulator  folders will be stored.
