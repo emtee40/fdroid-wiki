@@ -50,24 +50,18 @@ These machines are hosted at OSUOSL as part of the [GCC Farm Project](https://cf
 We got some short term credits from Azure.  These will disappear soon.  You can ssh to _root_ and _fdroid_.  This is what should go in your _~/.ssh/config_:
 
 ```config
-
-Host fdroid-buildserver-azure-1002
-  User fdroid
-  Hostname fdroid-fdroiddata-test317133756000.eastus.cloudapp.azure.com
-  Port 54687
-
-Host fdroid-buildserver-azure-1001
-  User fdroid
-  Hostname fdroid-fdroiddata-test317133756000.eastus.cloudapp.azure.com
-  Port 53131
-
 Host fdroid-buildserver-azure-1000
   User fdroid
   Hostname fdroid-fdroiddata-test317133756000.eastus.cloudapp.azure.com
   Port 51243
-
-Host fdroid-buildserver-azure-buster
-  User fdroid
-  Hostname fdroid-fdroiddata-test317133756000.eastus.cloudapp.azure.com
-  Port 65505
 ```
+
+## OSUOSL OpenStack
+
+OSUOSL has given F-Droid an allocation on their [OpenStack setup](https://osuosl.org/services/hosting/details/#openstack):
+
+* 10 instances
+* 64 VPUs
+* 200GB RAM
+* 7.8TB volume storage
+* 50 floating IP addresses
