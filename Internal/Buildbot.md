@@ -7,7 +7,7 @@ The easiest place to get started with this is to read [Buildbot Concepts](https:
 - https://docs.buildbot.net/latest/manual/configuration/www.html#reverse-proxy-configuration
 
 
-## Implementation Stages
+### Implementation Stages
 
 1. Get builds running in existing _buildserver_ VM by making a `Worker` per _buildserver_ instance that handles starting/stoping the VM, then running `fdroid build --server` for one single build.
 2. Make `fdroid build` just take the command line args and generate the `Changes` and submit them to the `Scheduler` via `buildbot sendchange`.
@@ -23,7 +23,7 @@ The easiest place to get started with this is to read [Buildbot Concepts](https:
 
 The build _worker_ should use a [`LatentWorker`](https://docs.buildbot.net/latest/manual/configuration/workers.html#latent-workers), either [`LibvirtWorker`](https://docs.buildbot.net/latest/manual/configuration/workers-libvirt.html) or we implement a `VagrantLatentWorker`.  At this point, I think `VagrantLatentWorker` will work best.
 
-## examples
+### examples
 
 OpenVPN uses libvirt with Buildbot:
 * https://github.com/OpenVPN/openvpn-buildbot
