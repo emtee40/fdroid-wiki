@@ -19,7 +19,15 @@ The easiest place to get started with this is to read [Buildbot Concepts](https:
 
 `checkupdates` can probably run as its own instance of Buildbot.
 
+# build
 
+The build _worker_ should use a [`LatentWorker`](https://docs.buildbot.net/latest/manual/configuration/workers.html#latent-workers), either [`LibvirtWorker`](https://docs.buildbot.net/latest/manual/configuration/workers-libvirt.html) or we implement a `VagrantLatentWorker`.  At this point, I think `VagrantLatentWorker` will work best.
+
+## examples
+
+OpenVPN uses libvirt with Buildbot:
+* https://github.com/OpenVPN/openvpn-buildbot
+* https://github.com/OpenVPN/openvpn-vagrant
 
 # verification
 
@@ -29,3 +37,9 @@ Collecting buildbot-console-view==2.10.1
 
 
 # checkupdates
+
+* The `fdroid checkupdates` runs are being implemented using a [`DockerLatentWorker`](https://docs.buildbot.net/3.5.0/manual/configuration/workers-docker.html).  
+
+* Each active app should get a `ChangeSource` set up on its source repo.  Then when that detects new commits, it should trigger a `fdroid checkupdates` run for that app.
+
+* There should be a new job that uses a Git watcher on fdroid/fdroiddata, then whenever there are new commits, it add/updates/deletes all the relevant `ChangeSources` for all the active apps.
