@@ -1,3 +1,18 @@
+## poll 2022-06-23
+
+> Do you use #FDroid on de-googled or stock #android?  
+>   
+> #gafam #google #privacy  
+>   
+> 68% - yes  
+> 16% - no (don't care; need some google apps/services)  
+> 3% - no (not yet; didn't know that's an option)  
+> 14% - no (my phone doesn't support custom ROMs)  
+
+1,031 votes (49+ replies)
+
+https://mastodon.technology/@fdroidorg/108525955215170811
+
 ## poll 2022-04-02
 
 > How much money do you spend on apps?
