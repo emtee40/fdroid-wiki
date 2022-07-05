@@ -20,6 +20,10 @@ Host fdroid-buildserver-full-copy
   PasswordAuthentication no
 ```
 
+* Hosted on OSUOSL's OpenStack Cloud
+* _rsync_ for _repo_ and _archive_ in _/etc/cron.monthly/rsync-fdroid_
+* _/home/fdroid/fetch-all-source-repos.sh_ for getting app source repos
+
 
 ## gcc147
 
