@@ -8,6 +8,18 @@ Once you have been granted access, you will need to copy the relevant config fro
 
 This aims to be as close as possible to the production setup.  There is an Ubuntu/focal chroot included, since `fdroid publish` is run on Ubuntu/focal.  To use that chroot, just run: `schroot`.
 
+## <tt>fdroid-buildserver-full-copy</tt>
+
+This instance is set up to be a close approximation of the complete production _buildserver_ setup, with a complete copy of the _buildserver_ VM, app source repos, and all the files from the _repo_ and _archive_ sections.
+
+
+```config
+Host fdroid-buildserver-full-copy
+  User fdroid
+  Hostname 140.211.166.80
+  PasswordAuthentication no
+```
+
 
 ## gcc147
 
