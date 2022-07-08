@@ -15,3 +15,7 @@ All contributors to F-Droid are welcome to use these shared runners to save time
 | vCPUs            | 4                        |
 | RAM              | 16 GiB                   |
 | Disk             | Standard HDD LRS 400 GiB |
+
+## Limitations
+
+- The runner has no access to `sysctl` for security. Add '|| true' to allow it to fail, and then ask [@proletarius101](https://matrix.to/#/@proletarius101:matrix.org) to add that setting in system level.
