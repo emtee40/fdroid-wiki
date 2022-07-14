@@ -56,18 +56,15 @@ check_interval = 0
 [[runners]]
   name = "docker-runner"
   url = "https://gitlab.com/"
-  token = "TOKEN"
+  token = "***"
   executor = "docker"
   builds_dir = "/builds"
   cache_dir = "/cache"
   
   environment = [
-    "GIT_DEPTH=1000",
-    "GIT_CLONE_PATH=$CI_BUILDS_DIR/$CI_CONCURRENT_ID/$CI_PROJECT_NAME"
+    "GIT_DEPTH=1000"
   ]
 
-  [runners.custom_build_dir]
-    enabled = true
   [runners.cache]
     [runners.cache.s3]
     [runners.cache.gcs]
