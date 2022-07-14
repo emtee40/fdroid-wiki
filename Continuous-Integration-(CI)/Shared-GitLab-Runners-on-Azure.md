@@ -22,7 +22,8 @@ All contributors to F-Droid are welcome to use these shared runners to save time
 
 ## Tuning
 
-Optimized according to the guidance in https://docs.gitlab.com/ee/ci/large_repositories/#docker-executor-example.
+- https://docs.gitlab.com/ee/ci/large_repositories/#docker-executor-example
+- https://docs.gitlab.com/ee/ci/large_repositories/index.html#our-gitlab-ciyml
 
 ## Configuration
 
