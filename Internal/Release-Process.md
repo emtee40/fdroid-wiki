@@ -99,8 +99,10 @@ As soon as a stable is tagged, master will move on to `-alpha0` on the next vers
 
 There are some very conservative stable release branches.  These are for targeted bugfixes only, and are setup to only have the changes that would allow the releases to get into Debian/stable and Ubuntu/LTS releases.
 
-* 2.0.x targets Debian/bullseye and Ubuntu/hirsute
-* 1.1.x targets Debian/buster and Ubuntu/focal
+* 2.2.x targets Debian/bookworm
+* 2.1.x targets Ubuntu/jammy 22.04
+* 2.0.x targets Debian/bullseye
+* 1.1.x targets Debian/buster and Ubuntu/focal 20.04
 
 
 # <tt>privileged-extension</tt>
