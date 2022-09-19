@@ -1,3 +1,15 @@
+## poll 2022-09-05
+
+> Do you think you spend too much time on your phone?
+>
+> 31% - no
+> 66% - yes
+> 3% - other (see comments)
+
+743 votes
+
+https://mastodon.technology/@fdroidorg/109001652512310331
+
 ## poll 2022-06-23
 
 > Do you use #FDroid on de-googled or stock #android?  
