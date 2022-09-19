@@ -2,8 +2,8 @@
 
 > Do you think you spend too much time on your phone?
 >
-> 31% - no
-> 66% - yes
+> 31% - no  
+> 66% - yes  
 > 3% - other (see comments)
 
 743 votes
