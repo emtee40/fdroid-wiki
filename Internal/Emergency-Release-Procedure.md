@@ -19,5 +19,9 @@ cd build/im.vector.app
 git reset --hard v1.4.36
 git clean -fdx
 git apply --ignore-space-change --ignore-whitespace ~/element_android_sec_1.4.37.patch
-git diff > ../../metadata/im.vector.app/element_android_sec_2.4.36-1.patch
+git status  # see any new files
+git add path/to/new.file
+git commit -a -m "element_android_sec_1.4.36-1.patch"
+git format-patch -n1
+ls -l 0001-element_android_sec_1.4.36-1.patch.patch 
 ```
