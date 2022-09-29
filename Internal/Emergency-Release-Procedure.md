@@ -10,7 +10,7 @@ With security issues, there is often a coordinated release with a [fixed time](h
 
 ## Use patches for the sensitive bits
 
-Patch files are a common way to share source code.  The sensitive parts of the coordinated release should be in a patch file.  If this is a patch on an existing release, then the patch should include all the changes needed to update `versionCode` and `versionName`.   This patch must apply cleanly to a well documented commit in the source repo.  That means these work: `git apply fix-vuln.patch` or `patch -p1 < fix-vuln.patch`.  If the patch requires options like `--ignore-space-change` or `--ignore-whitespace`, it will not work.  Refresh the patch against the exact commit, then `git diff` will generate a clean patch.
+Patch files are a common way to share source code.  The sensitive parts of the coordinated release should be in a patch file.  If this is a patch on an existing release, then the patch should include all the changes needed to update `versionCode` and `versionName`.   This patch must apply cleanly to a well documented commit in the source repo.  That means these work: `git apply fix-vuln.patch` or `patch -p1 < fix-vuln.patch`.  If the patch requires options like `--ignore-space-change` or `--ignore-whitespace`, it will not work.  Refresh the patch against the exact commit, then `git format-patch` will generate a clean patch.
 
 Here's an example session for refreshing a patch:
 
