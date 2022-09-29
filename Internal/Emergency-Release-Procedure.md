@@ -8,6 +8,10 @@ With security issues, there is often a coordinated release with a [fixed time](h
 * https://gitlab.com/fdroid/fdroiddata/-/merge_requests/11812
 * https://gitlab.com/fdroid/fdroiddata/-/merge_requests/11813
 
+## Make an actual release
+
+The emergency release should be an actual release, following the normal development process for that app.  This needs to happen before sending us the patches.  So like the upstream dev fixes security issues locally, bumps the version, then builds the APK, tests it locally. When that is done, they do the `git format-patch` or git push/pull to a private repo for us to build.  We cannot know what the release process for each app is, we build thousands of apps.
+
 ## Use patches for the sensitive bits
 
 Patch files are a common way to share source code.  The sensitive parts of the coordinated release should be in a patch file.  If this is a patch on an existing release, then the patch should include all the changes needed to update `versionCode` and `versionName`.   This patch must apply cleanly to a well documented commit in the source repo.  That means these work: `git apply fix-vuln.patch` or `patch -p1 < fix-vuln.patch`.  If the patch requires options like `--ignore-space-change` or `--ignore-whitespace`, it will not work.  Refresh the patch against the exact commit, then `git format-patch` will generate a clean patch.
