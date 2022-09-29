@@ -3,7 +3,7 @@ There are certain rare cases that require a emergency, manual release process to
 
 ## Start the build development as soon as possible
 
-With security issues, there is often a coordinated release with a [fixed time](https://matrix.org/blog/2022/09/23/pre-disclosure-upcoming-critical-security-release-of-matrix-sd-ks-and-clients/) in the future made for the release.  I n this case, the work to get the build setup should start as soon as possible.  All of the non-sensitive bits can be pushed to a merge request in https://gitlab.com/fdroid/fdroiddata so that CI can run and progress can be tracked.  For example:
+With security issues, there is often a coordinated release with a [fixed time](https://matrix.org/blog/2022/09/23/pre-disclosure-upcoming-critical-security-release-of-matrix-sd-ks-and-clients/) in the future made for the release.  In this case, the work to get the build setup should start as soon as possible.  All of the non-sensitive bits can be pushed to a merge request in https://gitlab.com/fdroid/fdroiddata so that the CI can run and progress can be tracked.  For example:
 
 * https://gitlab.com/fdroid/fdroiddata/-/merge_requests/11812
 * https://gitlab.com/fdroid/fdroiddata/-/merge_requests/11813
