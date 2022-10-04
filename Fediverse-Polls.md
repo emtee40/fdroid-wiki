@@ -1,3 +1,16 @@
+## poll 2022-09-29
+
+> What do you think about #Android #Privacy Indicator? It's a little dot showing up in your status bar when an app accesses your microphone, camera, location or other sensitive data. (became first available on Android 12)
+>
+> 60% - useful  
+> 4% - not useful  
+> 34% - I don't have this feature (Android 11 or older)  
+> 2% - other (see comments)
+
+636 votes
+
+https://mastodon.technology/@fdroidorg/109081013331977961
+
 ## poll 2022-09-05
 
 > Do you think you spend too much time on your phone?
