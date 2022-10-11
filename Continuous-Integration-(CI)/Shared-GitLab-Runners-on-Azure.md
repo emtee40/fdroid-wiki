@@ -14,7 +14,7 @@ All contributors to F-Droid are welcome to use these shared runners to save time
 | Size             | Standard B4ms            |
 | vCPUs            | 4                        |
 | RAM              | 16 GiB                   |
-| Disk             | Standard HDD LRS 400 GiB |
+| Disk             | Premium SSD P10 128GB    |
 
 ## Limitations
 
