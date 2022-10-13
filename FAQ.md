@@ -8,7 +8,7 @@ As the name suggests, this page collects questions asked frequently and puts som
 ### How long does it take for my app to show up on website and client?
 Your MR has just been merged, but the APK did not show up immediately? That's normal: the APK must first been built on the build server (happens automatically when the next build cycle starts), then signed (manual step), then a new index must be created and deployed.
 
-* a build cycle currently takes about 36h
+* a build cycle currently can take up to 72h (hard limit)
 * apps are manually signed after that, and then uploaded
 * next build cycle starts after signing is completed
 
