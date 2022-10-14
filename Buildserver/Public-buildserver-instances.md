@@ -52,7 +52,7 @@ Host fdroid-buildserver-gcc137-jspricke
 
 Host fdroid-buildserver-gcc137-licaon
   User fdroid
-  Hostname 192.168.100.20
+  Hostname 192.168.100.10
   ProxyJump tunnel@gcc147.osuosl.org
   ServerAliveInterval 30
   ServerAliveCountMax 5
