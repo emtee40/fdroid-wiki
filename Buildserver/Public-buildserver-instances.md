@@ -25,18 +25,42 @@ Host fdroid-buildserver-full-copy
 * _/home/fdroid/fetch-all-source-repos.sh_ for getting app source repos
 
 
+# Temporary instances
+
+If your SSH public key is listed [here](https://gitlab.com/fdroid/fdroid-cfarm-bootstrap/-/tree/master/files/contributor_keys), then you have access to all of these boxes:
+
 ## gcc147
 
 ```config
-Host fdroidGcc147
-  Hostname gcc147.osuosl.org
+Host gcc147.osuosl.org
   Port 45026
   User tunnel
 
-Host fdroid-buildserver-gcc147
+Host fdroid-buildserver-gcc137-bubu
   User fdroid
-  Hostname 192.168.111.129
-  ProxyJump fdroidGcc147
+  Hostname 192.168.103.20
+  ProxyJump tunnel@gcc147.osuosl.org
+  ServerAliveInterval 30
+  ServerAliveCountMax 5
+
+Host fdroid-buildserver-gcc137-jspricke
+  User fdroid
+  Hostname 192.168.102.20
+  ProxyJump tunnel@gcc147.osuosl.org
+  ServerAliveInterval 30
+  ServerAliveCountMax 5
+
+Host fdroid-buildserver-gcc137-licaon
+  User fdroid
+  Hostname 192.168.100.20
+  ProxyJump tunnel@gcc147.osuosl.org
+  ServerAliveInterval 30
+  ServerAliveCountMax 5
+
+Host fdroid-buildserver-gcc137-uniqx
+  User fdroid
+  Hostname 192.168.101.20
+  ProxyJump tunnel@gcc147.osuosl.org
   ServerAliveInterval 30
   ServerAliveCountMax 5
 
@@ -44,8 +68,7 @@ Host fdroid-buildserver-gcc147
 
 These machines are hosted at OSUOSL as part of the [GCC Farm Project](https://cfarm.tetaneutral.net/machines/list/).
 
-
-# Temporary instances
+## Azure
 
 We got some short term credits from Azure.  These will disappear soon.  You can ssh to _root_ and _fdroid_.  This is what should go in your _~/.ssh/config_:
 
