@@ -11,8 +11,8 @@ All contributors to F-Droid are welcome to use these shared runners to save time
 | Parameter | Specification |
 |-----------|---------------|
 | Operating System | Linux (rhel 9.0) |
-| Size | Standard B4ms |
-| vCPUs | 4 |
+| Size | Standard_F8s_v2 |
+| vCPUs | 8 |
 | RAM | 16 GiB |
 | Disk | Premium SSD P10 128GB |
 
@@ -36,7 +36,7 @@ https://gitlab.com/secure-system/fdroid/fdroid-azure-gitlab-runner
 `/etc/gitlab-runner/config.toml`
 
 ```toml
-concurrent = 10
+concurrent = 12
 check_interval = 0
 
 [session_server]
@@ -49,9 +49,8 @@ check_interval = 0
   executor = "docker"
   builds_dir = "/builds"
   cache_dir = "/cache"
-  
   environment = [
-    "GIT_DEPTH=1000"
+    "GIT_CLONE_PATH=$CI_BUILDS_DIR/$CI_CONCURRENT_ID/$CI_PROJECT_NAME"
   ]
 
   [runners.cache]
@@ -66,6 +65,7 @@ check_interval = 0
     disable_entrypoint_overwrite = false
     oom_kill_disable = false
     disable_cache = false
-    volumes = [ "/var/cache/apt", "/cache", "/builds", "/opt/android-sdk" ]
-    shm_size = 0
+    volumes = [ "/datadrive/fdroid-azure-gitlab-runner/data/builds:/builds", "/cache:/cache" ]
+    shm_size = 300000
+    dns = ["1.1.1.1", "1.0.0.0"]
 ```
