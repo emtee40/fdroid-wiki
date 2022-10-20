@@ -1,3 +1,10 @@
+# `config.yml` tweaks
+```
+build_server_always: true          (so you don't need to specify at runtime)
+deploy_process_logs: true          (so build logs are kept even if the build failed)
+serverwebroot: /home/fdroid        (create a folder `/home/fdroid/repo/` to save the logs into)
+```
+
 # Useful aliases for common tasks
 
 ```
