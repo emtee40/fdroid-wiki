@@ -29,6 +29,7 @@ alias tl='tmux list-sessions'
 
 Example workflow:
 ```
+ta run                       (create a tmux session to run the build in; allows you to switch to another session and do something else in the meantime, not run another build but: scan, rewritemeta, lint, checkupdate, publish etc)
 mf metadata/appid.yml        (edit the file)
 fl appid                     (lint verify)
 frm appid                    (rewritemeta to format it properly)
