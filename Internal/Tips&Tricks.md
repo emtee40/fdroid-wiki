@@ -47,7 +47,7 @@ Hence we've can edit `fdroidserver/fdroidserver/build.py` and replaced `destroy`
 
 # Moving files from/to a suspended VM
 
-First install `scp` for Vagrant install: `vagrant plugin install vagrant-scp`
+First install while, logged in as your normal user eg. `fdroid`, `scp` for Vagrant : `vagrant plugin install vagrant-scp`
 
 Now you can extract files from the VM, _(you run in folder `~/fdroiddata/builder/`)_: `vagrant scp :/home/vagrant/build/appid/path/ .`   
 (Don't forget the dot at the end or put a better path in its place to save files to)
