@@ -36,33 +36,63 @@ Host gcc147.osuosl.org
   Port 45026
   User tunnel
 
-Host fdroid-buildserver-gcc137-bubu
+
+Host fdroid-buildserver-gcc147-bubu
   User fdroid
   Hostname 192.168.103.20
+  HostKeyAlias fdroid-buildserver-gcc147-bubu
   ProxyJump tunnel@gcc147.osuosl.org
-  ServerAliveInterval 30
-  ServerAliveCountMax 5
 
-Host fdroid-buildserver-gcc137-jspricke
+Host fdroid-buildserver-gcc147-jspricke
   User fdroid
   Hostname 192.168.102.20
+  HostKeyAlias fdroid-buildserver-gcc147-jspricke
   ProxyJump tunnel@gcc147.osuosl.org
-  ServerAliveInterval 30
-  ServerAliveCountMax 5
 
-Host fdroid-buildserver-gcc137-licaon
+Host fdroid-buildserver-gcc147-licaon
   User fdroid
   Hostname 192.168.100.10
+  HostKeyAlias fdroid-buildserver-gcc147-licaon
   ProxyJump tunnel@gcc147.osuosl.org
-  ServerAliveInterval 30
-  ServerAliveCountMax 5
 
-Host fdroid-buildserver-gcc137-uniqx
+Host fdroid-buildserver-gcc147-uniqx
   User fdroid
   Hostname 192.168.101.20
+  HostKeyAlias fdroid-buildserver-gcc147-uniqx
   ProxyJump tunnel@gcc147.osuosl.org
-  ServerAliveInterval 30
-  ServerAliveCountMax 5
+
+```
+
+## gcc148
+
+```config
+Host gcc148.osuosl.org
+  Port 45027
+  User tunnel
+
+Host fdroid-buildserver-gcc148-bubu
+  User fdroid
+  Hostname 192.168.103.20
+  HostKeyAlias fdroid-buildserver-gcc148-bubu
+  ProxyJump tunnel@gcc148.osuosl.org
+
+Host fdroid-buildserver-gcc148-jspricke
+  User fdroid
+  Hostname 192.168.102.20
+  HostKeyAlias fdroid-buildserver-gcc148-jspricke
+  ProxyJump tunnel@gcc148.osuosl.org
+
+Host fdroid-buildserver-gcc148-licaon
+  User fdroid
+  Hostname 192.168.100.10
+  HostKeyAlias fdroid-buildserver-gcc148-licaon
+  ProxyJump tunnel@gcc148.osuosl.org
+
+Host fdroid-buildserver-gcc148-uniqx
+  User fdroid
+  Hostname 192.168.101.20
+  HostKeyAlias fdroid-buildserver-gcc148-uniqx
+  ProxyJump tunnel@gcc148.osuosl.org
 
 ```
 
