@@ -1,3 +1,14 @@
+## poll 2022-10-30
+
+> Do you use the #android VPN feature? (eg. for your #AdBlocker, or to route internet traffic over #Tor or a #VPN)
+> 
+> 67% - yes  
+> 33% - no
+
+1236 votes
+
+https://floss.social/web/@fdroidorg/109256167713077717
+
 ## poll 2022-09-29
 
 > What do you think about #Android #Privacy Indicator? It's a little dot showing up in your status bar when an app accesses your microphone, camera, location or other sensitive data. (became first available on Android 12)
