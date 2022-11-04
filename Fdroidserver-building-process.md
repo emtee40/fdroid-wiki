@@ -5,7 +5,7 @@ This is a detailed note about how the *fdroidserver* builds an app based on the 
 1. `sudo` is executed. Please note that the `Repo` hasn't been cloned so that `sudo` is executed in the root directory of *fdroiddata*. Virables hasn't been replaced so that `$$xxx$$`s do not work. After `sudo`, sudo will be removed.
 1. `Repo` is cloned into `build/{appID}` and checkout to `commit`. If `submodules` is ture then submodules will be inited.
 1. Path is changed to `build/{appID}`. If `subdir` is set, the path will change to it.
-1. `init` is executed. Please not that `$$srclibs$$`s are not available in `init`.
+1. `init` is executed. Please note that `$$srclibs$$`s are not available in `init`.
 1. `patch` is applied on `build/{appID}`.
 1. `srclibs` are prepared.
 1. `local.properties` files are updated. `sdk.dir` and `ndk.dir` are set.
