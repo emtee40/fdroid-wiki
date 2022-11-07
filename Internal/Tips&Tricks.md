@@ -1,4 +1,5 @@
 # `config.yml` tweaks
+
 ```
 build_server_always: true          (so you don't need to specify at runtime)
 deploy_process_logs: true          (so build logs are kept even if the build failed)
@@ -28,6 +29,7 @@ alias tl='tmux list-sessions'
 ```
 
 Example workflow:
+
 ```
 ta run                       (create a tmux session to run the build in; allows you to switch to another session and do something else in the meantime, not run another build but: scan, rewritemeta, lint, checkupdate, publish etc)
 mf metadata/appid.yml        (edit the file)
@@ -49,16 +51,17 @@ Hence we've can edit `fdroidserver/fdroidserver/build.py` and replaced `destroy`
 
 First install while, logged in as your normal user eg. `fdroid`, `scp` for Vagrant : `vagrant plugin install vagrant-scp`
 
-Now you can extract files from the VM, _(you run in folder `~/fdroiddata/builder/`)_: `vagrant scp :/home/vagrant/build/appid/path/ .`   
+Now you can extract files from the VM, _(you run in folder `\~/fdroiddata/builder/`)_: `vagrant scp :/home/vagrant/build/appid/path/ .`\
 (Don't forget the dot at the end or put a better path in its place to save files to)
 
-Or inject files in the VM, _(you run in folder `~/fdroiddata/builder/`)_: `vagrant scp /path/to/localfile :/home/vagrant/path/`   
+Or inject files in the VM, _(you run in folder `\~/fdroiddata/builder/`)_: `vagrant scp /path/to/localfile :/home/vagrant/path/`
 
 # How to recover a suspended fdroidserver VM that was halted _(Stretch, to be updated for Bullseye)_
 
 The trouble is that even if the VM was suspended there's a chance _(afaics bigger if the VM runs for longer or if it is left in suspended state longer)_ that the VM will refuse to restart. Same behaviour as if it was halted manually.
 
 Trying to start it:
+
 ```
 $ cd ~/fdroiddata/builder
 $ vagrant halt ; vagrant up ; vagrant ssh    (or 'vg' alias above)
@@ -79,15 +82,18 @@ Stderr from the command:
 ```
 
 Which command failed? Hmm, let's debug this `vagrant up --debug`
+
 ```
 ...
 DEBUG ssh: stderr: bash: sudo: command not found
 ```
+
 ...ah, as expected, we nuke `sudo` after the first steps.
 
 At @jspricke advice, _"you could mount the image and install sudo again"_
 
 So let's do this them, looks [easy](https://gist.github.com/shamil/62935d9b456a6f9877b5) enough:
+
 ```
 wget https://security.debian.org/debian-security/pool/updates/main/s/sudo/sudo_1.8.19p1-2.1+deb9u3_amd64.deb
 sudo modprobe nbd max_part=8
@@ -106,4 +112,16 @@ sudo rmmod nbd
 
 Now run `vagrant up ; vagrant ssh` and you end up logged as needed.
 
+# Disabling merge request pipelines in MRs to `fdroid/fdroiddata`
 
+[Merge request pipelines](https://docs.gitlab.com/ee/ci/pipelines/merge_request_pipelines.html) allows contributors to run CI pipelines within the context of the `fdroid/fdroiddata` without a credit card. However, sometimes it's not desirable (e.g., when you have more powerful self-hosted CI runners).
+
+To disable merge request pipelines for your merge requests:
+
+### Permanently
+
+Define the variable in your project which has [higher precedence](https://docs.gitlab.com/ee/ci/variables/#cicd-variable-precedence) than that defined in the CI script.
+
+### Temporarily
+
+Push with `git push -o ci.variable="CI_ENABLE_MERGE_REQUEST_PIPELINES=false"`
