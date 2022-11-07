@@ -10,18 +10,19 @@ serverwebroot: /home/fdroid        (create a folder `/home/fdroid/repo/` to save
 
 ```
 alias fd='cd /home/fdroid/fdroiddata'
+
 alias fb='fd && fdroid build --verbose --scan-binary'
 alias fbl='fb --latest'
 alias fcu='fd && fdroid checkupdates --verbose --auto --allow-dirty'
-alias frm='fd && fdroid rewritemeta --verbose'
 alias fl='fd && fdroid lint -f'
-alias fs='fd && fdroid scanner --verbose'
-alias fse='fs --exodus'
-alias mf='fd && $EDITOR'
-alias fcu='fd && fdroid checkupdates --allow-dirty --verbose --auto'
 alias fp='fd && fdroid publish --verbose'
 alias fpu='fp && fdroid update --create-metadata --verbose'
+alias frm='fd && fdroid rewritemeta --verbose'
+alias fs='fd && fdroid scanner --verbose'
+alias fse='fdroid scanner --verbose --exodus'
+alias mf='fd && $EDITOR'
 alias vg='cd /home/fdroid/fdroiddata/builder && vagrant resume && vagrant ssh'
+
 alias ak='java -jar ~/apktool_2.6.1.jar'
 
 alias ta='tmux new-session -A -s'
