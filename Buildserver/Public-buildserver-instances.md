@@ -29,6 +29,13 @@ Host fdroid-buildserver-full-copy
 
 If your SSH public key is listed [here](https://gitlab.com/fdroid/fdroid-cfarm-bootstrap/-/tree/master/files/contributor_keys), then you have access to all of these boxes:
 
+## Updating
+
+The setup is automated using an [Ansible Playbook](https://gitlab.com/eighthave/fdroid-bootstrap-buildserver).  Anyone with root access to the contributor boxes can run the automation.  It is meant to be safe to run repeatedly.  There are is one option to force-rebuild the _buildserver_ VM instance:
+
+* `ansible-playbook --limit contributor_box provision.yml`
+* `ansible-playbook --limit contributor_box --extra-vars "force_run_makebuildserver=true" provision.yml`
+
 ## gcc147
 
 ```config
