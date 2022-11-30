@@ -4,9 +4,9 @@
 > 
 > #FDroidUserSurvey
 > 
-> 19% - less than 1 year
-> 21% - less than 2 years
-> 48% - less than 5 years
+> 19% - less than 1 year  
+> 21% - less than 2 years  
+> 48% - less than 5 years  
 > 12% - longer than 5 years
 
 1904 votes
