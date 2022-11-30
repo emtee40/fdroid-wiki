@@ -1,4 +1,4 @@
-## poll 2022-11-23
+## poll 14, 2022-11-23
 
 > How long is your current phone in service?
 > 
@@ -13,7 +13,7 @@
 
 https://floss.social/@fdroidorg/109392753049950224
 
-## poll 2022-10-30
+## poll 13, 2022-10-30
 
 > Do you use the #android VPN feature? (eg. for your #AdBlocker, or to route internet traffic over #Tor or a #VPN)
 > 
@@ -24,7 +24,7 @@ https://floss.social/@fdroidorg/109392753049950224
 
 https://floss.social/web/@fdroidorg/109256167713077717
 
-## poll 2022-09-29
+## poll 12, 2022-09-29
 
 > What do you think about #Android #Privacy Indicator? It's a little dot showing up in your status bar when an app accesses your microphone, camera, location or other sensitive data. (became first available on Android 12)
 >
@@ -37,7 +37,7 @@ https://floss.social/web/@fdroidorg/109256167713077717
 
 https://mastodon.technology/@fdroidorg/109081013331977961
 
-## poll 2022-09-05
+## poll 11, 2022-09-05
 
 > Do you think you spend too much time on your phone?
 >
@@ -49,7 +49,7 @@ https://mastodon.technology/@fdroidorg/109081013331977961
 
 https://mastodon.technology/@fdroidorg/109001652512310331
 
-## poll 2022-06-23
+## poll 10, 2022-06-23
 
 > Do you use #FDroid on de-googled or stock #android?  
 >   
@@ -64,7 +64,7 @@ https://mastodon.technology/@fdroidorg/109001652512310331
 
 https://mastodon.technology/@fdroidorg/108525955215170811
 
-## poll 2022-04-02
+## poll 9, 2022-04-02
 
 > How much money do you spend on apps?
 >
@@ -77,7 +77,7 @@ https://mastodon.technology/@fdroidorg/108525955215170811
 
 https://mastodon.technology/@fdroidorg/108062248190455448
 
-## poll 2022-02-24
+## poll 8, 2022-02-24
 
 > Do you think it's fair/justified that #AppStore and #GooglePlay take a (quite substantial) percentage of each every transaction in apps they're shipping and that they refuse to ship apps with alternative donation/payment providers?
 >
@@ -90,7 +90,7 @@ https://mastodon.technology/@fdroidorg/108062248190455448
 
 https://mastodon.technology/@fdroidorg/107853673112259338
 
-## poll 2022-02-03
+## poll 7, 2022-02-03
 
 > Here's another question for the #FDroid user base: Do you think you are tech savvy?
 >
@@ -103,7 +103,7 @@ https://mastodon.technology/@fdroidorg/107853673112259338
 https://mastodon.technology/@fdroidorg/107733482674792869
 
 
-## poll 2021-12-12
+## poll 6, 2021-12-12
 
 > How many apps are installed on your phone? (not counting pre-installed ones)
 >
@@ -117,7 +117,7 @@ https://mastodon.technology/@fdroidorg/107733482674792869
 https://mastodon.technology/@fdroidorg/107432835152687088
 
 
-## poll 2021-11-15
+## poll 5, 2021-11-15
 
 > Have you ever helped someone install #FDroid or a custom #Android ROM on their device?
 >
@@ -131,7 +131,7 @@ https://mastodon.technology/@fdroidorg/107432835152687088
 https://mastodon.technology/@fdroidorg/107282308506133052
 
 
-## poll 2021-10-28
+## poll 4, 2021-10-28
 
 > Do you check for supported/available #android ROMs before getting a new/refurbished phone?
 >
@@ -143,7 +143,7 @@ https://mastodon.technology/@fdroidorg/107282308506133052
 https://mastodon.technology/@fdroidorg/107179649271823587
 
 
-## poll 2021-08-12
+## poll 3, 2021-08-12
 
 > What distribution channels do you rely on, to get all the #android #apps you need?
 >
@@ -157,7 +157,7 @@ https://mastodon.technology/@fdroidorg/107179649271823587
 https://mastodon.technology/@fdroidorg/106743698930732237
 
 
-## poll 2021-08-04
+## poll 2, 2021-08-04
 
 > What’s most important for you, when you’re getting a new (or refurbished) phone?
 >
@@ -171,7 +171,7 @@ https://mastodon.technology/@fdroidorg/106743698930732237
 https://mastodon.technology/web/statuses/106698120985747014
 
 
-## poll 2021-07-24
+## poll 1, 2021-07-24
 
 > Hey #Fediverse! Like so many other #FreeSoftware projects, keeping #FDroid up and running is a community effort. Have you ever contributed to any #FLOSS Project?
 >
