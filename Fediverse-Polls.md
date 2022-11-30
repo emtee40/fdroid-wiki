@@ -1,3 +1,18 @@
+## poll 2022-11-23
+
+> How long is your current phone in service?
+> 
+> #FDroidUserSurvey
+> 
+> 19% - less than 1 year
+> 21% - less than 2 years
+> 48% - less than 5 years
+> 12% - longer than 5 years
+
+1904 votes
+
+https://floss.social/@fdroidorg/109392753049950224
+
 ## poll 2022-10-30
 
 > Do you use the #android VPN feature? (eg. for your #AdBlocker, or to route internet traffic over #Tor or a #VPN)
