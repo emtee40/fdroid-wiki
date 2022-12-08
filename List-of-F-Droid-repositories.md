@@ -170,12 +170,6 @@ Description: Companion repository for Nanodroid, contains patched play store & M
 
 URL: https://nanolx.org/fdroid/repo?fingerprint=862ED9F13A3981432BF86FE93D14596B381D75BE83A1D616E2D44A12654AD015
 
-#### Unified Push
-
-Description: An Fdroid repository contains apps by UnifiedPush.
-
-URL: https://repo.unifiedpush.org//?fingerprint=DF11176406C63A7876103CE6CC1A8FCA239DF76AA5F6DE5CDBAFE73ECDBF1875
-
 ---
 ## --------------------------- popular Apps ----------------------
 #### Collabora Office
