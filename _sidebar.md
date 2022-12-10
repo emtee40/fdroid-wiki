@@ -1,8 +1,5 @@
 - [Architecture](Architecture)
-- Buildserver
-   - [Build Basebox images in Gitlab CI](Buildserver/Build-Basebox-images-in-Gitlab-CI)
-   - [Buildserver VM components](Buildserver/Buildserver-VM-components)
-   - [Public buildserver instances](Buildserver/Public-buildserver-instances)
+- [Buildserver](Buildserver)
 - [Client Librarification](Client-Librarification)
 - Continuous Integration (CI)
    - [Fixing linting issues](Continuous-Integration-(CI)/Fixing-linting-issues)
