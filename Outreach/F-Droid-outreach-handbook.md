@@ -1,5 +1,3 @@
-# F-Droid outreach handbook
-
 This document contains some guidelines for the F-Droid outreach team. (This is
 supposed to be an aid to help keeping everyone happy, rather than a strict
 policy. Try to be empathic and use good judgement too.)
@@ -15,6 +13,10 @@ community, official communication should not favor this particular demographic.
 
 F-Droids [code of conduct](https://f-droid.org/docs/Code_of_Conduct/) applies
 here too.
+
+## outreach chat-room
+
+For project internal co-ordination F-Droid outreach team has a non-public matrix chat room: [#outreach:f-droid.org](https://matrix.to/#/#outreach:f-droid.org). All core contributors are welcome to join, feel free to ask for invites on [#fdroid-dev:f-droid.org](https://matrix.to/#/#fdroid:f-droid.org).
 
 ## social media
 
