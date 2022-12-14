@@ -33,8 +33,7 @@ Here are some things to consider
 * When your post is not urgent, post it to F-Droids outreach chat-room first.
   Let the outreach team give comments, thumbs-up, etc.
 * Do a fact check.
-* Promotions and ads for any 3rd party must be cleared by F-Droid project
-  leadership.
+* Promotions and ads for any 3rd party must respect F-Droids core values, policies and have reasonable consent within the core team.
 * Consider if the post is relevant enough to send it out.
 * Be excellent.  (Even if you personally don't feel like it.)
 
