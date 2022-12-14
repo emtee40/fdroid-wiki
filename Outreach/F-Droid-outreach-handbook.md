@@ -88,8 +88,8 @@ ping/mention.  Official responses are barely necessary.
 ### post frequency
 
 Try to avoid spamming. F-Droids social media should be kept low traffic. Try
-to avoid posting/reposting more than out more than once per day. If multiple
-things come up prioritize.
+to avoid (re-)posting more than once per day. If multiple things come up
+prioritize.
 
 ### following
 
