@@ -30,7 +30,7 @@ Here are some things to consider
 * Try to avoid complex language constructs.  Try to use simple language
   whenever possible.
 * Try to avoid using too many technical terms.  Whenever using technical terms
-  try to help users with explanations or complementary links.
+  try to provide explanations or links for further learning.
 * Run a spell check.
 * When your post is not urgent, post it to F-Droids outreach chat-room first.
   Let the outreach team give comments, thumbs-up, etc.
