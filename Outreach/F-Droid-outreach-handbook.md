@@ -6,7 +6,7 @@ policy. Try to be empathic and use good judgement too.)
 
 F-Droids target audience is basically everyone interested in mobile computing.
 Official communication should always assume that users without any technology
-background are going to read this.  While F-Droid comes out of the FOSS
+background are going to read F-Droids announcements.  While F-Droid comes out of the FOSS
 community, official communication should not favor this particular demographic.
 
 ## code of conduct
