@@ -100,12 +100,11 @@ F-Droid follows this types of accounts:
 * F-Droid contributors
 * apps which are packaged on f-droid.org
 * policy/regulation institutions relevant to F-Droid
-* FOSS advocates
-* FOSS funders
-* privacy advocates
 * FOSS projects or services F-Droid is using
 * non-android mobile FOSS platforms
-* foss/privacy/security conferences
+* FOSS advocates/experts/funders/...
+* privacy advocates/experts/funders/...
+* mobile security advocates/experts/funders/...
 
 ### user blocking
 
