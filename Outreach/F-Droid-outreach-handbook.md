@@ -53,7 +53,7 @@ once a month consider moving it to a separate account or bot.
 
 F-Droids social media is not supposed to be a news curation. Repost rarely, and
 double check if anything you're reposting (or re-tooting) complies with the
-[posting checklist](#posting-checklist). Also go through check out the account
+[posting checklist](#posting-checklist). Also check out other posts of the account
 you're reposting, to make sure it's not a controversial account.
 
 Good things to repost:
@@ -69,9 +69,9 @@ Good things to repost:
 ### responding/answering to posts
 
 F-Droid has a way too big to do official responses to each and every
-ping/mention.  Official responses are barely necessary.
+ping/mention.  Official responses are okay but often not necessary.
 
-* Not issuing official responses often gives community members a change to
+* Not issuing official responses often gives community members a chance to
   support each other.  This is a good thing!
 * Don't issue an official response when a response from your personal account
   would do.  (Given you use your personal account to write about your
@@ -84,7 +84,7 @@ ping/mention.  Official responses are barely necessary.
 * If there's any doubt that something could be misunderstood, don't post it.
 * Try to avoid jokes/sarcasm/etc. (Could be misunderstood.)
 * Avoid directly attacking peers/competition/etc. It's however okay to
-  criticise and raise awareness about particular actions, policies, etc.
+  criticize and raise awareness about particular actions, policies, etc.
   Remember to be polite and objective while doing so.
 
 ### post frequency
