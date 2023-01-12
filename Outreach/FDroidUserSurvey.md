@@ -1,3 +1,14 @@
+## poll 15, 2023-01-09
+
+> Did you know that #FDroid isn't only informing you about #tracking with anti-feature warnings, but also removes non-free trackers from apps? #FDroidUserSurvey
+> 
+> 37% - yes  
+> 63% - no
+
+1,960 votes
+
+https://floss.social/@fdroidorg/109658861652747050
+
 ## poll 14, 2022-11-23
 
 > How long is your current phone in service?
