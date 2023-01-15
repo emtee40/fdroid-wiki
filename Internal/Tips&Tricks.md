@@ -38,6 +38,8 @@ fl appid                     (lint verify)
 frm appid                    (rewritemeta to format it properly)
 fbl appid                    (build latest version)
 fp appid                     (sign the APK so you can test it on device)
+
+To test AUM:
 mf metadata/appid.yml        (edit the file to add AUM, edit versionCode to a smaller number to simulate)
 fcu appid                    (run checkupdate to verify if newest version is picked up)
 ```
@@ -52,10 +54,10 @@ Hence we've can edit `fdroidserver/fdroidserver/build.py` and replaced `destroy`
 
 First install while, logged in as your normal user eg. `fdroid`, `scp` for Vagrant : `vagrant plugin install vagrant-scp`
 
-Now you can extract files from the VM, _(you run in folder `\~/fdroiddata/builder/`)_: `vagrant scp :/home/vagrant/build/appid/path/ .`\
+Now you can extract files from the VM, _(you run in folder `~/fdroiddata/builder/`)_: `vagrant scp :/home/vagrant/build/appid/path/ .`\
 (Don't forget the dot at the end or put a better path in its place to save files to)
 
-Or inject files in the VM, _(you run in folder `\~/fdroiddata/builder/`)_: `vagrant scp /path/to/localfile :/home/vagrant/path/`
+Or inject files in the VM, _(you run in folder `~/fdroiddata/builder/`)_: `vagrant scp /path/to/localfile :/home/vagrant/path/`
 
 # How to recover a suspended fdroidserver VM that was halted _(Stretch, to be updated for Bullseye)_
 
