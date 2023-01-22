@@ -4,7 +4,14 @@ Note that it's different from https://gitlab.com/fdroid/fdroid-gitlab-runner use
 
 ## Application
 
-All contributors to F-Droid are welcome to use these shared runners to save time when contributing. You just need to PM [your runner registration token](https://docs.gitlab.com/runner/register/#requirements) to [@proletarius101 on Matrix.org](https://matrix.to/#/@proletarius101:matrix.org).
+All contributors to F-Droid are welcome to use these shared runners to save time when contributing. You just need to PM [your runner registration token](https://docs.gitlab.com/runner/register/#requirements) to [@proletarius101 on ](https://matrix.to/#/@proletarius101:matrix.org)Matrix.org.
+
+## Usage
+
+By default, all CI pipelines of Merge Requests to [fdroid/fdroiddata](https://gitlab.com/fdroid/fdroiddata) are [Merge Request Pipelines](https://docs.gitlab.com/ee/ci/pipelines/merge_request_pipelines.html#run-pipelines-in-the-parent-project) running on the F-droid infrastructure. To leverage the shared runners on Azure:
+
+* Add a CI/CD variable <span dir="">`CI_ENABLE_MERGE_REQUEST_PIPELINES`</span> with value `false` to your fork;
+* Uncheck the `Protect variable` option for that variable to make it available for your non-main branch.
 
 ## Specification
 
