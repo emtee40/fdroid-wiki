@@ -98,10 +98,62 @@ Google Issue Tracker: [non-deterministic order of ZIP entries in APK makes build
 
 ## Differences in specific files
 
-### Differing .dex files
+**NB: first of all: please ensure the same commit is used for both builds.**
 
-Java/Kotlin classes compiled to Android bytecode; given their importance,
-differences in these files should always be addressed first.
+### Differing AndroidManifest.xml files (fix first)
+
+[App Manifest](https://developer.android.com/guide/topics/manifest/manifest-intro)
+compiled to Android binary XML.
+
+NB: if these files are not the same, something is definitely wrong; are the APKs
+really built from the same commit?
+
+```bash
+$ diff2f 'dump-axml.py' x/AndroidManifest.xml y/AndroidManifest.xml
+[...]
+```
+
+### Differing .xml files in res/ (fix first)
+
+[App resources](https://developer.android.com/guide/topics/resources/providing-resources)
+compiled to Android binary XML.
+
+NB: if these files are not the same, something is definitely wrong; are the APKs
+really built from the same commit?
+
+```bash
+$ diff2f 'dump-axml.py' x/res/foo.xml y/res/foo.xml
+[...]
+```
+
+### Differing resources.arsc (fix first)
+
+Android package resource table.
+
+NB: if these files are not the same (and you're using Android Gradle plugin
+`3.4.X` or later), something is definitely wrong; are the APKs really built from
+the same commit?
+
+```bash
+$ diff2f 'dump-arsc.py' x/resources.arsc y/resources.arsc
+[...]
+```
+
+Solution for ordering differences (upstream): use Android Gradle plugin `3.4.X`
+or later.
+
+Link: [Reproducible APK tools](https://f-droid.org/docs/Reproducible_Builds/#reproducible-apk-tools).
+
+Google Issue Tracker: [resources.arsc built with non-determism, prevents reproducible APK builds](https://issuetracker.google.com/issues/110237303).
+
+### Differing .dex files (can be hard to fix)
+
+Java/Kotlin classes compiled to Android bytecode.
+
+NB: these differences can be hard to fix, depending on what caused them, so
+please don't spend a lot of time trying to make `.dex` files equal when there
+are e.g. differences in `.xml` files or `resources.arsc`, as the build will
+never be reproducible if those are not fixed.
 
 ```bash
 # repeat as needed for classes2.dex etc.
@@ -117,10 +169,8 @@ $ bdiff x/classes.dex.dump y/classes.dex.dump
 [...]
 ```
 
-Ensure that:
-
-* the same commit is used for both builds;
-* the same JDK (usually that means OpenJDK 11) is used for both builds.
+Ensure that the same JDK (usually that means OpenJDK 11) is used for both
+builds.
 
 Sometimes this works (but we're not sure why):
 
@@ -149,10 +199,14 @@ Google Issue Tracker:
 * [unneeded DEX code differences based on number of CPUs used in build process](https://issuetracker.google.com/issues/269181868);
 * [Desugaring and reproducible builds](https://issuetracker.google.com/issues/195968520).
 
-### Differing .so files
+### Differing .so files (can be hard to fix)
 
-Compiled native code; given their importance, differences in these files should
-always be addressed first.
+Compiled native code.
+
+NB: these can be some of the hardest differences to fix, so please don't spend a
+lot of time trying to e.g. make build paths equal when there are differences in
+`.xml` files or `resources.arsc`, as the build will never be reproducible if
+those are not fixed.
 
 Links:
 
@@ -162,23 +216,26 @@ Links:
 * [NDK build-id](https://f-droid.org/docs/Reproducible_Builds/#ndk-build-id);
 * [R8 Optimizer](https://f-droid.org/docs/Reproducible_Builds/#r8-optimizer).
 
-### Differing assets/dexopt/baseline.prof
+### Differing assets/dexopt/baseline.prof (caused by .dex)
 
 Compiled [baseline profile](https://developer.android.com/topic/performance/baselineprofiles/overview).
 
-These should only differ when the `.dex` files do, as a result of the `.prof`
-file containing a checksum of the corresponding `.dex` files.
-
-Any differences in these files should disappear if the `.dex` files are equal.
+NB: these should only differ when the `.dex` files do (as a result of the
+`.prof` file containing a checksum of the corresponding `.dex` files); any
+differences in these files should disappear when the `.dex` files are made
+equal.
 
 ```bash
 $ diff2f 'dump-baseline.py' x/assets/dexopt/baseline.prof y/assets/dexopt/baseline.prof
 [...]
 ```
 
-### Differing assets/dexopt/baseline.profm
+### Differing assets/dexopt/baseline.profm (easy to fix)
 
 Compiled [baseline profile](https://developer.android.com/topic/performance/baselineprofiles/overview) metadata.
+
+NB: these may also differ as a result of `.dex` file differences, so please make
+sure those are equal first.
 
 ```bash
 $ diff2f 'dump-baseline.py' x/assets/dexopt/baseline.profm y/assets/dexopt/baseline.profm
@@ -191,7 +248,7 @@ Link: [Bug: baseline.profm not deterministic](https://gist.github.com/obfusk/610
 
 Google Issue Tracker: [Non-stable `assets/dexopt/baseline.profm` when rerun with --rerun-tasks](https://issuetracker.google.com/issues/231837768).
 
-### Differences caused by LF vs CRLF
+### Differences caused by LF vs CRLF (easy to fix)
 
 NB: this most commonly affects `META-INF/services/*` files, but can affect other
 files as well, e.g. `.css`/`.html`/`.js`/`.txt`.
@@ -226,11 +283,11 @@ postbuild:
 
 Google Issue Tracker: [newline differences between building on Windows vs Linux make builds not reproducible](https://issuetracker.google.com/issues/266109851).
 
-### Differing .json file from the AboutLibraries Gradle plugin
+### Differing .json file from the AboutLibraries Gradle plugin (easy to fix)
 
 Link: [Embedded timestamps: AboutLibraries Gradle plugin](https://f-droid.org/docs/Reproducible_Builds/#aboutlibraries-gradle-plugin).
 
-### Differing .png files
+### Differing .png files (easy to fix)
 
 PNG optimisation/generation is often not reproducible.
 
@@ -238,25 +295,6 @@ Links:
 
 * [PNG Crush/Crunch](https://f-droid.org/docs/Reproducible_Builds/#png-crushcrunch);
 * [PNGs generated from vector drawables](https://f-droid.org/docs/Reproducible_Builds/#pngs-generated-from-vector-drawables).
-
-### Differing resources.arsc
-
-Android package resource table.
-
-```bash
-$ diff2f 'dump-arsc.py' x/resources.arsc y/resources.arsc
-[...]
-```
-
-### Differing .xml files
-
-[App resources](https://developer.android.com/guide/topics/resources/providing-resources)
-compiled to Android binary XML.
-
-```bash
-$ diff2f 'dump-axml.py' x/res/foo.xml y/res/foo.xml
-[...]
-```
 
 ## If all else fails, try diffoscope
 
