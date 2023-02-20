@@ -1,5 +1,3 @@
-# HOWTO: diff & fix APKs for Reproducible Builds
-
 NB: assumes signed APK from upstream named `upstream-release.apk`, and unsigned
 APK from F-Droid CI named `fdroiddata-ci.apk`.
 
