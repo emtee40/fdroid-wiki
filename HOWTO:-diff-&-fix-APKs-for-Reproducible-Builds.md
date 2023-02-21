@@ -87,6 +87,23 @@ $ unzip -q -d x upstream-release.apk
 $ unzip -q -d y fdroiddata-ci.apk
 ```
 
+## Make sure the same commit and build method/options are used
+
+**NB: first of all: please ensure the same commit is used for both builds.**
+
+Second: try to avoid differences in build method/options that may affect
+reproducibility.
+
+Usually, it's fine for upstream to build using Android Studio (instead of
+invoking `gradle` directly as during F-Droid or CI builds), but this *can* cause
+differences.  But use of `bundletool` and AABs (instead of APKs) will almost
+certainly not work with reproducible builds.
+
+NB: if you're certain you're building from the same commit but still seeing
+differences in `AndroidManifest.xml`, `res/*.xml`, or `resources.arsc`, it's
+likely something is different about the build method, options, and/or
+configuration, which should be addressed before trying to fix other issues.
+
 ## ZIP ordering differences
 
 Solution (upstream): either build using the CLI (not Android Studio) or use
@@ -98,41 +115,39 @@ Google Issue Tracker: [non-deterministic order of ZIP entries in APK makes build
 
 ## Differences in specific files
 
-**NB: first of all: please ensure the same commit is used for both builds.**
-
-### Differing AndroidManifest.xml files (fix first)
+### Differing AndroidManifest.xml files (address first)
 
 [App Manifest](https://developer.android.com/guide/topics/manifest/manifest-intro)
 compiled to Android binary XML.
 
 NB: if these files are not the same, something is definitely wrong; are the APKs
-really built from the same commit?
+really built from the same commit and using the same build method/options?
 
 ```bash
 $ diff2f 'dump-axml.py' x/AndroidManifest.xml y/AndroidManifest.xml
 [...]
 ```
 
-### Differing .xml files in res/ (fix first)
+### Differing .xml files in res/ (address first)
 
 [App resources](https://developer.android.com/guide/topics/resources/providing-resources)
 compiled to Android binary XML.
 
 NB: if these files are not the same, something is definitely wrong; are the APKs
-really built from the same commit?
+really built from the same commit and using the same build method/options?
 
 ```bash
 $ diff2f 'dump-axml.py' x/res/foo.xml y/res/foo.xml
 [...]
 ```
 
-### Differing resources.arsc (fix first)
+### Differing resources.arsc (address first)
 
 Android package resource table.
 
 NB: if these files are not the same (and you're using Android Gradle plugin
 `3.4.X` or later), something is definitely wrong; are the APKs really built from
-the same commit?
+the same commit and using the same build method/options?
 
 ```bash
 $ diff2f 'dump-arsc.py' x/resources.arsc y/resources.arsc
@@ -203,6 +218,10 @@ Google Issue Tracker:
 
 Compiled native code.
 
+Easily affected by differences in build environment; using a build environment
+that resembles the F-Droid buildserver/CI as closely as possible -- e.g. using
+the same Debian version, etc. -- should reduce differences.
+
 NB: these can be some of the hardest differences to fix, so please don't spend a
 lot of time trying to e.g. make build paths equal when there are differences in
 `.xml` files or `resources.arsc`, as the build will never be reproducible if
@@ -212,6 +231,7 @@ Links:
 
 * [Concurrency: reproducibility can depend on the number of CPUs/cores](https://f-droid.org/docs/Reproducible_Builds/#concurrency-reproducibility-can-depend-on-the-number-of-cpuscores);
 * [Embedded build paths](https://f-droid.org/docs/Reproducible_Builds/#embedded-build-paths);
+* [Embedded timestamps](https://f-droid.org/docs/Reproducible_Builds/#embedded-timestamps);
 * [Native library stripping](https://f-droid.org/docs/Reproducible_Builds/#native-library-stripping);
 * [NDK build-id](https://f-droid.org/docs/Reproducible_Builds/#ndk-build-id);
 * [R8 Optimizer](https://f-droid.org/docs/Reproducible_Builds/#r8-optimizer).
