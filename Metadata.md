@@ -1,3 +1,3 @@
 - [XML and JSON v1 Index](Metadata/XML-and-JSON-v1-Index)
-- [JSON v2 Index](Metadata/JSON-v1-Index)
+- [JSON v2 Index](Metadata/JSON-v2-Index)
 - [YAML Metadata](Metadata/YAML-Metadata)
