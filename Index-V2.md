@@ -1,7 +1,7 @@
-We are creating a new index format to solve a lot of issue and improve things.  Track progress here:
+We are creating a new index format to solve a lot of issue and improve things. Track progress here:
 
-* https://gitlab.com/groups/fdroid/-/issues?scope=all&state=opened&label_name[]=index-v2
-* https://gitlab.com/groups/fdroid/-/merge_requests?scope=all&state=opened&label_name[]=index-v2
+* https://gitlab.com/groups/fdroid/-/issues?scope=all&state=opened&label_name\[\]=index-v2
+* https://gitlab.com/groups/fdroid/-/merge_requests?scope=all&state=opened&label_name\[\]=index-v2
 
 Weekly Meeting: [Tuesdays, 1200 UTC](https://time.is/1200_in_UTC/ET/BRT/WAT/EAT/CET/Moscow/IST/China) on #fdroid-dev and https://meet.calyx.net/fdroid
 
@@ -11,15 +11,11 @@ Related: https://theupdateframework.github.io
 
 #### Can we go with readable json only? I.e. Don't use the jar format and rely on the web server compressing the data.
 
-We need the JAR, it provides the signing method.  The code for verifying signed JARs is built into Android and Java. Also, there is no guarantee that there is a webserver serving the repo.  It can also come from IPFS, USB Disk, Bluetooth, etc. -@eighthave
-We could go with inline signing like Debian does, let's discuss this in the next meeting -@jspricke
-Publish both a `entry.jar` and a `entry.json`.
+We need the JAR, it provides the signing method. The code for verifying signed JARs is built into Android and Java. Also, there is no guarantee that there is a webserver serving the repo. It can also come from IPFS, USB Disk, Bluetooth, etc. -@eighthave We could go with inline signing like Debian does, let's discuss this in the next meeting -@jspricke Publish both a `entry.jar` and a `entry.json`.
 
 #### Do we need the `"version": 30001` field?
 
-Absolutely, that's the index format version.  It is the way to tell the client to upgrade its database. For example, like when a new metadata field gets added, like `Liberapay:`. -@eighthave
-It should be enough for the client to update the DB when there is an new client version, let's discuss in the meeting. -@jspricke
-
+Absolutely, that's the index format version. It is the way to tell the client to upgrade its database. For example, like when a new metadata field gets added, like `Liberapay:`. -@eighthave It should be enough for the client to update the DB when there is an new client version, let's discuss in the meeting. -@jspricke
 
 ### Subdirectories
 
@@ -29,14 +25,14 @@ It should be enough for the client to update the DB when there is an new client 
 
 ### Tickets
 
-* [ ] ~~[Tag reproducible builds](https://gitlab.com/fdroid/fdroidserver/-/issues/178)~~
-* [x] [File name can be path](https://gitlab.com/fdroid/fdroidclient/-/issues/1164)
-* [x] [Changelog per version, not app](https://gitlab.com/fdroid/fdroidserver/-/issues/527)
-* [ ] [Anti-Feature Maintainer-Notes as structured text](https://gitlab.com/fdroid/fdroidserver/-/issues/683)
-* [x] [Signing](https://gitlab.com/fdroid/fdroidserver/-/issues/835) [Algorithm](https://gitlab.com/fdroid/fdroidclient/-/issues/1989) -> Jarsigner without legacy algorithm
-* [ ] ~~["frosting" in the APK Signing Block](https://gitlab.com/fdroid/fdroidserver/-/issues/935)~~
-* [ ] ~~[Extension to app descriptions](https://gitlab.com/fdroid/fdroidserver/-/issues/953)~~
-* [x] [multiple donation links](https://gitlab.com/fdroid/fdroidserver/-/issues/968)
+* [ ] [~~Tag reproducible builds~~](https://gitlab.com/fdroid/fdroidserver/-/issues/178 "Tag reproducible builds")
+* [x] [File name can be path](https://gitlab.com/fdroid/fdroidclient/-/issues/1164 "let the file entry be a fully qualified URL rather than just a filename")
+* [x] [Changelog per version, not app](https://gitlab.com/fdroid/fdroidserver/-/issues/527 "Store changelog with the package instead of the app")
+* [ ] [Anti-Feature Maintainer-Notes as structured text](https://gitlab.com/fdroid/fdroidserver/-/issues/683 "Anti-Feature Maintainer-Notes as structured text")
+* [x] [Signing](https://gitlab.com/fdroid/fdroidserver/-/issues/835 "signindex: sign index-v2.jar with modern hash algorithm") [Algorithm](https://gitlab.com/fdroid/fdroidclient/-/issues/1989 "Use stronger digest algorithm for index signing") -> Jarsigner without legacy algorithm
+* [ ] [~~"frosting" in the APK Signing Block~~](https://gitlab.com/fdroid/fdroidserver/-/issues/935 'handle APKs that have "frosting" in the APK Signing Block.')
+* [ ] [~~Extension to app descriptions~~](https://gitlab.com/fdroid/fdroidserver/-/issues/953 "Extension to app descriptions: DescriptionAppend, DescriptionPrepend")
+* [x] [multiple donation links](https://gitlab.com/fdroid/fdroidserver/-/issues/968 "Accept array (list) of donation links")
 
 ## New index format
 
@@ -76,7 +72,6 @@ It should be enough for the client to update the DB when there is an new client 
   }
 }
 ```
-
 
 ### repo and package index
 
@@ -163,7 +158,7 @@ It should be enough for the client to update the DB when there is an new client 
         ],
         "flattrID": 343053,
         "issueTracker": "https://gitlab.com/fdroid/fdroidclient/issues",
-        "liberapayID": 27859,
+        "liberapay": "F-Droid-Data",
         "license": "GPL-3.0-or-later",
         "openCollective": "F-Droid-Euro",
         "sourceCode": "https://gitlab.com/fdroid/fdroidclient",
@@ -399,6 +394,7 @@ It should be enough for the client to update the DB when there is an new client 
 * potential diff method and lib: https://github.com/OpenDataServices/json-merge-patch
 
 ### adding an app
+
 ```json
 {
   "timestamp": 1641697189000,
@@ -491,6 +487,7 @@ It should be enough for the client to update the DB when there is an new client 
 ```
 
 ### adding a new version
+
 ```json
 {
   "packages": {
@@ -538,6 +535,7 @@ It should be enough for the client to update the DB when there is an new client 
 ```
 
 ### add+archive version
+
 ```json
 {
   "packages": {
@@ -589,6 +587,7 @@ It should be enough for the client to update the DB when there is an new client 
 ```
 
 ### archive app
+
 ```json
 {
   "packages": {
