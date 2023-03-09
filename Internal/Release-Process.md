@@ -77,13 +77,17 @@ As soon as a stable is tagged, master will move on to `-alpha0` on the next vers
 
 1. Make sure [all of the tests](https://gitlab.com/fdroid/fdroidserver/#build-status)
    listed on top of the README are passing.
-2. pull in latest commits from Weblate into a local branch called
+1. Pull in all the latest commits from Weblate into a local branch called
    _weblate_
+2. If any languages have reached 100%, add them to _MANIFEST.in_, and if any are in
+   bad shape, remove them from _MANIFEST.in_.
 3. rebase the _weblate_ branch on the latest commits in _master_ of
    <https://gitlab.com/fdroid/fdroidserver> and fix any conflicts
 4. push local _weblate_ branch to your fork create a merge request,
    and tag it with the _localization_ label
-5. make sure all tests pass before merging
+5. Make sure all tests pass before merging. If any incomplete translations are causing
+   the CI to fail, it is OK to not include them, as long as doing so does not create
+   merge conflicts with Weblate's git repo.
 6. Update official release languages using
    `locale/pick-complete-translations.py`, then commit changes.
 7. set `version=''` in _setup.py_
