@@ -113,3 +113,9 @@ Of course you can contact us if you need help.
 
 Thank you for helping us spreading FOSS apps in the world :)
 ```
+
+# Deleting issues, merge requests, and comments
+
+GitLab gives Owners the possibility to delete things, so they are gone.  This is useful in the case of posts that are spam, abusive, code of conduct violations, etc. If it is a new issue that is only spam with no comments or emoji reactions on it, it should be closed, locked, set to confidential.  Then a repository Owner can delete it.
+
+Anything else should be first saved in the [Internet Archive](https://web.archive.org/) before deleting.  This is important in cases of Code of Conduct violations so that there is an archive of the issues if they are needed for any further proceedings, like to establish a pattern of regular code of conduct violations, which can lead to explusion or bans.
