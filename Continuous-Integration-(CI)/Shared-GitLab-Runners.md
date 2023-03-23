@@ -1,7 +1,11 @@
-## [Shared GitLab Runners on Azure](Continuous-Integration-(CI)/Shared-GitLab-Runners-on-Azure)
+
+F-Droid relies heavily on GitLab CI, and that means we need GitLa CI Runners.  We use the gitlab.com shared runners, as well as a number that are maintained by other organizations.
+
+## Shared GitLab Runners on Azure
 
 When there is time available donated by Azure, then there can be
-[Shared GitLab Runners on Azure](Continuous-Integration-(CI)/Shared-GitLab-Runners-on-Azure).
+[Shared GitLab Runners on Azure](Continuous-Integration-(CI)/Shared-GitLab-Runners-on-Azure).  This is maintained by @proletarius101.
+
 
 ## OSUOSL runners
 
