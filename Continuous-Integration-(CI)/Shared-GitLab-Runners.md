@@ -9,12 +9,13 @@ When there is time available donated by Azure, then there can be
 
 ## OSUOSL runners
 
-OSUOSL maintains some runners that are shared across a number of projects.
+OSUOSL maintains some runners that are shared across a number of projects.  Maintained by [OSUOSL](https://osuosl.org/contact/): support@osuosl.org 
 
 * [ci-aarch64-runner1-osuosl-docker-fdroid](https://gitlab.com/groups/fdroid/-/runners/15012154)
 * [ci-x64-runner1-osuosl-docker-fdroid](https://gitlab.com/groups/fdroid/-/runners/15012034)
 * [ci-x64-runner2-osuosl-docker-fdroid](https://gitlab.com/groups/fdroid/-/runners/15012150)
 
+https://osuosl.org/services/hosting/details/#ci-cd-hardware-resources
 
 ## `pep-runner`
 
