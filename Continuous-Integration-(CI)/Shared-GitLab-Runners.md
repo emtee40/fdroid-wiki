@@ -1,5 +1,7 @@
 
-F-Droid relies heavily on GitLab CI, and that means we need Runners.  We use the gitlab.com shared runners, as well as a number that are maintained by other organizations.
+F-Droid relies heavily on GitLab CI, and that means we need Runners.  We use the gitlab.com shared runners, as well as a number that are maintained by other organizations.  These runners need to be oriented towards stability.  It is easy to cause issues that cause jobs to fail mysteriously.  If the dev doesn't know it was caused by runner instability, it can easily cause someone to spend hours trying to track down a problem.
+
+`quay.io/gitlab/gitlab-runner-docker-cleanup` is always running on these runners to clean up Docker cruft.
 
 
 ## Shared GitLab Runners on Azure
