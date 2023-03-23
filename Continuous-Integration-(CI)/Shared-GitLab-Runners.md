@@ -1,5 +1,6 @@
 
-F-Droid relies heavily on GitLab CI, and that means we need GitLa CI Runners.  We use the gitlab.com shared runners, as well as a number that are maintained by other organizations.
+F-Droid relies heavily on GitLab CI, and that means we need Runners.  We use the gitlab.com shared runners, as well as a number that are maintained by other organizations.
+
 
 ## Shared GitLab Runners on Azure
 
@@ -16,6 +17,7 @@ OSUOSL maintains some runners that are shared across a number of projects.  Main
 * [ci-x64-runner2-osuosl-docker-fdroid](https://gitlab.com/groups/fdroid/-/runners/15012150)
 
 https://osuosl.org/services/hosting/details/#ci-cd-hardware-resources
+
 
 ## `pep-runner`
 
