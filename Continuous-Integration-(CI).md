@@ -2,4 +2,4 @@
 - [Integrating F Droid builds into your own CI workflow](Continuous-Integration-(CI)/Integrating-F-Droid-builds-into-your-own-CI-workflow)
 - [Running emulators in GitLab CI](Continuous-Integration-(CI)/Running-emulators-in-GitLab-CI)
 - [Running self hosted GitLab CI Runner](Continuous-Integration-(CI)/Running-self-hosted-GitLab-CI-Runner)
-- [Shared GitLab Runners on Azure](Continuous-Integration-(CI)/Shared-GitLab-Runners-on-Azure)
+- [Shared GitLab Runners](Continuous-Integration-(CI)/Shared-GitLab-Runners)
