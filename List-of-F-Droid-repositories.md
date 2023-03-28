@@ -46,6 +46,12 @@ Description: Official repository for apps created by Divested Computing Group. A
 
 URL: https://divestos.org/fdroid/official/?fingerprint=E4BE8D6ABFA4D9D4FEEF03CDDA7FF62A73FD64B75566F6DD4E5E577550BE8467
 
+#### mobilsicher Ethical Apps
+
+A curated selection of apps for German users, by mobilsicher.de.
+
+URL: https://repo.mobilsicher.de/fdroid/repo/?fingerprint=D8EE660B3812AA2DF68D8A9740C02B8C5315C3BB0911E3C223A527A3C7A97495
+
 ---
 ## -------------------------------- Messaging -------------------------
 ### Signal -----------------
