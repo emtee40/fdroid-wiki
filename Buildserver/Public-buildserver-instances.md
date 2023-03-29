@@ -73,7 +73,7 @@ Host fdroid-buildserver-osuosl-water
   ProxyJump tunnel@fdroid2.osuosl.org
 ```
 
-### SSH host key fingerprints
+<details><summary>SSH host key fingerprints</summary>
 
 * fdroid2.osuosl.org
   * `SHA256:usFlA1O6SpF14HlHqK/ElOlY3KyPi9qPGFAcwHUHApU (ECDSA)`
@@ -96,6 +96,7 @@ Host fdroid-buildserver-osuosl-water
   * `SHA256:iNADpiryyqZvNxvknmyiIoYk9xFIQuDQ0F7EaLuBVx4 (ED25519)`
   * `SHA256:41zoyzGDqnbVLPcjvDw68ARUFXBm+AQ9ocjmvgzLokw (RSA)`
 
+</summary>
 
 # Temporary instances
 
