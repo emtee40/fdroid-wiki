@@ -96,7 +96,7 @@ Host fdroid-buildserver-osuosl-water
   * `SHA256:iNADpiryyqZvNxvknmyiIoYk9xFIQuDQ0F7EaLuBVx4 (ED25519)`
   * `SHA256:41zoyzGDqnbVLPcjvDw68ARUFXBm+AQ9ocjmvgzLokw (RSA)`
 
-</summary>
+</details>
 
 # Temporary instances
 
