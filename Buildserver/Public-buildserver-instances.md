@@ -48,30 +48,35 @@ These are shared instances, so please be careful in case someone else is using i
 * 126GB RAM
 
 ```config
+Host fdroid2.osuosl.org
+  User tunnel
+
 Host fdroid-buildserver-osuosl-earth
   User fdroid
   Hostname 192.168.100.10
   HostKeyAlias fdroid-buildserver-osuosl-earth
-  ProxyJump tunnel@fdroid2.osuosl.org
+  ProxyJump fdroid2.osuosl.org
 
 Host fdroid-buildserver-osuosl-wind
   User fdroid
   Hostname 192.168.101.20
   HostKeyAlias fdroid-buildserver-osuosl-wind
-  ProxyJump tunnel@fdroid2.osuosl.org
+  ProxyJump fdroid2.osuosl.org
 
 Host fdroid-buildserver-osuosl-fire
   User fdroid
   Hostname 192.168.102.20
   HostKeyAlias fdroid-buildserver-osuosl-fire
-  ProxyJump tunnel@fdroid2.osuosl.org
+  ProxyJump fdroid2.osuosl.org
 
 Host fdroid-buildserver-osuosl-water
   User fdroid
   Hostname 192.168.103.20
   HostKeyAlias fdroid-buildserver-osuosl-water
-  ProxyJump tunnel@fdroid2.osuosl.org
+  ProxyJump fdroid2.osuosl.org
 ```
+
+Do specify your `IdentityFile` in config for both the host and the tunnel server.
 
 <details><summary>SSH host key fingerprints</summary>
 
