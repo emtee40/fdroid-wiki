@@ -1,0 +1,3 @@
+- https://gitlab.com/fdroid/fdroiddata.git
+- https://gitlab.com/guardianproject/fdroid-metadata.git
+- https://gitlab.com/rfc2822/fdroid-firefox.git [archived]
