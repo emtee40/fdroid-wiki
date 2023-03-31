@@ -1,3 +1,6 @@
 - https://gitlab.com/fdroid/fdroiddata.git
 - https://gitlab.com/guardianproject/fdroid-metadata.git
+- https://github.com/Efreak/auto-daily-fdroid.git
+- https://github.com/xarantolus/fdroid.git
 - https://gitlab.com/rfc2822/fdroid-firefox.git [archived]
+- https://gitlab.com/lucaapp/fdroid-repository.git [archived]
