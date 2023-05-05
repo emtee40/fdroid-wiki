@@ -23,6 +23,12 @@
 * don't duplicate https:// when prepending ([#2523](https://gitlab.com/fdroid/fdroidclient/-/issues/2523))
 * Strip semicolons from supplied repository fingerprint ([#900](https://gitlab.com/fdroid/fdroidclient/-/issues/900))
 
+## Re-order repo priorities
+
+* allow user to change order of repos in the list, adjusting priorities in the DB
+* open/old MR https://gitlab.com/fdroid/fdroidclient/-/merge_requests/435
+* [#1887](https://gitlab.com/fdroid/fdroidclient/-/issues/1887)
+
 # Unrelated work
 
 * use localized categories from index ([2544](https://gitlab.com/fdroid/fdroidclient/-/issues/2544))
