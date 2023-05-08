@@ -29,10 +29,11 @@ A list of the components and how they are used to create a _buildserver_ guest V
 
 ## "Control" scripts
 
-There are scripts in _~/control_ which automate the main steps of the whole build cycle.  There are a couple of manual triggers for triggering things outside of the regular cycle, at the next opportunity:
+There are scripts in _/home/fdroid/control_ which automate the main steps of the whole build cycle.  There are a couple of manual triggers for triggering things outside of the regular cycle, at the next opportunity:
 
-* `touch ~/control/makebs-next` - run _makebuildserver_ at the next opportunity.
-* `touch ~/control/pull-fdroidserver-next` - pull in the latest _fdroidserver_ commits.
+* `touch ~/control/makebs-next` - run _makebuildserver_.
+* `touch ~/control/pullfdroidserver-next` - pull in the latest _fdroidserver_ commits.
+
 
 ## Maintenance
 
