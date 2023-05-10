@@ -110,6 +110,7 @@ In XML directly within the `apps` section (XPath: `/fdroid/application[0..n]/pac
 | - | size | size | size in bytes |
 | - | sdkver | minSdkVersion | (int) minimal supported Android version |
 | - | targetSdkVersion | targetSdkVersion | (int) targeted Android version |
+| - | nativecode | nativecode | (XML: CSV; JSON: array of string) ABIs with native code |
 | - | added | added | when this APK was added. XML: yyyy-mm-dd, JSON: (int) timestamp |
 | - | sig | sig | hash of the signature |
 | - | - | signer | ? (longer hash) |
