@@ -67,7 +67,7 @@ Versions are grouped by the file hash. For each APK (hash), there's the followin
 | ----- | ------- |
 | added | timestamp of when the file was added to the index |
 | file  | subset with the fields `name` (file name with a leading slash), `sha256` (the hash again) and `size` (in bytes) |
-| manifest | subset with the fields `versionname`, `versionCode`, `usesSdk` (`minSdkVersion`, `targetSdkVersion`), `signer` (`sha256` as array 0..n of hashes), `usesPermissions` (array 0..n of `name` with the fully qualified permission name and optionally also `maxSdkVersion`) |
+| manifest | subset with the fields `versionname`, `versionCode`, `usesSdk` (`minSdkVersion`, `targetSdkVersion`), `signer` (`sha256` as array 0..n of hashes), `usesPermissions` (array 0..n of `name` with the fully qualified permission name and optionally also `maxSdkVersion`), `nativecode` (optional; array of strings) |
 | antiFeatures | just the names with an empty assignment (referring `antiFeatures` of the `repo` section) |
 | src   | details on the source tarball (structure like `file`) |
 | releaseChannels | array 0..n of string, referring the release-channel defined in `repo` |
