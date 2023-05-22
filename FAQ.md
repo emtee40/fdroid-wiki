@@ -5,21 +5,25 @@ As the name suggests, this page collects questions asked frequently and puts som
 [[_TOC_]]
 
 ## General
-### How long does it take for my app to show up on website and client?
-Your MR has just been merged, but the APK did not show up immediately? That's normal: the APK must first been built on the build server (happens automatically when the next build cycle starts), then signed (manual step), then a new index must be created and deployed.
 
-* a build cycle currently can take up to 72h (hard limit)
-* apps are manually signed after that, and then uploaded
+### How long does it take for my app to show up on website and client?
+
+Your MR has just been merged, but the APK did not show up immediately? That's normal: the APK must first been built on the build server _(happens automatically when the next build cycle starts)_, then signed (manual step), then a new index must be created and deployed.
+
+* a build cycle currently can take up to 72h _(hard limit)_
+* apps are manually signed after that _(if not reproducible)_, and then uploaded
 * next build cycle starts after signing is completed
 
-So if you're lucky, it takes 2 days (new build cycle just started minutes after the merge). If your not-that-lucky (merge happened a minute after a build cycle started), it will take 4 days. If you're very unlucky, Murphy visits in between with some problems… So no panic before 5 days have passed, please :wink:
+So if you're lucky, it takes 2 days _(new build cycle just started minutes after the merge)_. If your not-that-lucky _(merge happened a minute after a build cycle started)_, it will take 4 days. If you're very unlucky, Murphy visits in between with some problems… So no panic before 5 days have passed, please :wink:
 
 Please also note that the website is updated asynchronously – so while the index might already have reached your local client, website might still be a bit behind.
 
 ### Can I see the current build status?
+
 Sure: for this we have the [F-Droid Monitor](https://monitor.f-droid.org/builds) where you can see the current build cycle ([running](https://monitor.f-droid.org/builds/running)), the last completed one ([build](https://monitor.f-droid.org/builds/build)), [disabled](https://monitor.f-droid.org/builds/disabled) builds, and more.
 
 ### How exactly does the building process work?
+
 Several stages happen before an app update is published. In this page, we will explain all the steps that happen.
 
 #### Finding updates
@@ -41,34 +45,37 @@ If your app isn't listed, it either hasn't been built yet or will be part of the
 After a few days (on average about 3), someone will sign all the built apps on an airgapped machine and push the signed APK files to the F-Droid repository. You can tell this happened from an fdroiddata commit with the name [Update known apks](https://gitlab.com/fdroid/fdroiddata/-/commits/master?search=Update+known+apks). After this, a new cycle starts.
 
 ## Merge Requests
-### Why do we always ask for static values on versionCode/versionName in `build.gradle`?
-> fdroidserver has to check 2753 repositories for updates every build cycle. If we spend, for example, as little as 30 seconds for each, this will be 23 hours. Thus, updates checking needs to be fast. We cannot afford launching a virtual machine (like we do for building apps) for that.
->
-> Those constraints impose a big limitation: we can't run build.gradle to find new values of versionCode and versionName because this is untrusted code. We can only rely on static analysis of build.gradle contents. Currently fdroidserver recognizes versionCode and versionName only when they are defined as literals.
 
-([source](https://gitlab.com/fdroid/fdroiddata/-/merge_requests/6570#note_353356522); note the number of repositories has quite increased since, and long passed 3k)
+### Why do we always ask for static values on versionCode/versionName in `build.gradle`?
+
+The chckupdate CI job has to check \~3350 repositories for updates continuously. If we spend, for example, as little as 30 seconds for each, this will be 28 hours. Thus, updates checking needs to be fast. We cannot afford launching a virtual machine _(like we do for building apps)_ for that.
+
+Those constraints impose a big limitation: we can't run build.gradle to find new values of versionCode and versionName because this is untrusted code. We can only rely on static analysis of build.gradle contents. Currently fdroidserver recognizes versionCode and versionName only when they are defined as literals.
 
 ### How can I trigger the bot/build to run again?
-Pipelines are run automatically whenever a new commit was pushed to the merge request. However, sometimes there's no update needed for the MR itself, as fixes have been applied in the app's source repo – or some pipeline failed for other reasons, like network errors. The account that opened the merge request (as well as members with status developer and up) can always trigger the pipelines again:
+
+Pipelines are run automatically whenever a new commit was pushed to the merge request. However, sometimes there's no update needed for the MR itself, as fixes have been applied in the app's source repo – or some pipeline failed for other reasons, like network errors. The account that opened the merge request _(as well as members with status developer and up)_ can always trigger the pipelines again:
 
 ![image](uploads/fd7c1a2a6514c617de8cf396b98f7611/image.png)
 
 Members with status developer and up usually can trigger them too – unless the source branch is protected. So please make sure to use a separate branch when opening merge requests – as the `master`/`main` branch is always protected in GitLab.
 
-**Note:** clicking on the *name* of the job (left of the ② in above screenshot) will bring you to the corresponding logs. This way you can e.g. figure out why a build failed – or what labels *issuebot* would have applied to the MR (similar to what it does on RFP) if it had "higher privileges".
+**Note:** clicking on the _name_ of the job _(left of the ② in above screenshot)_ will bring you to the corresponding logs. This way you can e.g. figure out why a build failed – or what labels _issuebot_ would have applied to the MR _(similar to what it does on RFP)_ if it had "higher privileges".
 
 ### Can I obtain the `*.apk` your CI built?
+
 It can be quite helpful to get your hands on that, yes. And you easily can
 
-* **CI build:** click on *fdroid build* (shown in above screenshot), then use the "browse" button on the right side of the opening page, navigate to the `unsigned/` directory.
+* **CI build:** click on _fdroid build_ _(shown in above screenshot)_, then use the "browse" button on the right side of the opening page, navigate to the `tmp/` directory.
 * **Issuebot:** If the issuebot report says "`<com.example.packageName>` builds", follow the final link of that report. Again, the `*.apk` is available in the `unsigned/` directory.
 
-
 ## Misc
+
 ### What are the criteria for an app to show up in the "Latest" tab?
+
 The F-Droid client features a "Latest" tab – and there's always confusion about what shows up there and in which order. So let's sum that up:
 
-The sorting logic [can be found here](https://gitlab.com/fdroid/fdroidclient/-/merge_requests/971/diffs#fbc34fe643b953bd45f1cc19fc874453c683b074_854_865). Don't let yourself be misled by the name "Latest" – it's not really meant as "Newest", but rather like "latest fashion"; though some of us argued `last_updated` should have a much higher weight, it in fact has not. The sorting algorithm from above linked code, put in easy words, is rather:
+The sorting logic [can be found here](https://gitlab.com/fdroid/fdroidclient/-/merge_requests/971/diffs#fbc34fe643b953bd45f1cc19fc874453c683b074_854_865 "convert the Latest Tab SELECT logic to ORDER BY, with accurate IS_LOCALIZED"). Don't let yourself be misled by the name "Latest" – it's not really meant as "Newest", but rather like "latest fashion"; though some of us argued `last_updated` should have a much higher weight, it in fact has not. The sorting algorithm from above linked code, put in easy words, is rather:
 
 * pick all apps which are localized to what the user has set as their device locale
 * order that by name (nulls last; i.e. "make sure it has a name")
@@ -81,6 +88,7 @@ The sorting logic [can be found here](https://gitlab.com/fdroid/fdroidclient/-/m
 * then by when it was added (oldest first – meaning, "this app already is with us for a long time and still well maintained")
 
 ### How can I verify the downloaded F-Droid.apk?
+
 Some details on this can be found in our documentation at [Release Channels and Signing Keys](https://f-droid.org/docs/Release_Channels_and_Signing_Keys/). To make it easier to understand for non-devs, here are the steps in short:
 
 * download https://f-droid.org/F-Droid.apk.asc and https://f-droid.org/F-Droid.apk
@@ -104,7 +112,7 @@ gpg --verify F-Droid.apk.asc F-Droid.apk
 
 The expected output of the last command should look like:
 
-```
+```plaintext
 gpg: Signature made Mon 09 Aug 2021 11:17:55 PM CEST
 gpg:                using RSA key 802A9799016112346E1FEFF47A029E54DD5DCE7A
 gpg: Good signature from "F-Droid <admin@f-droid.org>" [unknown]
@@ -126,7 +134,7 @@ gpg> save
 
 Run `gpg -verify` again and the warning will be gone:
 
-```
+```plaintext
 gpg: Signature made Mon 09 Aug 2021 11:17:55 PM CEST
 gpg:                using RSA key 802A9799016112346E1FEFF47A029E54DD5DCE7A
 gpg: checking the trustdb
