@@ -23,6 +23,21 @@
 * don't duplicate https:// when prepending ([#2523](https://gitlab.com/fdroid/fdroidclient/-/issues/2523))
 * Strip semicolons from supplied repository fingerprint ([#900](https://gitlab.com/fdroid/fdroidclient/-/issues/900))
 
+### Implementation notes
+
+Handle incoming URL:
+*    bare domain name, with auto-probe, e.g. "guardianproject.info"
+*    new repo, with fingerprint
+*    new repo, without fingerprint
+*    mirror of new repo, with fingerprint
+*    mirror of new repo, without fingerprint
+*    existing repo, with fingerprint
+*    existing repo, without fingerprint
+*    mirror of existing repo, with fingerprint
+*    mirror of existing repo, without fingerprint
+
+Always fetch extracted URL first to decide the above and get info from repo such as fingerprint, icon, etc.
+
 ## Re-order repo priorities
 
 * allow user to change order of repos in the list, adjusting priorities in the DB
