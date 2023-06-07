@@ -3,7 +3,7 @@ sub sites:
 * [Buildserver VM components](Buildserver/Buildserver-VM-components)
 * [Public buildserver instances](Buildserver/Public-buildserver-instances)
 
-Automation Process Diagram
+## Automation Process Diagram
 
 _source_: [execution-cycle.dot](uploads/78f4d2334557ac959353f318ce161b33/execution-cycle.dot)
 
