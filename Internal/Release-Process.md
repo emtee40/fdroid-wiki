@@ -29,6 +29,16 @@ For each piece of the F-Droid ecosystem, there is a specific release process.  T
 11. add new `Build:` entry to
     [metadata file](https://gitlab.com/fdroid/fdroiddata/blob/master/metadata/org.fdroid.fdroid.yml)
 
+### changelogs
+
+_CHANGELOG.md_ should be updated for every release, with a decent level of detail and a more technical tone.  All entries should be maintained in _master_, bug fix releases should also include the relevant entries.
+
+The _metadata/en-US/changelogs/_ are shown in the client and on the website, and should have an accessible tone and level of detail. The _metadata/en-US/changelogs/_ files have a more complicated workflow because they are translated and spread across multiple files.
+
+* The first alpha release of each cycle should move the current _metadata/en-US/changelogs/en-US/default.txt_ to the file named after the last Version Code, e.g. _metadata/en-US/changelogs/en-US/1016050.txt_
+* The new _metadata/en-US/changelogs/en-US/default.txt_ should include a first draft at the final changelog.  That lets translators start working on it.
+* Bug fix releases only include new stuff in the changelog if it is quite important, otherwise, it is fine to leave it as is.
+
 ### major release
 
 If it is a major release, there are a few more steps.
