@@ -4,7 +4,7 @@ For each piece of the F-Droid ecosystem, there is a specific release process.  T
 
 # <tt>fdroidclient</tt>
 
-0. Commit changes in Weblate (e.g. `wlc commit`)
+0. Commit changes in Weblate (e.g. `wlc commit`) (See: [wlc docs](https://docs.weblate.org/en/latest/wlc.html))
 1. Fetch in latest commits from Weblate
 1. Run `./tools/pick-complete-translations.py`
 2. run `./tools/check-format-strings.py` and
