@@ -35,8 +35,8 @@ _CHANGELOG.md_ should be updated for every release, with a decent level of detai
 
 The _metadata/en-US/changelogs/_ are shown in the client and on the website, and should have an accessible tone and level of detail. The _metadata/en-US/changelogs/_ files have a more complicated workflow because they are translated and spread across multiple files.
 
-* The first alpha release of each cycle should move the current _metadata/en-US/changelogs/en-US/default.txt_ to the file named after the last Version Code, e.g. _metadata/en-US/changelogs/en-US/1016050.txt_
-* The new _metadata/en-US/changelogs/en-US/default.txt_ should include a first draft at the final changelog.  That lets translators start working on it.
+* The first alpha release of each cycle should move the current _metadata/en-US/changelogs/default.txt_ to the file named after the last Version Code, e.g. _metadata/en-US/changelogs/1016050.txt_
+* The new _metadata/en-US/changelogs/default.txt_ should include a first draft at the final changelog.  That lets translators start working on it.
 * Bug fix releases only include new stuff in the changelog if it is quite important, otherwise, it is fine to leave it as is.
 
 ### major release
