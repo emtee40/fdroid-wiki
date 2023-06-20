@@ -8,13 +8,13 @@ As the name suggests, this page collects questions asked frequently and puts som
 
 ### How long does it take for my app to show up on website and client?
 
-Your MR has just been merged, but the APK did not show up immediately? That's normal: the APK must first been built on the build server _(happens automatically when the next build cycle starts)_, then signed (manual step), then a new index must be created and deployed.
+Your MR has just been merged, but the APK did not show up immediately? That's normal: the APK must first be built on the build server _(happens automatically when the next build cycle starts)_, then signed _(manual step)_, then a new index must be created and deployed.
 
 * a build cycle currently can take up to 72h _(hard limit)_
 * apps are manually signed after that _(if not reproducible)_, and then uploaded
 * next build cycle starts after signing is completed
 
-So if you're lucky, it takes 2 days _(new build cycle just started minutes after the merge)_. If your not-that-lucky _(merge happened a minute after a build cycle started)_, it will take 4 days. If you're very unlucky, Murphy visits in between with some problems… So no panic before 5 days have passed, please :wink:
+So if you're lucky, it takes 2 days _(new build cycle just started minutes after the merge)_. If you're not-that-lucky _(merge happened a minute after a build cycle started)_, it will take 4 days. If you're very unlucky, Murphy visits in between with some problems… So don't panic before 5 days have passed, please. :wink:
 
 Please also note that the website is updated asynchronously – so while the index might already have reached your local client, website might still be a bit behind.
 
@@ -28,29 +28,29 @@ Several stages happen before an app update is published. In this page, we will e
 
 #### Finding updates
 
-First, F-Droid checks for app updates existing. To see if the update has been detected, look at the app in the [metadata](https://gitlab.com/fdroid/fdroiddata/-/tree/master/metadata) directory of fdroiddata (for example, in F-Droid's case the file is [org.fdroid.fdroid](https://gitlab.com/fdroid/fdroiddata/-/blob/master/metadata/org.fdroid.fdroid.yml)). The list of known versions is listed under the `Builds` key.
+First, F-Droid checks for app updates. To see if the update has been detected, look at the app in the [metadata](https://gitlab.com/fdroid/fdroiddata/-/tree/master/metadata) directory of fdroiddata _(for example, in F-Droid's case the file is [org.fdroid.fdroid](https://gitlab.com/fdroid/fdroiddata/-/blob/master/metadata/org.fdroid.fdroid.yml))_. The list of known versions is listed under the `Builds` key.
 
-If the latest version isn't under `Builds` yet, `checkupdates` either hasn't found the build yet, or automatic updates aren't enabled for the app. Please give it at least 2 days and check [fdroiddata](https://gitlab.com/fdroid/fdroiddata) `Issues` and `Merge Requests` to see if anyone is working on it.
+If the latest version isn't under `Builds` yet, `checkupdates` either hasn't found the build yet, automatic updates aren't enabled for the app or something changed in the source code and it can't be detected. Please give it at least 2 days and check [fdroiddata](https://gitlab.com/fdroid/fdroiddata) `Issues` and `Merge Requests` to see if anyone is working on it.
 
 #### Build cycle
 
-Each build cycle starts at a certain fdroiddata commit. At https://monitor.f-droid.org/builds/build you can see the current cycle.
+Each build cycle starts at a certain fdroiddata commit. At https://monitor.f-droid.org/builds/running you can see the current cycle.
 
-If you're lucky, you may already see your app under `Succcesful builds` (or `Failed builds`). If the build failed, usually a fixed version will be tried the next build cycle or upstream will be contacted if the F-Droid team can't fix the build failure themselves.
+If you're lucky, you may already see your app under `Succcesful builds` _(or `Failed builds`)_. If the build failed, usually a fixed version will be tried the next build cycle or upstream will be contacted if the F-Droid team can't fix the build failure themselves.
 
 If your app isn't listed, it either hasn't been built yet or will be part of the next cycle. On the webpage under `fdroiddata version` you can see which commit is currently building. Click this link and go to the app's entry in `metadata` again. If the latest version is under `Builds`, it is part of this cycle. If not, it will be part of the next cycle.
 
 #### Signing
 
-After a few days (on average about 3), someone will sign all the built apps on an airgapped machine and push the signed APK files to the F-Droid repository. You can tell this happened from an fdroiddata commit with the name [Update known apks](https://gitlab.com/fdroid/fdroiddata/-/commits/master?search=Update+known+apks). After this, a new cycle starts.
+After a few days _(on average about 3)_, someone will sign all the built apps on an air-gapped machine and push the signed APK files to the F-Droid repository. You can tell this happened from an fdroiddata commit with the name [Update known apks](https://gitlab.com/fdroid/fdroiddata/-/commits/master?search=Update+known+apks). After this, a new cycle starts.
 
 ## Merge Requests
 
 ### Why do we always ask for static values on versionCode/versionName in `build.gradle`?
 
-The chckupdate CI job has to check \~3350 repositories for updates continuously. If we spend, for example, as little as 30 seconds for each, this will be 28 hours. Thus, updates checking needs to be fast. We cannot afford launching a virtual machine _(like we do for building apps)_ for that.
+The checkupdate CI job has to check \~3350 repositories for updates continuously. If we spend, for example, as little as 30 seconds for each, this will be \~28 hours. Thus, updates checking needs to be fast. We cannot afford launching a virtual machine _(like we do for building apps)_ for that.
 
-Those constraints impose a big limitation: we can't run build.gradle to find new values of versionCode and versionName because this is untrusted code. We can only rely on static analysis of build.gradle contents. Currently fdroidserver recognizes versionCode and versionName only when they are defined as literals.
+These constraints impose a big limitation: we can't run build.gradle to find new values of versionCode and versionName because this is untrusted code. We can only rely on static analysis of build.gradle contents. Currently fdroidserver recognizes versionCode and versionName only when they are defined as literals.
 
 ### How can I trigger the bot/build to run again?
 
@@ -78,14 +78,14 @@ The F-Droid client features a "Latest" tab – and there's always confusion abou
 The sorting logic [can be found here](https://gitlab.com/fdroid/fdroidclient/-/merge_requests/971/diffs#fbc34fe643b953bd45f1cc19fc874453c683b074_854_865 "convert the Latest Tab SELECT logic to ORDER BY, with accurate IS_LOCALIZED"). Don't let yourself be misled by the name "Latest" – it's not really meant as "Newest", but rather like "latest fashion"; though some of us argued `last_updated` should have a much higher weight, it in fact has not. The sorting algorithm from above linked code, put in easy words, is rather:
 
 * pick all apps which are localized to what the user has set as their device locale
-* order that by name (nulls last; i.e. "make sure it has a name")
-* then by icon (i.e. "has an icon")
+* order that by name _(nulls last; i.e. "make sure it has a name")_
+* then by icon _(i.e. "has an icon", small note, the newer .xml icon format is not currently picked up, so make sure that Fastlane/Triple-T have an `icon.png`)_
 * then by summary, description (i.e. has summary, has description)
-* then by "has any graphic" (screenshot, featureGraphic etc – one of them suffices)
-* then by "was just added now or updated in the last 7 days" (ahem, this should rather compare to the index date but does not)
-* then by whether it has a "whatsNew" (i.e. per-release changelogs in Fastlane)
-* **only then by when it was last updated** (descending, so newest first)
-* then by when it was added (oldest first – meaning, "this app already is with us for a long time and still well maintained")
+* then by "has any graphic" _(screenshot, featureGraphic etc – one of them suffices)_
+* then by "was just added now or updated in the last 7 days" _(ahem, this should rather compare to the index date but does not)_
+* then by whether it has a "whatsNew" _(i.e. per-release changelogs in Fastlane)_
+* **only then by when it was last updated** _(descending, so newest first)_
+* then by when it was added _(oldest first – meaning, "this app already is with us for a long time and still well maintained")_
 
 ### How can I verify the downloaded F-Droid.apk?
 
