@@ -107,8 +107,6 @@ environment:
 
 ### NativeScript
 
-Feel free to ping @FestplattenSchnitzel in case of problems with your recipe.
-
 ```yaml
 Builds:
   - versionName: 2.0.2
