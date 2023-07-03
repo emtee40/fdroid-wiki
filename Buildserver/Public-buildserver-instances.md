@@ -4,6 +4,8 @@ There are a number of _buildserver_ instances which community members can get ac
 
 If you have any kind of status, e.g. "Reporter", in the F-Droid group or any project on https://gitlab.com/fdroid, you automatically have access to these instances.
 
+Please note that this is not "the buildserver". These machines are not used to actually publish anything to f-droid.org and they do not have access to do so. They simply exist for testing and experimentation purposes.
+
 
 # Setup
 
