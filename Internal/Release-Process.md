@@ -20,10 +20,7 @@ For each piece of the F-Droid ecosystem, there is a specific release process.  T
 9. For alpha builds, edit the _metadata/en-US/changelogs/_ file for the upcoming
    release so the translators can work on it (e.g. for 1.12-alpha1/`1012001`, edit
    _metadata/en-US/changelogs/1012050.txt_).
-10. make a local branch for the final release, then run
-    `./tools/trim-incomplete-translations-for-release.py`
-	to remove any incomplete translations from the final while leaving
-	them in _master_
+11. For non-alpha final release (x.x.0 or higher), make a local branch for the release, then run `./tools/trim-incomplete-translations-for-release.py` to remove any incomplete translations from the final while leaving them in _master_
 10. add git signed tag named after the exact version name (no
    preceeding __v__)
 11. add new `Build:` entry to
