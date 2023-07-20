@@ -33,7 +33,7 @@ $ ./fdroid signindex
 
 There is an Android emulator test that makes sure that there are no crashes caused by format strings.  It can be run by itself using:
 
-```console
+```bash
 ./gradlew assembleFullDebug connectedFullDebugAndroidTest \
   -Pandroid.testInstrumentationRunnerArguments.class=org.fdroid.fdroid.LocalizationTest
 ```
