@@ -27,3 +27,13 @@ compiling catalog locale/zh_Hant/LC_MESSAGES/fdroidserver.po to locale/zh_Hant/L
 [..snip..]
 $ ./fdroid signindex
 ```
+
+
+## _fdroidclient_
+
+There is an Android emulator test that makes sure that there are no crashes caused by format strings.  It can be run by itself using:
+
+```console
+./gradlew assembleFullDebug connectedFullDebugAndroidTest \
+  -Pandroid.testInstrumentationRunnerArguments.class=org.fdroid.fdroid.LocalizationTest
+```
