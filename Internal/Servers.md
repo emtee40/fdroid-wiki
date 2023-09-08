@@ -26,4 +26,24 @@ of one admin's GPG would lead to compromise of that private key, etc.
 
 ## _f-droid.org_
 
-_f-droid.org_ is run from a collection of 3-4 bare metal servers and one VM.  There is one bare metal server that is the canonical web server.  There are two or three bare metal servers that serve as caching front-end servers for the canonical web server. The [website deployserver](https://gitlab.com/fdroid/fdroid-deployserver/) is a VM that generates the [website](https://gitlab.com/fdroid/fdroid-website/) and _rsyncs_ it to the canonical server.  The _buildserver_ host is a bare metal server that generates the repo and runs builds in the [guest](https://gitlab.com/fdroid/fdroidserver/tree/2.0/buildserver). 
+_f-droid.org_ is run from a collection of 3-4 bare metal servers and one VM.  There is one bare metal server that is the canonical web server.  There are two or three bare metal servers that serve as caching front-end servers for the canonical web server. The [website deployserver](https://gitlab.com/fdroid/fdroid-deployserver/) is a VM that generates the [website](https://gitlab.com/fdroid/fdroid-website/) and _rsyncs_ it to the canonical server.  The _buildserver_ host is a bare metal server that generates the repo and runs builds in the [guest](https://gitlab.com/fdroid/fdroidserver/tree/2.0/buildserver).
+
+
+# How to donate servers and/or hardware
+
+F-Droid mostly needs hosted services, donations of hardware are only useful to us if they are hosted somewhere reachable on the Internet.  It does not need to have a static IPv4.  IPv6-only works fine.
+
+## [Buildserver](Buildserver) instances
+
+* Bare-metal servers to run multiple contributor instances.
+* VPS with nested KVM support, 8+ CPUs and 16+ GB of RAM.  500GB minimum disk, up to 5TB would be used.
+
+## CI Runners
+
+* VPS with nested KVM support with 2+ CPUs, 8+ GB RAM, and 50GB minimum disk.
+* Bare-metal with 8+ CPUs, 16+ GB RAM, 500GB minimum disk.
+
+## Maven and Android repository hosting
+
+* 5+ TB of storage space that can be accessed by static IP/domain name and static path.
+
