@@ -80,11 +80,11 @@
 * Creative Commons Attribution-ShareAlike 3.0 License (CC-BY-SA-3.0) 
 * GNU General Public License version 3 or later (GPLv3+)
 
-
+https://opencollective.com/f-droid-euro
 ## Money
 
 * https://opencollective.com/f-droid
-* https://opencollective.com/f-fdroid-euro
+* https://opencollective.com/f-droid-euro
 * https://liberapay.com/F-Droid-Data
 * https://github.com/sponsors/f-droid, which is hooked up to https://opencollective.com/f-droid via Stripe.
 
