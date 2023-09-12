@@ -14,6 +14,6 @@ This is a work-in-progress policy doc for the process of requesting and being gr
 * The number of owners of the whole group should be kept at a minimum, but above 1-2 people to avoid a single point of failure
 
 * Any Core Contributor can be added to the _Contributors_ group in forum.f-droid.org.  The new contributor should state their forum username in the GitLab issue.
-* Any Core Contributor can be added to [#f-droid-private](https://matrix.to/#/#f-droid-private:f-droid.org) on Matrix/etc.  The new contributor should state their Matrix/etc username in the GitLab issue.
+* Any Core Contributor can be added to [#F-Droid-private](https://matrix.to/#/#f-droid-private:f-droid.org) on Matrix/etc.  The new contributor should state their Matrix/etc username in the GitLab issue.
 * Core Contributor can optionally be added to the  `team@f-droid.org` email alias.
 * Core Contributor can be added to the [Consultants](https://f-droid.org/consulting/) page, edit [consulting.md](https://gitlab.com/fdroid/fdroid-website/blob/master/_pages/consulting.md) and submit a merge request.
