@@ -35,6 +35,7 @@ Handle incoming URL:
 * if fingerprint is given and known, maybe check situation first before fetching repo
 * ~~fetch extracted URL first to get info from repo such as fingerprint, icon, number of apps, anti-features etc.~~
 * TODO check how using a repo from a flash drive works (just swap flow?)
+* @uniqx looking into adding Storage Access Framework flow to Manage Repos (e.g. choosing a repo hosted on Nextcloud, Google Drive, Samba, etc)
 
 possible results:
 * could not connect to repo for whatever reason -> show error
@@ -57,6 +58,13 @@ possible results:
 * remove "Conflicts With Active VPN!" warning, allow override ([#2577](https://gitlab.com/fdroid/fdroidclient/-/issues/2577))
 * Use `repo_web_base_url` for app sharing ([#1946](https://gitlab.com/fdroid/fdroidclient/-/issues/1946))
 * ~~Bad intent: Intent { act=BonjourStatus } [#2518](https://gitlab.com/fdroid/fdroidclient/-/issues/2518)~~
+
+# 2023-09-12 Feedback from @eighthave
+
+- [ ] Click **+** then Scan QR with fdroidrepos://gnu-taler.gitlab.io/fdroid-repo-nightly/fdroid/repo?fingerprint=55F8A24F97FAB7B0960016AF393B7E57E7A0B13C2D2D36BAC50E1205923A7843 and crashed with `java.lang.IllegalArgumentException: Expected URL scheme 'http' or 'https' but was 'fdroidrepos'`
+- [ ] Clicking fdroidrepos://gnu-taler.gitlab.io/fdroid-repo-nightly/fdroid/repo?fingerprint=55F8A24F97FAB7B0960016AF393B7E57E7A0B13C2D2D36BAC50E1205923A7843 put up the "add repos" dialog but did not show the repo preview screen.
+- [ ] After clicking `fdroidrepos://` URL and adding repo, the flow returns to the browser where I clicked the URL.  Seems to me that if someone is adding a repo, they most likely want to get an app rather than go back to the browser.  Is there a standard Android/Material UX pattern here?
+- [ ] Clicking fdroidrepos://gnu-taler.gitlab.io/fdroid-repo-nightly/fdroid/repo?fingerprint=55F8A24F97FAB7B0960016AF393B7E57E7A0B13C2D2D36BAC50E1205923A7843 puts up a Toast with `kotlinx.serialization.MissingFieldException: Field 'name' is required for type with serial name 'org.fdroid.index.v2.CategoryV2', but it was missing at path: $.repo.categories['Money'] at path: $.repo.categories['Money'] at path: $.repo.categories['Money'] at path: $.repo.categories['Money']` https://gitlab.com/fdroid/fdroidserver/-/merge_requests/1390
 
 
 
