@@ -57,3 +57,13 @@ possible results:
 * remove "Conflicts With Active VPN!" warning, allow override ([#2577](https://gitlab.com/fdroid/fdroidclient/-/issues/2577))
 * Use `repo_web_base_url` for app sharing ([#1946](https://gitlab.com/fdroid/fdroidclient/-/issues/1946))
 * ~~Bad intent: Intent { act=BonjourStatus } [#2518](https://gitlab.com/fdroid/fdroidclient/-/issues/2518)~~
+
+
+# 2023-09-08 Feedback
+
+The preview screen working smoothly, that's nice to see.
+
+- [x] `https://example.com` worked for me
+- [ ] Typing a plain domain name into the manual field fails, it could automatically do `example.com` -> `https://example.com/fdroid/repo`.  I think the old one did that, but I could be wrong.
+- [ ] `https://` is not prefilled in the manual field.
+- [ ] Clicking Back `<--` on the Add Repo preview screen cancels the whole flow.  Are we sure that's the right UX?  Felt surprising to me.
