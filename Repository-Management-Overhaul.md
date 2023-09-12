@@ -59,7 +59,8 @@ possible results:
 * ~~Bad intent: Intent { act=BonjourStatus } [#2518](https://gitlab.com/fdroid/fdroidclient/-/issues/2518)~~
 
 
-# 2023-09-08 Feedback
+
+# 2023-09-08 Feedback from @eighthave
 
 The preview screen working smoothly, that's nice to see.
 
