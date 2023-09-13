@@ -38,6 +38,7 @@ Handle incoming URL:
 * ~~fetch extracted URL first to get info from repo such as fingerprint, icon, number of apps, anti-features etc.~~
 * TODO check how using a repo from a flash drive works (just swap flow?)
 * @uniqx looking into adding Storage Access Framework flow to Manage Repos (e.g. choosing a repo hosted on Nextcloud, Google Drive, Samba, etc)
+* support adding repos behind basic auth
 
 possible results:
 * could not connect to repo for whatever reason -> show error
