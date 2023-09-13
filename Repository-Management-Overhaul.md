@@ -23,6 +23,8 @@
 * split fingerprint off into its own field right after pasting URL ([#2078](https://gitlab.com/fdroid/fdroidclient/-/issues/2078))
 * don't duplicate https:// when prepending ([#2523](https://gitlab.com/fdroid/fdroidclient/-/issues/2523))
 * Strip semicolons from supplied repository fingerprint ([#900](https://gitlab.com/fdroid/fdroidclient/-/issues/900))
+* [search chip to show apps in a specific repo](https://gitlab.com/fdroid/fdroidclient/-/issues/570) reachable from repo details and show after adding a repo (which progress spinner while still updating)
+* add `https://` in front of input, if no scheme was given
 
 ### Implementation notes
 
@@ -58,21 +60,3 @@ possible results:
 * remove "Conflicts With Active VPN!" warning, allow override ([#2577](https://gitlab.com/fdroid/fdroidclient/-/issues/2577))
 * Use `repo_web_base_url` for app sharing ([#1946](https://gitlab.com/fdroid/fdroidclient/-/issues/1946))
 * ~~Bad intent: Intent { act=BonjourStatus } [#2518](https://gitlab.com/fdroid/fdroidclient/-/issues/2518)~~
-
-# 2023-09-12 Feedback from @eighthave
-
-- [ ] Click **+** then Scan QR with fdroidrepos://gnu-taler.gitlab.io/fdroid-repo-nightly/fdroid/repo?fingerprint=55F8A24F97FAB7B0960016AF393B7E57E7A0B13C2D2D36BAC50E1205923A7843 and crashed with `java.lang.IllegalArgumentException: Expected URL scheme 'http' or 'https' but was 'fdroidrepos'`
-- [ ] Clicking fdroidrepos://gnu-taler.gitlab.io/fdroid-repo-nightly/fdroid/repo?fingerprint=55F8A24F97FAB7B0960016AF393B7E57E7A0B13C2D2D36BAC50E1205923A7843 put up the "add repos" dialog but did not show the repo preview screen.
-- [ ] After clicking `fdroidrepos://` URL and adding repo, the flow returns to the browser where I clicked the URL.  Seems to me that if someone is adding a repo, they most likely want to get an app rather than go back to the browser.  Is there a standard Android/Material UX pattern here?
-- [ ] Clicking fdroidrepos://gnu-taler.gitlab.io/fdroid-repo-nightly/fdroid/repo?fingerprint=55F8A24F97FAB7B0960016AF393B7E57E7A0B13C2D2D36BAC50E1205923A7843 puts up a Toast with `kotlinx.serialization.MissingFieldException: Field 'name' is required for type with serial name 'org.fdroid.index.v2.CategoryV2', but it was missing at path: $.repo.categories['Money'] at path: $.repo.categories['Money'] at path: $.repo.categories['Money'] at path: $.repo.categories['Money']` https://gitlab.com/fdroid/fdroidserver/-/merge_requests/1390
-
-
-
-# 2023-09-08 Feedback from @eighthave
-
-The preview screen working smoothly, that's nice to see.
-
-- [x] `https://example.com` worked for me
-- [ ] Typing a plain domain name into the manual field fails, it could automatically do `example.com` -> `https://example.com/fdroid/repo`.  I think the old one did that, but I could be wrong.
-- [ ] `https://` is not prefilled in the manual field.
-- [ ] Clicking Back `<--` on the Add Repo preview screen cancels the whole flow.  Are we sure that's the right UX?  Felt surprising to me.
