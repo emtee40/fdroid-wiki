@@ -20,11 +20,12 @@
 * ~~Properly detect mirrors by fetching signer when validating URL ([#1718](https://gitlab.com/fdroid/fdroidclient/-/issues/1718))~~
 * ~~don't add invalid repos ([#598](https://gitlab.com/fdroid/fdroidclient/-/issues/598))~~
 * use pinned signer fingerprint in client when available ([#2557](https://gitlab.com/fdroid/fdroidclient/-/issues/2557))
-* split fingerprint off into its own field right after pasting URL ([#2078](https://gitlab.com/fdroid/fdroidclient/-/issues/2078))
-* don't duplicate https:// when prepending ([#2523](https://gitlab.com/fdroid/fdroidclient/-/issues/2523))
-* Strip semicolons from supplied repository fingerprint ([#900](https://gitlab.com/fdroid/fdroidclient/-/issues/900))
+* ~~split fingerprint off into its own field right after pasting URL ([#2078](https://gitlab.com/fdroid/fdroidclient/-/issues/2078))~~ (doesn't make sense in new UI)
+* ~~don't duplicate https:// when prepending ([#2523](https://gitlab.com/fdroid/fdroidclient/-/issues/2523))~~ (no more https:// in input field)
+* ~~Strip semicolons from supplied repository fingerprint ([#900](https://gitlab.com/fdroid/fdroidclient/-/issues/900))~~ (doesn't make sense as we don't support separate fingerprint entry anymore, just create a proper link or qr code)
 * [search chip to show apps in a specific repo](https://gitlab.com/fdroid/fdroidclient/-/issues/570) reachable from repo details and show after adding a repo (which progress spinner while still updating)
-* add `https://` in front of input, if no scheme was given
+* ~~add `https://` in front of input, if no scheme was given~~
+* support adding repos behind basic auth
 
 ### Implementation notes
 
@@ -32,13 +33,12 @@ Handle incoming URL:
 * ~~deny adding repos if unknown sources is disallowed by device manager~~
 * ~~check if repo URL is valid, show error if not~~
 * check if swap URL and if so redirect to swap workflow
-* maybe do some auto-probe on certain URLs such as bare domain name e.g. "guardianproject.info"
+* ~~maybe do some auto-probe on certain URLs such as bare domain name e.g. "guardianproject.info"~~
 * request orbot to start tor, if enabled (and needed for URL?)
-* if fingerprint is given and known, maybe check situation first before fetching repo
+* ~~if fingerprint is given and known, maybe check situation first before fetching repo~~
 * ~~fetch extracted URL first to get info from repo such as fingerprint, icon, number of apps, anti-features etc.~~
-* TODO check how using a repo from a flash drive works (just swap flow?)
+* check how using a repo from a flash drive works (just swap flow?)
 * @uniqx looking into adding Storage Access Framework flow to Manage Repos (e.g. choosing a repo hosted on Nextcloud, Google Drive, Samba, etc)
-* support adding repos behind basic auth
 
 possible results:
 * could not connect to repo for whatever reason -> show error
