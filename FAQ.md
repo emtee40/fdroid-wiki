@@ -162,6 +162,14 @@ Signer #1 certificate SHA-1 digest: 05f2e65928088981b317fc9a6dbfe04b0fa13b4e
 Signer #1 certificate MD5 digest: 17c55c628056e193e95644e989792786
 ```
 
+#### Pithus
+
+1. Upload the _F-Droid.apk_ you downloaded to https://beta.pithus.org/ as a "File"
+2. In the resulting report, click on "APK analysis"
+3. Search for the "Certificate details" section.
+3. The MD5, SHA1, and SHA256 should match:![Screenshot_from_2023-09-20_17-13-47](uploads/e6fd2c5fb9c3379994dc0e35ec2ab524/Screenshot_from_2023-09-20_17-13-47.png)
+
+
 #### VirusTotal
 
 1. Upload the _F-Droid.apk_ you downloaded to https://www.virustotal.com/
