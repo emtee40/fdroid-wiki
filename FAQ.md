@@ -175,3 +175,16 @@ Signer #1 certificate MD5 digest: 17c55c628056e193e95644e989792786
 1. Upload the _F-Droid.apk_ you downloaded to https://www.virustotal.com/
 2. Search for the "Certificate Attributes" section.
 3. The "Thumbprint" (SHA1 fingerprint) should match:![Screenshot_from_2023-09-20_17-00-30](uploads/56b25f289c4967c2ebd816926a313045/Screenshot_from_2023-09-20_17-00-30.png)
+
+
+
+
+#### Firefox
+
+(_This is more of a smokecheck than a full verification because Firefox can't check the signature matches META-INF/CIARANG.RSA_)
+
+1. Download _F-Droid.apk_
+2. Open it with an Archive Manager or ZIP program.
+3. Find the file _META-INF/CIARANG.RSA_ and extract it as _CIARANG.RSA.der_ (*important:* the file must end in _.der_, the rest of the file name is not important)
+4. Drag-n-drop the _CIARANG.RSA.der_ file onto any Firefox window, and you should see this pop up:![Screenshot_from_2023-09-20_17-23-58](uploads/11366f8e2e915cbafb71561fad71962a/Screenshot_from_2023-09-20_17-23-58.png)
+5. Open up the red "Details" and find "Certificate Fingerprints", that should match:![Screenshot_from_2023-09-20_17-24-59](uploads/0fdbbd5740c013b924b03dbec1057500/Screenshot_from_2023-09-20_17-24-59.png)
