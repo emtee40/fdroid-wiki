@@ -91,6 +91,8 @@ The sorting logic [can be found here](https://gitlab.com/fdroid/fdroidclient/-/m
 
 Some details on this can be found in our documentation at [Release Channels and Signing Keys](https://f-droid.org/docs/Release_Channels_and_Signing_Keys/). To make it easier to understand for non-devs, here are the steps in short:
 
+#### GnuPG
+
 * download https://f-droid.org/F-Droid.apk.asc and https://f-droid.org/F-Droid.apk
 * load the public key for admin@f-droid.org
 * compare the fingerprint with what above mentioned page states
@@ -147,3 +149,21 @@ gpg: Good signature from "F-Droid <admin@f-droid.org>" [full]
 Primary key fingerprint: 37D2 C987 89D8 3119 4839  4E3E 41E7 044E 1DBA 2E89
      Subkey fingerprint: 802A 9799 0161 1234 6E1F  EFF4 7A02 9E54 DD5D CE7A
 ```
+
+#### Android `apksigner`
+
+Download the APK from the front page of https://f-droid.org, then run this:
+
+```console
+$ apksigner verify --print-certs ~/Downloads/F-Droid.apk|grep -v WARNING:
+Signer #1 certificate DN: CN=Ciaran Gultnieks, OU=Unknown, O=Unknown, L=Wetherby, ST=Unknown, C=UK
+Signer #1 certificate SHA-256 digest: 43238d512c1e5eb2d6569f4a3afbf5523418b82e0a3ed1552770abb9a9c9ccab
+Signer #1 certificate SHA-1 digest: 05f2e65928088981b317fc9a6dbfe04b0fa13b4e
+Signer #1 certificate MD5 digest: 17c55c628056e193e95644e989792786
+```
+
+#### VirusTotal
+
+1. Upload the _F-Droid.apk_ you downloaded to https://www.virustotal.com/
+2. Search for the "Certificate Attributes" section.
+3. The "Thumbprint" (SHA1 fingerprint) should match:![Screenshot_from_2023-09-20_17-00-30](uploads/56b25f289c4967c2ebd816926a313045/Screenshot_from_2023-09-20_17-00-30.png)
