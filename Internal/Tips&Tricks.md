@@ -47,7 +47,7 @@ fcu appid                    (run checkupdate to verify if newest version is pic
 
 As contributors we need to enter the VM rather often, since most recipes that we build have failed using the usual simple steps or the Gitlab CI can't handle some cases.
 
-Hence we've can edit `fdroidserver/fdroidserver/build.py` and replaced `destroy` with `suspend` around [here](https://gitlab.com/fdroid/fdroidserver/-/blob/8267fb2cafe4fd5f517f27ea4d2646e7f1ff4ef2/fdroidserver/build.py#L304-L305) so at the end of the build the VM can still be used. We can enter it to tweak/test the steps of the recipe or analyse the dependency tree or search/extract an APK/file that was not found automatically, or we need etc.
+Hence we've can edit `fdroidserver/fdroidserver/build.py` and replaced `destroy` with `suspend` around [here](https://gitlab.com/fdroid/fdroidserver/-/blob/8267fb2cafe4fd5f517f27ea4d2646e7f1ff4ef2/fdroidserver/build.py#L304-L305) so at the end of the build the VM can still be used. We can enter it with `vg` to tweak/test the steps of the recipe or analyse the dependency tree or search/extract an APK/file that was not found automatically, or we need etc.
 
 # Moving files from/to a suspended VM
 
