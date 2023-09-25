@@ -28,6 +28,10 @@ of one admin's GPG would lead to compromise of that private key, etc.
 
 _f-droid.org_ is run from a collection of 3-4 bare metal servers and one VM.  There is one bare metal server that is the canonical web server.  There are two or three bare metal servers that serve as caching front-end servers for the canonical web server. The [website deployserver](https://gitlab.com/fdroid/fdroid-deployserver/) is a VM that generates the [website](https://gitlab.com/fdroid/fdroid-website/) and _rsyncs_ it to the canonical server.  The _buildserver_ host is a bare metal server that generates the repo and runs builds in the [guest](https://gitlab.com/fdroid/fdroidserver/tree/2.0/buildserver).
 
+## _matrix.f-droid.org_
+
+F-Droid runs a Matrix server to have official F-Droid rooms.
+
 
 # How to donate servers and/or hardware
 
