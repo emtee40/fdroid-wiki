@@ -48,6 +48,13 @@ possible results:
 * existing repo -> tell user that this repo already exists, maybe show repo details?
 * mirror of existing repo -> ask user if they want to add this repo as a mirror
 
+## Representing apps from multiple repos
+
+* Change database structure to be faster, better support multiple repos. ([#511](https://gitlab.com/fdroid/fdroidclient/-/issues/511))
+* Properly support multiple repositories with the same app ([!375](https://gitlab.com/fdroid/fdroidclient/-/merge_requests/375))
+* Add support for multiple repos with conflicting apps/apks ([#33](https://gitlab.com/fdroid/fdroidclient/-/issues/33))
+
+
 ## Re-order repo priorities
 
 * allow user to change order of repos in the list, adjusting priorities in the DB
