@@ -55,6 +55,10 @@ possible results:
 * Add support for multiple repos with conflicting apps/apks ([#33](https://gitlab.com/fdroid/fdroidclient/-/issues/33))
 * allow user to change order of repos in the list, adjusting priorities in the DB (open/old MR [!435](https://gitlab.com/fdroid/fdroidclient/-/merge_requests/435) [#1887](https://gitlab.com/fdroid/fdroidclient/-/issues/1887))
 
+
+One idea: new repos are added with lower priority, so users can easily get new apps by adding repos without dealing with the hard questions.  Then per-app, users can decide to prioritize any repo as the selected source for that app.
+
+
 # Unrelated work
 
 * ~~use localized categories from index ([2544](https://gitlab.com/fdroid/fdroidclient/-/issues/2544))~~
