@@ -6,9 +6,9 @@
 ## UI
 
 * ~~update list faster, not waiting for DB, e.g. when deleting repo ([#2447](https://gitlab.com/fdroid/fdroidclient/-/issues/2447))~~
-* allow users to add and manage the IPFS gateways ([#2541](https://gitlab.com/fdroid/fdroidclient/-/issues/2541))
-* in app details, show from what repo the shown data comes from
 * ~~show repo icons and URL in list ([#536](https://gitlab.com/fdroid/fdroidclient/-/issues/536))~~
+* ~~in app details, show from what repo the shown data comes from (#1824)[https://gitlab.com/fdroid/fdroidclient/-/issues/1824]~~
+* allow users to add and manage the IPFS gateways ([#2541](https://gitlab.com/fdroid/fdroidclient/-/issues/2541))
 
 ## Add repo flow
 
@@ -19,13 +19,13 @@
 * ~~Show list of apps included in repo when adding, and later as well (part of [#966](https://gitlab.com/fdroid/fdroidclient/-/issues/966))~~
 * ~~Properly detect mirrors by fetching signer when validating URL ([#1718](https://gitlab.com/fdroid/fdroidclient/-/issues/1718))~~
 * ~~don't add invalid repos ([#598](https://gitlab.com/fdroid/fdroidclient/-/issues/598))~~
-* use pinned signer fingerprint in client when available ([#2557](https://gitlab.com/fdroid/fdroidclient/-/issues/2557))
 * ~~split fingerprint off into its own field right after pasting URL ([#2078](https://gitlab.com/fdroid/fdroidclient/-/issues/2078))~~ (doesn't make sense in new UI)
 * ~~don't duplicate https:// when prepending ([#2523](https://gitlab.com/fdroid/fdroidclient/-/issues/2523))~~ (no more https:// in input field)
 * ~~Strip semicolons from supplied repository fingerprint ([#900](https://gitlab.com/fdroid/fdroidclient/-/issues/900))~~ (doesn't make sense as we don't support separate fingerprint entry anymore, just create a proper link or qr code)
-* [search chip to show apps in a specific repo](https://gitlab.com/fdroid/fdroidclient/-/issues/570) reachable from repo details and show after adding a repo (which progress spinner while still updating)
+* ~~search chip to show apps in a specific repo reachable from repo details and show after adding a repo (which progress spinner while still updating) ([#570](https://gitlab.com/fdroid/fdroidclient/-/issues/570))~~
 * ~~add `https://` in front of input, if no scheme was given~~
 * support adding repos behind basic auth
+* use pinned signer fingerprint in client when available ([#2557](https://gitlab.com/fdroid/fdroidclient/-/issues/2557))
 
 ### Implementation notes
 
@@ -53,13 +53,7 @@ possible results:
 * Change database structure to be faster, better support multiple repos. ([#511](https://gitlab.com/fdroid/fdroidclient/-/issues/511))
 * Properly support multiple repositories with the same app ([!375](https://gitlab.com/fdroid/fdroidclient/-/merge_requests/375))
 * Add support for multiple repos with conflicting apps/apks ([#33](https://gitlab.com/fdroid/fdroidclient/-/issues/33))
-
-
-## Re-order repo priorities
-
-* allow user to change order of repos in the list, adjusting priorities in the DB
-* open/old MR https://gitlab.com/fdroid/fdroidclient/-/merge_requests/435
-* [#1887](https://gitlab.com/fdroid/fdroidclient/-/issues/1887)
+* allow user to change order of repos in the list, adjusting priorities in the DB (open/old MR [!435](https://gitlab.com/fdroid/fdroidclient/-/merge_requests/435) [#1887](https://gitlab.com/fdroid/fdroidclient/-/issues/1887))
 
 # Unrelated work
 
