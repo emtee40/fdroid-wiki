@@ -13,6 +13,20 @@ As much as possible, the F-Droid servers are built, deployed and maintained usin
 
 https://gitlab.com/explore?utf8=%E2%9C%93&name=fdroid&sort=latest_activity_desc&tag=ansible
 
+### Playbooks
+
+* _buildserver_: <https://gitlab.com/fdroid/fdroid-bootstrap-buildserver/>
+* _f-droid.org deployserver_: <https://gitlab.com/fdroid/fdroid-deployserver/>
+* _f-droid.org_: <https://gitlab.com/fdroid/fdroid-http-fronters/>
+* _fdroid.link_: <https://gitlab.com/fdroid/fdroid-http-fronters/>
+* _fdroidstatus.org_: <https://gitlab.com/fdroid/fdroid-statuspage-deployment/>
+* _forum.f-droid.org_: <https://f-droid.org/docs/Maintaining_the_Forum/>
+* IPFS pinning server: <https://gitlab.com/fdroid/ipfs-pinning-server>
+* _matrix.f-droid.org_: <https://gitlab.com/fdroid/wiki/-/wikis/Internal/Servers#matrixf-droidorg>
+* _monitor.f-droid.org_: <https://gitlab.com/fdroid/fdroid-monitor-deployment/>
+* _search.f-droid.org_: <https://gitlab.com/fdroid/fdroid-website-search-deployment/>
+
+
 
 ### Vault setup
 
