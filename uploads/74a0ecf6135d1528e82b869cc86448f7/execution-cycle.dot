@@ -1,0 +1,131 @@
+
+digraph G {
+  node [fontname = "Roboto"];
+  edge [fontname = "Roboto", tailport=s, headport=n];
+
+  compound=true;
+  overlap=true;
+  splines=true;
+  
+  top [style=invis]; // purely for a better overall layout
+
+  // actual commands
+  "fdroid build", "fdroid publish", "fdroid gpgsign", "fdroid update", "fdroid signindex", "fdroid deploy", "./makebuildserver", "git pull fdroiddata", "git pull fdroidserver", "git commit stats/known_apks.txt", "push-to-mirror.sh" [shape="box", fontname="Inconsolata"];
+
+  // trigger file tests
+  "-f build", "-f makebs", "-f makebs-next", "-f pullfdroidserver", "-f pullfdroidserver-next", "-f update", "-f update_server" [ shape="diamond", fontname="Inconsolata" ];
+
+  // emails
+  build_email, postpublish_email, postsignindex_email [ fontname="serif", style="filled", fillcolor="lightgrey" shape=house];
+
+  // webservers
+  "f-droid.org", "ftp.agdsn.de", "ftp.lysator.liu.se", "plug-mirror.rcac.purdue.edu" [ style="filled", fillcolor="lightyellow" shape=parallelogram];
+
+  // mystery things on "FDROID PUBLISH"
+  pull_unsigned [ label = "rsync pull unsigned?", color=grey, fontcolor=grey, style=dashed ];
+  push_repo [ label = "rsync push repo?", color=grey, fontcolor=grey, style=dashed ];
+  push_archive [ label = "rsync push archive?", color=grey, fontcolor=grey, style=dashed ];
+  pull_unsigned_indexes [ label = "rsync pull repo/ unsigned indexes?", color=grey, fontcolor=grey, style=dashed ];
+  push_repo_indexes [ label = "rsync push repo/ indexes?", color=grey, fontcolor=grey, style=dashed ];
+  push_archive_indexes [ label = "rsync push archive/ indexes?", color=grey, fontcolor=grey, style=dashed ];
+  "gpgsign?" [ color=grey, fontcolor=grey, style=dashed ];
+
+  build_email [ label = "Build output is waiting to be published" ];
+  postpublish_email [ label = "Index is waiting to be signed" ];
+  postsignindex_email [ label = "Server has been updated." ];
+
+  top -> "-f build" [style=invis];
+  "-f build" -> "git pull fdroiddata";
+  "git pull fdroiddata"  -> "fdroid build"
+  "fdroid build" -> build_email;
+  build_email -> pull_unsigned [lhead=cluster_publish];
+  pull_unsigned -> "fdroid publish" [color=darkgrey, style=dashed];
+  "fdroid publish" -> "fdroid gpgsign" [color=darkgrey, style=dashed];
+  "fdroid gpgsign" -> push_repo [color=darkgrey, style=dashed];
+  push_repo -> push_archive [color=darkgrey, style=dashed];
+  push_archive -> "-f update" [ltail=cluster_publish];
+  "-f update" -> "fdroid update";
+  "fdroid update" -> postpublish_email:w;
+  postpublish_email -> pull_unsigned_indexes [lhead=cluster_signindex];
+  pull_unsigned_indexes -> "fdroid signindex";
+  "fdroid signindex" -> "gpgsign?" [color=darkgrey, style=dashed];
+  "gpgsign?" -> push_repo_indexes [color=darkgrey, style=dashed];
+  push_repo_indexes -> push_archive_indexes [color=darkgrey, style=dashed];
+  push_archive_indexes -> "-f update_server" [ltail=cluster_signindex];
+  "fdroid update" -> "-f makebs-next";
+  "-f update_server" -> "fdroid deploy";
+  "fdroid deploy" -> "git commit stats/known_apks.txt";
+  "git commit stats/known_apks.txt" -> postsignindex_email;
+  "git commit stats/known_apks.txt" -> "-f pullfdroidserver-next";
+  "-f pullfdroidserver-next" -> "-f pullfdroidserver";
+  "-f pullfdroidserver-next":w -> "-f build" [taillabel="!", fontweight=bold];
+  "-f pullfdroidserver" -> "git pull fdroidserver";
+  "git pull fdroidserver" -> "-f build";
+  
+  "-f makebs-next" -> "-f makebs";
+  "-f makebs" -> "./makebuildserver";
+
+  "fdroid deploy" -> "f-droid.org";
+  "f-droid.org" -> "push-to-mirror.sh";
+  "push-to-mirror.sh" -> "ftp.agdsn.de";
+  "push-to-mirror.sh" -> "ftp.lysator.liu.se";
+  "push-to-mirror.sh" -> "plug-mirror.rcac.purdue.edu";
+
+
+  subgraph cluster_build_sh {
+          "-f build" "git pull fdroiddata" "fdroid build";
+          label="build.sh";
+          margin=25.0;
+  }
+
+  subgraph cluster_postpublish_sh {
+          "-f update" "fdroid update" "-f makebs-next";
+          label="postpublish.sh";
+          margin=25.0;
+  }
+
+  subgraph cluster_postsignindex_sh {
+          "-f update_server" "fdroid deploy" "git commit stats/known_apks.txt" "-f pullfdroidserver-next";
+          label="postsignindex.sh";
+          margin=25.0;
+  }
+
+  subgraph cluster_pullfdroidserver_sh {
+          "-f pullfdroidserver" "git pull fdroidserver";
+          label="pullfdroidserver.sh";
+          margin=25.0;
+  }
+
+  subgraph cluster_publish {
+          pull_unsigned "fdroid publish" "fdroid gpgsign" push_repo push_archive;
+          label="PUBLISH";
+          color="grey";
+          style=dashed;
+          margin=25.0;
+  }
+
+  subgraph cluster_signindex {
+          pull_unsigned_indexes "fdroid signindex" "gpgsign?" push_repo_indexes push_archive_indexes;
+          label="PUBLISH";
+          color="grey";
+          margin=25.0;
+          style=dashed;
+  }
+
+  subgraph cluster_makebs_sh {
+          "-f makebs" "./makebuildserver";
+          label="makebs.sh";
+          margin=25.0;
+  }
+
+  subgraph cluster_originserver {
+          "f-droid.org" "push-to-mirror.sh";
+          label="originserver";
+          margin=25.0;
+  }
+
+  // these are here just to force layout positioning
+   edge[style=invis];
+   "-f makebs-next" -> postpublish_email -> pull_unsigned_indexes -> push_archive_indexes -> "-f update_server" -> "-f pullfdroidserver-next" -> "-f pullfdroidserver" -> "git pull fdroidserver" -> "-f build" -> "fdroid build" -> build_email -> pull_unsigned;
+   "ftp.agdsn.de" -> "ftp.lysator.liu.se" -> "plug-mirror.rcac.purdue.edu" -> postsignindex_email;
+}
