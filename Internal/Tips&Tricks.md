@@ -1,13 +1,13 @@
 # `config.yml` tweaks
 
-```
+```plaintext
 build_server_always: true          (so you don't need to specify at runtime)
 deploy_process_logs: true          (so build logs are kept even if the build failed)
 ```
 
 # Useful aliases for common tasks
 
-```
+```plaintext
 alias fd='cd /home/fdroid/fdroiddata'
 
 alias fb='fd && fdroid build --verbose --scan-binary'
@@ -30,7 +30,7 @@ alias tl='tmux list-sessions'
 
 Example workflow:
 
-```
+```plaintext
 ta run                       (create a tmux session to run the build in; allows you to switch to another session and do something else in the meantime, not run another build but: scan, rewritemeta, lint, checkupdate, publish etc)
 mf metadata/appid.yml        (edit the file)
 fl appid                     (lint verify)
@@ -41,6 +41,22 @@ fp appid                     (sign the APK so you can test it on device)
 To test AUM:
 mf metadata/appid.yml        (edit the file to add AUM, edit versionCode to a smaller number to simulate)
 fcu appid                    (run checkupdate to verify if newest version is picked up)
+```
+
+# How to configure the resources allocated for the VM
+
+Edit the file `fdroiddata/builder/Vagrantfile` and bump `cpus` _(cores)_ and `memory` _(in MB)_
+
+```plaintext
+Vagrant.configure("2") do |config|
+  config.vm.box = "buildserver"
+  config.vm.synced_folder ".", "/vagrant", disabled: true
+
+  config.vm.provider :libvirt do |libvirt|
+    libvirt.cpus = 6
+    libvirt.memory = 12288
+  end
+end
 ```
 
 # How to suspend the VM after a build
@@ -64,7 +80,7 @@ The trouble is that even if the VM was suspended there's a chance _(afaics bigge
 
 Trying to start it:
 
-```
+```plaintext
 $ cd ~/fdroiddata/builder
 $ vagrant halt ; vagrant up ; vagrant ssh    (or 'vg' alias above)
 ==> default: Halting domain...
@@ -85,7 +101,7 @@ Stderr from the command:
 
 Which command failed? Hmm, let's debug this `vagrant up --debug`
 
-```
+```plaintext
 ...
 DEBUG ssh: stderr: bash: sudo: command not found
 ```
@@ -96,7 +112,7 @@ At @jspricke advice, _"you could mount the image and install sudo again"_
 
 So let's do this them, looks [easy](https://gist.github.com/shamil/62935d9b456a6f9877b5) enough:
 
-```
+```plaintext
 wget https://security.debian.org/debian-security/pool/updates/main/s/sudo/sudo_1.8.19p1-2.1+deb9u3_amd64.deb
 sudo modprobe nbd max_part=8
 sudo qemu-nbd --connect=/dev/nbd0 /var/lib/libvirt/images/builder_default.img (adapt to yours as needed)
