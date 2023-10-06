@@ -14,7 +14,7 @@ Your MR has just been merged, but the APK did not show up immediately? That's no
 * apps are manually signed after that _(if not reproducible)_, and then uploaded
 * next build cycle starts after signing is completed
 
-So if you're lucky, it takes 2 days _(new build cycle just started minutes after the merge)_. If you're not-that-lucky _(merge happened a minute after a build cycle started)_, it will take 4 days. If you're very unlucky, Murphy visits in between with some problems… So don't panic before 5 days have passed, please. :wink:
+So if you're lucky, it takes 3 days _(new build cycle just started minutes after the merge)_. If you're not-that-lucky _(merge happened a minute after a build cycle started)_, it will take 6 days. If you're very unlucky, Murphy visits in between with some problems… So don't panic before 7 days have passed, please. :wink:
 
 Please also note that the website is updated asynchronously – so while the index might already have reached your local client, website might still be a bit behind.
 
