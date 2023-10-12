@@ -40,6 +40,7 @@ The _metadata/en-US/changelogs/_ are shown in the client and on the website, and
 
 If it is a major release, there are a few more steps.
 
+0. Run `tools/update-mirrors-in-default_repos.xml.py` then only commit the changes to the lists of URLs.
 1. temporarily remove the _iw/in_ links: `find app/src/main/res/ -type l -delete`
 2. In Android Studio, go to _Analyze_ -> _Inspect Code_
 3. After running on the whole project, go to _Android Lint:
