@@ -67,7 +67,13 @@ Some repo links in the the newly introduced fdroid.link format.
 * 3rd party repo: https://fdroid.link/#repo=https://obfusk.dev/fdroid/repo&fingerprint=2A21B7FFC93B878724B1991C05DAE113C72B93A556C193F49B5D3342884798B7
 * missing fingerprint: https://fdroid.link/#repo=https://obfusk.dev/fdroid/repo
 * non existent domain: https://fdroid.link/#repo=https://bad.example.com/fdroid/repo&fingerprint=43238d512c1e5eb2d6569f4a3afbf5523418b82e0a3ed1552770abb9a9c9ccab
-* Old URL now a 308 Redirect https://service.tagesschau.de/app/repo
+* 308 Redirect https://fdroid.link/#repo=https://service.tagesschau.de/app/repo
+* fdroidrepos https://fdroid.link/#repo=fdroidrepos://obfusk.dev/fdroid/repo&fingerprint=2A21B7FFC93B878724B1991C05DAE113C72B93A556C193F49B5D3342884798B7
+* fdroidrepo https://fdroid.link/#repo=fdroidrepo://obfusk.dev/fdroid/repo&fingerprint=2A21B7FFC93B878724B1991C05DAE113C72B93A556C193F49B5D3342884798B7
+* http: https://fdroid.link/#repo=http://obfusk.dev/fdroid/repo&fingerprint=2A21B7FFC93B878724B1991C05DAE113C72B93A556C193F49B5D3342884798B7
+
+
+* Old URL now a 308 Redirect: https://service.tagesschau.de/app/repo
 
 # Unrelated work
 
