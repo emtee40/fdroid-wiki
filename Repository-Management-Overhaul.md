@@ -66,6 +66,8 @@ some repo links in the the newly introduced fdroid.link format:
 * https://fdroid.link/#repo=https://f-droid.org/repo&fingerprint=43238d512c1e5eb2d6569f4a3afbf5523418b82e0a3ed1552770abb9a9c9ccab
 * https://fdroid.link/#repo=https://fdroid-mirror.calyxinstitute.org/fdroid/repo&fingerprint=43238d512c1e5eb2d6569f4a3afbf5523418b82e0a3ed1552770abb9a9c9ccab
 
+* Old URL now a 308 Redirect https://service.tagesschau.de/app/repo
+
 # Unrelated work
 
 * ~~use localized categories from index ([2544](https://gitlab.com/fdroid/fdroidclient/-/issues/2544))~~
