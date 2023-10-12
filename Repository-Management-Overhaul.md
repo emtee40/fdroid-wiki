@@ -63,7 +63,8 @@ One idea: new repos are added with lower priority, so users can easily get new a
 
 some repo links in the the newly introduced fdroid.link format:
 
-* https://fdroid.link/#repo=https://f-droid.org/repo?fingerprint=43238d512c1e5eb2d6569f4a3afbf5523418b82e0a3ed1552770abb9a9c9ccab
+* https://fdroid.link/#repo=https://f-droid.org/repo&fingerprint=43238d512c1e5eb2d6569f4a3afbf5523418b82e0a3ed1552770abb9a9c9ccab
+* https://fdroid.link/#repo=https://fdroid-mirror.calyxinstitute.org/fdroid/repo&fingerprint=43238d512c1e5eb2d6569f4a3afbf5523418b82e0a3ed1552770abb9a9c9ccab
 
 # Unrelated work
 
