@@ -35,7 +35,7 @@ Handle incoming URL:
 * ~~check if repo URL is valid, show error if not~~
 * check if swap URL and if so redirect to swap workflow
 * ~~maybe do some auto-probe on certain URLs such as bare domain name e.g. "guardianproject.info"~~
-* request orbot to start tor, if enabled (and needed for URL?)
+* ~~request orbot to start tor, if enabled (and needed for URL?)~~
 * ~~if fingerprint is given and known, maybe check situation first before fetching repo~~
 * ~~fetch extracted URL first to get info from repo such as fingerprint, icon, number of apps, anti-features etc.~~
 * check how using a repo from a flash drive works (just swap flow?)
