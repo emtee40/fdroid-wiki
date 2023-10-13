@@ -78,6 +78,11 @@ Some repo links in the the newly introduced fdroid.link format.
 
 * Old URL now a 308 Redirect: https://service.tagesschau.de/app/repo
 
+### Other app stores
+
+* https://play.google.com/store/apps/details?id=net.osmand.plus
+* https://amazon.com/gp/mas/dl/android/net.osmand.plus
+
 # Unrelated work
 
 * ~~use localized categories from index ([2544](https://gitlab.com/fdroid/fdroidclient/-/issues/2544))~~
