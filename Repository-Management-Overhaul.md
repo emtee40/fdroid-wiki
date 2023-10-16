@@ -56,8 +56,16 @@ possible results:
 * Add support for multiple repos with conflicting apps/apks ([#33](https://gitlab.com/fdroid/fdroidclient/-/issues/33))
 * allow user to change order of repos in the list, adjusting priorities in the DB (open/old MR [!435](https://gitlab.com/fdroid/fdroidclient/-/merge_requests/435) [#1887](https://gitlab.com/fdroid/fdroidclient/-/issues/1887))
 
+### Overhaul Proposal
 
-One idea: new repos are added with lower priority, so users can easily get new apps by adding repos without dealing with the hard questions.  Then per-app, users can decide to prioritize any repo as the selected source for that app.
+* new repos are added with lower priority, so users can easily get new apps by adding repos without dealing with the hard questions
+* per-app, users are shown when the app is available in more than one repo and can decide to prioritize any repo as the selected source for that app
+* global repo priorities can be changed by dragging repos in the repository list
+* per-app selection takes precedence over global repo priorities
+* app details only shows version from selected repo
+* new install takes suggested version only from selected repo
+* app updates are only considered from selected repo
+* bonus feature: show that updates are available in a different repo and allow one-time update from a non-selected repo
 
 # Test Links
 
