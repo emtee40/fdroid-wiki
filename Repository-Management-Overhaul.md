@@ -25,7 +25,7 @@
 * ~~search chip to show apps in a specific repo reachable from repo details and show after adding a repo (which progress spinner while still updating) ([#570](https://gitlab.com/fdroid/fdroidclient/-/issues/570))~~
 * ~~add `https://` in front of input, if no scheme was given~~
 * ~~support adding repos behind basic auth~~
-* use pinned signer fingerprint in client when available ([#2557](https://gitlab.com/fdroid/fdroidclient/-/issues/2557))
+* ~~use pinned signer fingerprint in client when available ([#2557](https://gitlab.com/fdroid/fdroidclient/-/issues/2557))~~
 * Should HTTP 30x Redirects be handled in the Add Repo flow?  For example, user adds https://service.tagesschau.de/app/repo, then Add Repo could fetch the new URL and present it to the user: do you want to use the new URL?
 
 ### Implementation notes
@@ -38,7 +38,7 @@ Handle incoming URL:
 * ~~request orbot to start tor, if enabled (and needed for URL?)~~
 * ~~if fingerprint is given and known, maybe check situation first before fetching repo~~
 * ~~fetch extracted URL first to get info from repo such as fingerprint, icon, number of apps, anti-features etc.~~
-* check how using a repo from a flash drive works (just swap flow?)
+* ~~check how using a repo from a flash drive works (just swap flow?)~~
 * @uniqx looking into adding Storage Access Framework flow to Manage Repos (e.g. choosing a repo hosted on Nextcloud, Google Drive, Samba, etc)
 
 possible results:
