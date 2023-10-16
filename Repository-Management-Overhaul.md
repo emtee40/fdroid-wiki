@@ -60,8 +60,9 @@ possible results:
 
 * new repos are added with lower priority, so users can easily get new apps by adding repos without dealing with the hard questions
 * per-app, users are shown when the app is available in more than one repo and can decide to prioritize any repo as the selected source for that app
-* global repo priorities can be changed by dragging repos in the repository list
+* global repo priorities can be changed by dragging repos in the repository list in case a user prefers many apps from one repo over another
 * per-app selection takes precedence over global repo priorities
+* selected repo determines compatibility and anti-features for app listings
 * app details only shows version from selected repo
 * new install takes suggested version only from selected repo
 * app updates are only considered from selected repo
