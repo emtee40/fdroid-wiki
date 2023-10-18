@@ -1,31 +1,27 @@
-# Managing trust in a distributed repo/store experience
-
 This is an attempt by @uniqx to model trust in F-Droid and figure out how to drive decentralization while keeping everything that makes F-Droid great.
 
 ## Status quo
 
 Currently when it comes to installing apps available in multiple repositories
-F-Droids behavior isn't well communitcated to users. It's based on repository
-priority, with additional rules for reproducibly built apps. It feels
-organically grown, not designed. With some competing assumptions:
+F-Droids behavior isn't well communicated to users. It's based on repository
+priority, with additional rules for reproducible apps. It feels
+organically grown, not designed. With some competing assumptions, most notably:
 
- * F-Droid only ships thrurrowly reviewd apps guaranteed to be fully FOSS
- * F-Dorid fdroid is decentralized
- * F-Droid provides updates developer signed apps which are reproducibly built
- * F-Droid prefers installing develper signed apps when builds are reproducible
+ * F-Droid only ships trustworthy and reviewed apps guaranteed to be fully FOSS
+ * Everyone can take a couple of APKs from the web and start their own F-Droid repo/app store
 
 ## Trust perception - app vs. repository
 
 F-Droids branding doesn't reflect the border between the repository on
 f-droid.org/fdroiddata and the F-Droid app. So F-Droid can really mean 2
-things: A decentral app store where everyone can host repositories without any
+things: A de-central app store where everyone can host repositories without any
 controlling instance or central platform where the FOSS community publishes
 Android apps. These two things have fundamentally different security/safety
 properties.
 
 From personal experience I think F-Droid's growth mostly relies on these
 channels:
-* FOSS and privacy activits (Cryptoparty, Free your Android, ...)
+* FOSS and privacy activists (Crypto-party, Free your Android, ...)
 * Word of mouth
 * Media coverage
 All these channels I take it are primarily informed by their own
@@ -36,23 +32,26 @@ design).
 
 ## Trust perception - up-/down-stream
 
-Since since FOSS software distribution is hardly a topic of broad interrest,
-I'm assumung most users are not familiar with the terms up- and down-stream.
-These terms describe the two main roles in FOSS supply chains. Upstream are the
-software relases as published the owners/authors/maintainers of a specific
-software project, in the form of source code under a FOSS license. Downstream
+Since since FOSS software distribution is hardly a topic of broad interest,
+I'm assuming most users are not familiar with the terms up- and down-stream.
+These terms describe the two main roles in FOSS supply chains. Up-stream are
+the owners/authors/maintainers of a specific software project, who publish
+releases in the form of source code under a FOSS license. Down-stream
 on the other hand catalogs/curates all project up-streams, builds actually
-useable binaries for the source code and distributes those binaries to users.
+use-able binaries for the source code and distributes those binaries to users
+in a secure and easy to consume way with some additional guarantees.
 
-The interests of Upstream/App-Devs are not always identical to user interests,
+The interests of Up-stream/App-Devs are not always identical to user interests,
 especially when it comes to monetization of apps. In the context of the
-f-droid.org repository of apps these conflicts of interest manifest in the form
-of Anti-Feature warnings. So down-streams are not only a distribution channel
+f-droid.org repository of apps, these conflicts manifest in the form of
+Anti-Feature warnings, or even the refusal to package apps because of inclusion
+policy violations. So down-streams are not only a distribution channel
 but can also serve as a player fending for user rights. (Debian and F-Droid
 examples for this, but there are also counter examples like Windows Store,
-Google Play, App Store, which are primarily interested in monetizing users.)
+Google Play or Apples App Store, which are primarily interested in monetizing
+users.)
 
-## Trust perception - reporducible builds
+## Trust perception - reproducible builds
 
 The concept of repositories and reproducible builds is not easy to understand
 for people without technical background. My observation is that they tend to
