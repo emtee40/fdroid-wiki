@@ -1,3 +1,7 @@
+[[_TOC_]]
+
+---
+
 # Current approach
 
 * repos have implicit/hidden priorities
@@ -19,7 +23,7 @@
 
 # Considered Improvements
 
-## Drop multi-repo feature
+## Remove multi-repo feature
 
 We completely remove the ability to add other repositories. One F-Droid client app is giving data from exactly one repo. At the same time, we make it very easy to create white-label versions of the client app with a custom repository pre-installed. Single apps could also (via a library) update themselves similar to how Signal (download version) does it.
 
