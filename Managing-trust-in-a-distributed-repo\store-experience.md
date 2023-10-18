@@ -287,7 +287,7 @@ installed old version of the app.
   F-Droid could also maintain an index of repositories and suggest to add
   repositories for apps that are not in the main f-droid.org repository.
 
-#### repo saftey UX
+#### repository safety UX
 
 I think currently it's too easy to add malicious repositories to the F-Droid
 app. I think currently F-Droids main safeguard is, that the user-base is to
