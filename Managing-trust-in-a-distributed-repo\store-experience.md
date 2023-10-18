@@ -129,7 +129,7 @@ for users to assess trustworthiness of up- and down-streams.
 
 When an app is signed by down-stream, down-stream maintainers may also alter an
 app before shipping it. Additionally up-stream may provide a custom build
-flavor for a specific down-stream, eg. to comply with down-stream policies.
+flavor for a specific down-stream, e.g. to comply with down-stream policies.
 This in turn means that a specific version of an app can have very different
 properties depending on the distribution channel.
 
@@ -197,11 +197,11 @@ trust decisions for users:
   to study privacy policies of apps before installing them.
 * group permissions, by whether they are automatically granted or require user
   permission (dangerous permissions).
-* Provide additionl of down-stream maintainer notes, which are less severe then
-  anti-feature warnings. e.g. when an app contains risks or newsenses like:
-  paid features, ToS violation (which could get your Google, Facebook, ...
-  account suspended), legal risks (like file sharing), high resouce consumption
-  of apps, etc.
+* Provide additional down-stream maintainer notes, which are less severe then
+  anti-feature warnings. e.g. when an app contains low risks things or
+  nuisances like: paid features, ToS violation (which could get your Google,
+  Facebook, ... account suspended), legal risks (like file sharing), high
+  battery consumption, etc.
 
 
 ### repository/down-stream UX requirements
@@ -263,7 +263,7 @@ installed old version of the app.
 
 #### federated repository architecture
 
-* enable fdroidserver to consume other fdroid repositories for discovering
+* enable fdroidserver to consume other F-Droid repositories for discovering
   reproducible builds. (e.g. what's now known as the `Binaries:` metadata field
   could be converted into a reference to an f-droid repository) This actually
   shouldn't be a single entry, but a list of F-Droid repositories. If
@@ -302,7 +302,7 @@ small a target for bad actors.
 And while this might be might unpopular with the community and might dampen the
 aspirations of decentralization, I do think it's very important for creating a
 safe UX for all levels of users, to explicitly warn about the risks of using
-3rd partiy repositories.
+3rd parity repositories.
 
 
 #### architecture and UX summary
@@ -310,5 +310,5 @@ safe UX for all levels of users, to explicitly warn about the risks of using
 All the requirements above combined will hopefully create a federated system of
 up-/down-stream and maybe also independent notary/verification repositories
 linked by reproducible builds. This system then will allow establishing way
-stronger trust guarantees then currently available systems of software
+stronger trust guarantees than currently available systems of software
 distribution.
