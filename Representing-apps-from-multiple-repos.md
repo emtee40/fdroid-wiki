@@ -37,4 +37,25 @@ We completely remove the ability to add other repositories. One F-Droid client a
 * many people are used to add repos in one single app
 * in addition to publishing a repo, the publisher also needs to maintain an app and keep it up to date
 
+## Allow changing repo priorities
 
+In the list of repos, we allow the user to drag and drop repos to other positions ([#1887](https://gitlab.com/fdroid/fdroidclient/-/issues/1887)). As the position is the priority, this would allow users to at least change repo priorities. The list items could have a little handle indicating that they can be moved around. There could also be some onboarding for this after a user adds their first repo.
+
+In the app details, we could show where the displayed information is coming from.
+
+### Pros
+
+* previously hard-coded (by time of adding) priorities could now be changed
+* transparent where app info comes from
+
+### Cons
+
+* feature is hard to discover and hard to understand
+* many of the problems with the current approach (see above) would still exist:
+  * repos can still override information, though a bit less silent
+  * updates would still get installed from any repo
+* changing repo priorities is a coarse all or nothing approach especially for repos with many apps, e.g. user wants to prefer izzy repo only for one app, but get all others from F-Droid still
+
+## Allow changing repo priorities globally and per app
+
+to be continued...
