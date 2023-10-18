@@ -308,7 +308,7 @@ safe UX for all levels of users, to explicitly warn about the risks of using
 #### architecture and UX summary
 
 All the requirements above combined will hopefully create a federated system of
-up-/down-stream and maybe also independant notary/verification repositories
+up-/down-stream and maybe also independent notary/verification repositories
 linked by reproducible builds. This system then will allow establishing way
 stronger trust guarantees then currently available systems of software
 distribution.
