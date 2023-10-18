@@ -28,10 +28,13 @@ We completely remove the ability to add other repositories. One F-Droid client a
 * complex client code with lots of edge cases would get simplified a lot, making maintenance easier as well
 * Android security model would be followed: one app = one source of apps
 * an entire problem space would go away
+* one-repo apps could be simpler (based on Basic?) and use upstream branding/colors/images
 
 ### Cons
 
 * people that use many repos now need many apps, duplicated code on people's phones
 * hard to migrate existing multi-repo installs to that
 * many people are used to add repos in one single app
+* in addition to publishing a repo, the publisher also needs to maintain an app and keep it up to date
+
 
