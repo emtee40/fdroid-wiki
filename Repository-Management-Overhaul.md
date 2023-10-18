@@ -62,11 +62,11 @@ possible results:
 * per-app, users are shown when the app is available in more than one repo and can decide to prioritize any repo as the selected source for that app
 * global repo priorities can be changed by dragging repos in the repository list in case a user prefers many apps from one repo over another
 * per-app selection takes precedence over global repo priorities
-* selected repo determines compatibility and anti-features for app listings
+* selected repo determines all metadata including compatibility, version availability and Anti-Features for app listings
 * app details only shows version from selected repo
 * new install takes suggested version only from selected repo
 * app updates are only considered from selected repo
-* bonus feature: show that updates are available in a different repo and allow one-time update from a non-selected repo
+* bonus feature: show that updates are available in a different repo and allow one-time update from a non-selected repo (currently visible in Versions listing on App Details?)
 
 # Test Links
 
