@@ -57,14 +57,17 @@ The concept of repositories and reproducible builds is not easy to understand
 for people without technical background. My observation is that they tend to
 perceive apps/tech mostly in terms of brands. I.e. they trust or distrust
 Apple, Google, Microsoft, Android, Chromium, Samusung, Facebook, Twitter, etc.
-instead of actual artefacts, like a specific version of Android running on
-their phone.
+instead of actual artifacts, like a specific version of an Android app running
+on their phone.
+
+In the context of F-Droid reproducible builds are a form of proof that an APK
+corresponds to publicly available source code of that app. 
 
 ## Trust Model
 
 So based on my experience and considerations I'll now try come up with a model
-for trust and group all factors that are key to trust desicions of users into
-dimentions.
+for trust and group all factors that are key to trust decisions of users into
+dimensions.
 
 ### Involved parties
 
@@ -76,28 +79,29 @@ develop/publish/maintain one or more apps. In case of apps in the f-droid.org
 repository they also who provide a source-code up-stream.
 
 down-stream - individuals, companies, communities, non-profits, etc. who publish
-one or more apps. The technical artefact produced by down-stream is reffered to
-as repository and they also can be seen as platforms.
+one or more apps. The technical artifact produced by down-stream is referred to
+as repository containing apps from more than one up-stream and they also can be
+seen as platforms, with all the pro and cons of platforms.
 
-### trust dimention 1: app listing
+### trust dimension 1: app listing
 
 Selecting an app over other competing apps which offer the same or very similar
 use cases is the first leap of trusts users have to take.
 
-Right now F-Droid aids this trust desicion by providing some key informationat:
+Right now F-Droid aids this trust decision by providing some key information:
 
-* developer supplied representation (icons, store lisiting texts, etc.)
+* developer supplied representation (icons, store-listing texts, etc.)
 * technical aspects (permissions, update frequency, known vulnerabilities, privacy properties, etc.)
 * down-stream review results (anti-feature warnings)
 * legal framework (license)
 
 Of course there are also other aspects which are not part of F-Droids UX,
-contributing to trust desicions of users. E.g. brand reputation, expert/user
+contributing to trust decisions of users. E.g. brand reputation, expert/user
 reviews and ratings, advertisement, legality of content/features of an app,
 privacy policy, ToS, etc.
 
 
-### trust dimention 2: repository
+### trust dimension 2: repository
 
 Repository maintainers have absolute controll over all the information in the
 app listing. They can leave out, spin or falsify key informaton for trust
