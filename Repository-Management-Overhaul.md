@@ -3,6 +3,10 @@
 * rename many classes ([#318](https://gitlab.com/fdroid/fdroidclient/-/issues/318#note_450961188))
 * ~~optimize all imports according to Android Studio defaults~~
 
+## architecture and ux considerations
+
+Some ideas about modelling trust and what that could imply for implementing this: https://gitlab.com/fdroid/wiki/-/wikis/Managing-trust-in-a-distributed-repo-store-experience
+
 ## UI
 
 * ~~update list faster, not waiting for DB, e.g. when deleting repo ([#2447](https://gitlab.com/fdroid/fdroidclient/-/issues/2447))~~
