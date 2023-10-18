@@ -271,7 +271,7 @@ installed old version of the app.
   all APK-signatures for every reproducible build. This allows users, researches,
   etc. to verify reproducibility claims.
 * Provide a simple to install/run/maintain tool-chain for app-developers to run
-  their own fdroid repo. (maybe even integrated with popular ci toolchains) The
+  their own fdroid repo. (maybe even integrated with popular CI tool-chains) The
   fdroiddata team should recommend hosting their own F-Droid repos to up-stream
   devs. This will hopefully bootstrap a truly de-central ecosystem of up- and
   down-streams for doing reproducible builds.
@@ -294,15 +294,15 @@ app. I think currently F-Droids main safeguard is, that the user-base is to
 small a target for bad actors.
 
 * Always warn users that apps from 3rd party repositories are not checked for
-  anit-features, trackers, malware, etc.
+  anti-features, trackers, malware, etc.
 * I think F-Droid should start a registry of 3rd party repositories and comment
-  (or omit warings) on security/safty, user freedom, privacy, ... for 3rd party
+  (or omit warnings) on security/safety, user freedom, privacy, ... for 3rd party
   repositories (think anti-features, think TLS-CAs)
 
 And while this might be might unpopular with the community and might dampen the
 aspirations of decentralization, I do think it's very important for creating a
 safe UX for all levels of users, to explicitly warn about the risks of using
-3rd partiy repostories.
+3rd partiy repositories.
 
 
 #### architecture and UX summary
