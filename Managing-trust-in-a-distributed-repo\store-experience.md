@@ -198,10 +198,10 @@ trust decisions for users:
 * group permissions, by whether they are automatically granted or require user
   permission (dangerous permissions).
 * Provide additional down-stream maintainer notes, which are less severe then
-  anti-feature warnings. e.g. when an app contains low risks things or
-  nuisances like: paid features, ToS violation (which could get your Google,
-  Facebook, ... account suspended), legal risks (like file sharing), high
-  battery consumption, etc.
+  anti-feature warnings. e.g. when an app contains inherent risks or nisances
+  like: paid features, ToS violation (which could get your Google, Facebook,
+  ... account suspended), legal risks (like file sharing), high battery
+  consumption, etc.
 
 
 ### repository/down-stream UX requirements
