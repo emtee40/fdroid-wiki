@@ -26,16 +26,17 @@ channels:
 * FOSS and privacy activists (Crypto-party, Free your Android, ...)
 * Word of mouth
 * Media coverage
-All these channels I take it are primarily informed by their own
+
+All these channels, I take it, are primarily informed by their own
 experiences/reviews of the Software and Services provided by F-Droid and
 maybe also by F-Droids official announcements. I think to keep this dynamic up
-F-Droid merely needs to stay true to it's core values. (FOSS and privacy by
+F-Droid merely needs to stay true to its core values. (FOSS and privacy by
 design).
 
 
 ## Trust perception - up-/down-stream
 
-Since since FOSS software distribution is hardly a topic of broad interest,
+Since FOSS software distribution is hardly a topic of broad interest,
 I'm assuming most users are not familiar with the terms up- and down-stream.
 These terms describe the two main roles in FOSS supply chains. Up-stream are
 the owners/authors/maintainers of a specific software project, who publish
@@ -50,17 +51,17 @@ f-droid.org repository of apps, these conflicts manifest in the form of
 Anti-Feature warnings, or even the refusal to package apps because of inclusion
 policy violations. So down-streams are not only a distribution channel
 but can also serve as a player fending for user rights. (Debian and F-Droid
-examples for this, but there are also counter examples like Windows Store,
-Google Play or Apples App Store, which are primarily interested in monetizing
+are examples for this, but there are also counter examples like Windows Store,
+Google Play or Apple App Store, which are primarily interested in monetizing
 users.)
 
 
 ## Trust perception - reproducible builds
 
 The concept of repositories and reproducible builds is not easy to understand
-for people without technical background. My observation is that they tend to
+for people without a technical background. My observation is that they tend to
 perceive apps/tech mostly in terms of brands. I.e. they trust or distrust
-Apple, Google, Microsoft, Android, Chromium, Samusung, Facebook, Twitter, etc.
+Apple, Google, Microsoft, Android, Chromium, Samsung, Facebook, Twitter, etc.
 instead of actual artifacts, like a specific version of an Android app running
 on their phone.
 
