@@ -5,7 +5,8 @@
 
 ## architecture and ux considerations
 
-Some ideas about modelling trust and what that could imply for implementing this: https://gitlab.com/fdroid/wiki/-/wikis/Managing-trust-in-a-distributed-repo-store-experience
+* https://gitlab.com/fdroid/wiki/-/wikis/Representing-apps-from-multiple-repos
+* https://gitlab.com/fdroid/wiki/-/wikis/Managing-trust-in-a-distributed-repo-store-experience
 
 ## UI
 
