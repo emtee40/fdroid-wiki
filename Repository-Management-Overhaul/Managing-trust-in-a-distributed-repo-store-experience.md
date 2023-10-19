@@ -222,10 +222,9 @@ are hidden away in settings like config options.
   material chip?) in the app details. Tapping it should allow users to learn
   more about a repository. eg. by opening the previously mention repo-listing
   screen.
-* I think F-Droid should convey a basic understanding of what up- and
-  down-streams are by merely by using our app. I think key to this is by
-  keeping up good app descriptions, and also adding good descriptions/listings
-  for repositories.
+* I think F-Droid should convey a basic understanding of what repositories are
+  by merely by using our app. I think key to this is by keeping up good app
+  descriptions, and also adding good descriptions/listings for repositories.
 * Think when installing an app and there are multiple sources available F-Droid
   should let them pick which down-stream they want to trust. So the F-Droid app
   shouldn't establish and enforce a priority of repositories. (I think F-Droid
@@ -285,7 +284,12 @@ installed old version of the app.
 
 #### federated repository UX
 
-* The web-app running on fdroid.link and the F-Droid app should find have a 
+* fdroid.link should direct users to a good place to learn more about repositories
+  if they don't have F-Droid client installed (eg. becuase they're on a linux
+  computer)
+
+* F-Droid client should give users a preview and appropriate warning before
+  actually adding a repository.
 
 * I'm not sure how to deal with the "Get it on F-Droid". I think it's important
   to make sure that we have a link format capable of navigating federated
