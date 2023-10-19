@@ -5,8 +5,8 @@
 
 ## architecture and ux considerations
 
-* https://gitlab.com/fdroid/wiki/-/wikis/Representing-apps-from-multiple-repos
-* https://gitlab.com/fdroid/wiki/-/wikis/Managing-trust-in-a-distributed-repo-store-experience
+* [Representing apps from multiple repos](https://gitlab.com/fdroid/wiki/-/wikis/Representing-apps-from-multiple-repos)
+* [Managing trust in a distributed repo/store experience](https://gitlab.com/fdroid/wiki/-/wikis/Repository-Management-Overhaul/Managing-trust-in-a-distributed-repo-store-experience)
 
 ## UI
 
