@@ -62,15 +62,20 @@ In the app details, we could show where the displayed information is coming from
 
 ## Allow changing repo priorities globally and per app
 
-We allow the user to re-order repo priorities as above, but in addition provide way to set a preferred repo per app. Only if one app is available from more than one repo, its app details screen highlights this information. The user can then switch this app to another repo. The versions shown on that page (which are considered for install/update) only come from the currently preferred repo.
+We allow the user to re-order repo priorities as above, but in addition provide way to set a preferred repo per app. Only if one app is available from more than one repo, its app details screen highlights this information. The user can then switch this app to another repo and see the metadata provided there. The versions shown on that page (which are also considered for install/update) only come from the currently preferred repo, not from all repos as the case at the moment.
 
-If a user has not set a preferred repo for an app, it is determined by the repo priorities. If a user *has* set a preferred repo, this takes precedence over the repo priorities.
+If a user has not set a preferred repo for an app, it is automatically determined by the repo priorities. If a user *has* set a preferred repo, this takes precedence over the repo priorities.
 
 New repos get added with a *lower* priority than existing ones to prevent them overriding existing info without explicit user opt-in. This way users can easily get new apps by adding repos without dealing with the hard questions or having to know about repo priorities and their reordering.
 
 ### Pros
 
-* solves all of the problems identified above
+* solves all of the problems identified above:
+  * made transparent that one app is in more than one repository
+  * easy to find out where app information comes from
+  * easy to change where app information comes from
+  * new repos can not silently "override" information from other repos
+  * updates for reproducible apps are installed only from the chosen repo (that was most likely used for install as well)
 
 ### Cons
 
@@ -79,13 +84,13 @@ New repos get added with a *lower* priority than existing ones to prevent them o
 ### Open Questions
 
 * app details UI, should we use
-  * tabs to switch between repos with indicator (star?) for preferred one or
-  * display current repo with button/dialog to switch to over repo
+  * tabs to switch between repos? Maybe have an indicator (star?) for preferred repo and a blue checkmark for the official F-Droid repo?
+  * display current repo with its icon and add a button to switch to another repo which opens a dialog with the list of available repos for that app
 * Should installing an app from one repo auto-set that repo as the preferred one, so updates only come from it as well?
-* should we show updates available from other repos? (bonus feature)
-  * app details maybe add a badge to tab for the repo with an update
-  * in updates tab, there could be a special hint
-  * don't show system notification
+* should we show updates available from other repos? (separate bonus feature!)
+  * in app details maybe add a badge to the tab for the repo with an update (may overload UI)
+  * in updates tab, there could be a normal update item, but with special hint/text saying that this is not from the preferred repo
+  * don't show system notification for updates in non-preferred repos
 * when showing lists of apps, should we
-  * mix information from multiple repos? (e.g. `union` categories, `intersect` anti-features, `or` compatibility) or
+  * mix information from multiple repos? (e.g. `intersect` anti-features and logical `or` compatibility) or
   * strictly take what current preferred repo has (easier to do and closer to how things currently work)
