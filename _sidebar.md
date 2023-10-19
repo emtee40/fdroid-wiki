@@ -11,6 +11,7 @@
 - [List of F-Droid repositories](List-of-F-Droid-repositories)
 - [Metadata](Metadata)
 - [Outreach](Outreach)
+- [Repository Management Overhaul](Repository Management Overhaul)
 - [Running on old Androids](Running-on-old-Androids)
 - [Scanners](Scanners)
 - [Setting up app submissions development environment locally](Setting-up-app-submission-development-environment-locally)
