@@ -138,7 +138,7 @@ On the main f-droid.org repository down-stream changes and build flavors are
 usually about removing or disabling undesired features, dependencies and fixing
 security issues. F-Droid client currently abstracts this trust choice by
 establishing a priority of repositories and signing keys and always preferring
-to install from the repository with the highest priority and withing that
+to install from the repository with the highest priority and within that
 repository prefer apps signed by up-stream.
 
 
