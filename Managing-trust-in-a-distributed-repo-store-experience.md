@@ -226,9 +226,15 @@ are hidden away in settings like config options.
   keeping up good app descriptions, and also adding good descriptions/listings
   for repositories.
 * Think when installing an app and there are multiple sources available F-Droid
-  should let them pick which down-stream they want to trust. (When users aren't
-  sure what they're choosing there and don't care, F-Droid could suggest a
-  reasonable choice.)
+  should let them pick which down-stream they want to trust. So the F-Droid app
+  shouldn't establish and enforce a priority of repositories. (I think F-Droid
+  should still suggest a reasonable choice: repositories well aligned with
+  F-Droid core values first.)
+
+  Key here is that by providing repository information to users, and giving
+  repositories to brand themselves (in a similar way apps can do so in their
+  listings) users can establish and individually manage their own
+  trust-relationships to both up- and down-stream repositories.
 * I think F-Droid client should make clear visual distinctions between
   representing up- and down-stream repositories. The main point here is to make
   it easy for users to grasp that there's a difference between these kind of
@@ -310,5 +316,5 @@ safe UX for all levels of users, to explicitly warn about the risks of using
 All the requirements above combined will hopefully create a federated system of
 up-/down-stream and maybe also independent notary/verification repositories
 linked by reproducible builds. This system then will allow establishing way
-stronger trust guarantees than currently available systems of software
+stronger trust guarantees than other currently available systems of software
 distribution.
