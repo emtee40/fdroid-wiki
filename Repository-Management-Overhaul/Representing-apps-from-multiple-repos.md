@@ -86,6 +86,7 @@ New repos get added with a *lower* priority than existing ones to prevent them o
 * app details UI, should we use
   * tabs to switch between repos? Maybe have an indicator (star?) for preferred repo and a blue checkmark for the official F-Droid repo?
   * display current repo with its icon and add a button to switch to another repo which opens a dialog with the list of available repos for that app
+  * use a dropdown to let users switch between different repos. then auto-set last selected as preferred?
 * Should installing an app from one repo auto-set that repo as the preferred one, so updates only come from it as well?
 * should we show updates available from other repos? (separate bonus feature!)
   * in app details maybe add a badge to the tab for the repo with an update (may overload UI)
