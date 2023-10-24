@@ -5,7 +5,7 @@
 
 ## architecture and ux considerations
 
-* [Representing apps from multiple repos](/Representing-apps-from-multiple-repos)
+* [Representing apps from multiple repos](Repository-Management-Overhaul/Representing-apps-from-multiple-repos)
 * [Managing trust in a distributed repo/store experience](/Repository-Management-Overhaul/Managing-trust-in-a-distributed-repo-store-experience)
 
 ## UI
