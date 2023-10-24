@@ -7,6 +7,7 @@
 
 * [Representing apps from multiple repos](Repository-Management-Overhaul/Representing-apps-from-multiple-repos)
 * [Managing trust in a distributed repo/store experience](/Repository-Management-Overhaul/Managing-trust-in-a-distributed-repo-store-experience)
+* Related reading: https://security.googleblog.com/2019/04/the-android-platform-security-model.html
 
 ## UI
 
