@@ -50,7 +50,7 @@ possible results:
 * could not connect to repo for whatever reason -> show error
 * given fingerprint isn't matching the one from the repo -> show error
 * new repo -> show repo info and ask user if they want to add this
-* URL is mirror of new repo (the URL that was provided is not the canonical URL of the repo, but is one of the official mirrors) 
+* URL is mirror of new repo (the URL that was provided is not the canonical URL of the repo, but is one of the official mirrors.  It could also be that the provided URL is not an official mirror) 
 * existing repo -> tell user that this repo already exists, maybe show repo details?
 * mirror of existing repo -> ask user if they want to add this repo as a mirror
 
