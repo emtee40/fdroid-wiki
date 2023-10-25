@@ -1,3 +1,6 @@
+
+Project tracking: [Manage Repos overhaul](https://gitlab.com/groups/fdroid/-/milestones/11#tab-issues)
+
 ## Things to do first
 
 * rename many classes ([#318](https://gitlab.com/fdroid/fdroidclient/-/issues/318#note_450961188))
