@@ -64,6 +64,7 @@ possible results:
 * Properly support multiple repositories with the same app ([!375](https://gitlab.com/fdroid/fdroidclient/-/merge_requests/375))
 * Add support for multiple repos with conflicting apps/apks ([#33](https://gitlab.com/fdroid/fdroidclient/-/issues/33))
 * allow user to change order of repos in the list, adjusting priorities in the DB (open/old MR [!435](https://gitlab.com/fdroid/fdroidclient/-/merge_requests/435) [#1887](https://gitlab.com/fdroid/fdroidclient/-/issues/1887))
+* handle conflicting mirrors/repos ([#2707](https://gitlab.com/fdroid/fdroidclient/-/issues/2707))
 
 ### Overhaul Proposal
 
