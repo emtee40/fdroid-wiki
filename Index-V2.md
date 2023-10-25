@@ -225,11 +225,11 @@ Absolutely, that's the index format version. It is the way to tell the client to
             "versionCode": 1013051,
             "versionName": "1.13.1",
             "package": "org.fdroid.fdroid",
-            "uses-sdk": {
+            "usesSdk": {
               "minSdkVersion": 22,
               "targetSdkVersion": 25
             },
-            "uses-permission": [
+            "usesPermission": [
               {
                 "name": "android.permission.INTERNET"
               },
@@ -280,7 +280,7 @@ Absolutely, that's the index format version. It is the way to tell the client to
                 "name": "android.permission.FOREGROUND_SERVICE"
               }
             ],
-            "uses-permission-sdk-23": [
+            "usesPermissionSdk23": [
               {
                 "name": "android.permission.ACCESS_COARSE_LOCATION"
               }
@@ -310,11 +310,11 @@ Absolutely, that's the index format version. It is the way to tell the client to
             "versionCode": 1013050,
             "versionName": "1.13",
             "package": "org.fdroid.fdroid",
-            "uses-sdk": {
+            "usesSdk": {
               "minSdkVersion": 22,
               "targetSdkVersion": 25
             },
-            "uses-permission": [
+            "usesPermission": [
               {
                 "name": "android.permission.INTERNET"
               },
@@ -365,7 +365,7 @@ Absolutely, that's the index format version. It is the way to tell the client to
                 "name": "android.permission.FOREGROUND_SERVICE"
               }
             ],
-            "uses-permission-sdk-23": [
+            "usesPermissionSdk23": [
               {
                 "name": "android.permission.ACCESS_COARSE_LOCATION"
               }
