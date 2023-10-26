@@ -95,3 +95,6 @@ New repos get added with a *lower* priority than existing ones to prevent them o
 * when showing lists of apps, should we
   * mix information from multiple repos? (e.g. `intersect` anti-features and logical `or` compatibility) or
   * strictly take what current preferred repo has (easier to do and closer to how things currently work)
+* when migrating repo priorities to the new earlier repo wins scheme, do we
+  * leave existing priorities as they are, e.g. f-droid.org would stay with lowest priority for existing users, or
+  * adapt existing repositories by reversing their priority, so repos added earlier will be prioritized
