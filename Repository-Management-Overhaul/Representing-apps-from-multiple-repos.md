@@ -30,7 +30,7 @@ We completely remove the ability to add other repositories. One F-Droid client a
 ### Pros
 
 * complex client code with lots of edge cases would get simplified a lot, making maintenance easier as well
-* Android security model would be followed: one app = one source of apps
+* Android security model would be followed (debatable): one app = one source of apps
 * an entire problem space would go away though part of it would still exist outside of F-Droid, e.g. which app-repo takes priority (Android 14 update ownership helps with this)
 * one-repo apps could be simpler (based on Basic?) and use upstream branding/colors/images
 
@@ -88,7 +88,7 @@ New repos get added with a *lower* priority than existing ones to prevent them o
   * display current repo with its icon and add a button to switch to another repo which opens a dialog with the list of available repos for that app
   * use a dropdown to let users switch between different repos. then auto-set last selected as preferred?
 * Should installing an app from one repo auto-set that repo as the preferred one, so updates only come from it as well?
-* should we show updates available from other repos? (separate bonus feature!)
+* should we show (compatible) updates available from other repos? (separate bonus feature!)
   * in app details maybe add a badge to the tab for the repo with an update (may overload UI)
   * in updates tab, there could be a normal update item, but with special hint/text saying that this is not from the preferred repo
   * don't show system notification for updates in non-preferred repos
