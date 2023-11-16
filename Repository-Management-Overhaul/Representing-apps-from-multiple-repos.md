@@ -85,14 +85,16 @@ New repos get added with a *lower* priority than existing ones to prevent them o
 
 This is a list of all the things the user could do when working with repo priorities in the App Details screen:
 
-* app not installed, user clicks install: prefer repo with highest global priority and install
-* app not installed, user selects repo then clicks install: prefer selected repo and install
-* app not installed, user selects repo then navigates away from App Details: reset to menu to preferred repo
-* installed with update available, user clicks update: use preferred repo and update
-* installed with update available, user selects repo then clicks update: prefer selected repo and update from it
-* installed with update available, user selects repo then navigates away from App Details: reset the menu to preferred repo
-* installed with no update available, user selects repo then clicks prefer: set preferred repo
-* installed with no update available, user selects repo then navigates away from App Details: reset to menu to preferred repo
+| state | user action | result |
+--------|-------------|--------|
+| app not installed | user clicks install | prefer repo with highest global priority and install |
+| app not installed | user selects repo then clicks install | prefer selected repo and install |
+| app not installed | user selects repo then navigates away from App Details | reset to menu to preferred repo |
+| installed with update available | user clicks update | use preferred repo and update |
+| installed with update available | user selects repo then clicks update | prefer selected repo and update from it |
+| installed with update available | user selects repo then navigates away from App Details | reset the menu to preferred repo |
+| installed with no update available | user selects repo then clicks prefer | set preferred repo |
+| installed with no update available | user selects repo then navigates away from App Details | reset to menu to preferred repo |
 
 Other things to consider?
 * App is updated in the background while user is on App Details for that app.
