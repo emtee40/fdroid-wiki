@@ -81,7 +81,9 @@ New repos get added with a *lower* priority than existing ones to prevent them o
 
 * may make the UI more overloaded and thus confusing (only to people using other repos)
 
-#### Selection cases
+#### User selection flows
+
+This is a list of all the things the user could do when working with repo priorities in the App Details screen:
 
 * app not installed, user clicks install: prefer repo with highest global priority and install
 * app not installed, user selects repo then clicks install: prefer selected repo and install
