@@ -94,6 +94,9 @@ This is a list of all the things the user could do when working with repo priori
 * installed with no update available, user selects repo then clicks prefer: set preferred repo
 * installed with no update available, user selects repo then navigates away from App Details: reset to menu to preferred repo
 
+Other things to consider?
+* App is updated in the background while user is on App Details for that app.
+* Should the current state of the repo menu ever be stored?  Should it be force reset?
 
 ### Open Questions
 
