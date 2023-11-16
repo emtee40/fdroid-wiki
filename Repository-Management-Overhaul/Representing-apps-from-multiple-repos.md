@@ -81,6 +81,18 @@ New repos get added with a *lower* priority than existing ones to prevent them o
 
 * may make the UI more overloaded and thus confusing (only to people using other repos)
 
+#### Selection cases
+
+* app not installed, user clicks install: prefer repo with highest global priority and install
+* app not installed, user selects repo then clicks install: prefer selected repo and install
+* app not installed, user selects repo then navigates away from App Details: reset to menu to preferred repo
+* installed with update available, user clicks update: use preferred repo and update
+* installed with update available, user selects repo then clicks update: prefer selected repo and update from it
+* installed with update available, user selects repo then navigates away from App Details: reset the menu to preferred repo
+* installed with no update available, user selects repo then clicks prefer: set preferred repo
+* installed with no update available, user selects repo then navigates away from App Details: reset to menu to preferred repo
+
+
 ### Open Questions
 
 * app details UI, should we use
